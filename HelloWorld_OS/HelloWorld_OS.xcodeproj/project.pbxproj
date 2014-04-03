@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA4753FB18EDDE790088B9AB /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
 		EA80A4AA1AA8C7A3002292EA /* HelloWorld_OS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld_OS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA80A4AE1AA8C7A3002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA80A4AF1AA8C7A3002292EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 				EA80A4AC1AA8C7A3002292EA /* HelloWorld_OS */,
 				EA80A4C31AA8C7A4002292EA /* HelloWorld_OSTests */,
 				EA80A4AB1AA8C7A3002292EA /* Products */,
+				EA4753FB18EDDE790088B9AB /* doc */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,6 +406,7 @@
 				EA80A4CC1AA8C7A4002292EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA80A4CD1AA8C7A4002292EA /* Build configuration list for PBXNativeTarget "HelloWorld_OSTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +415,7 @@
 				EA80A4CF1AA8C7A4002292EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
