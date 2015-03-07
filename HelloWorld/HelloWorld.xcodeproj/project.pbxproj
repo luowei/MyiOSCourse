@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA80A3F81AA89B3D002292EA /* FrameWorkTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80A3F71AA89B3D002292EA /* FrameWorkTest.framework */; };
+		EA80A3F91AA89B3D002292EA /* FrameWorkTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA80A3F71AA89B3D002292EA /* FrameWorkTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA80A3FB1AA89C2A002292EA /* me.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EA80A3FA1AA89C2A002292EA /* me.jpeg */; };
+		EA80A4771AA8B6F5002292EA /* libStaticLibTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80A4761AA8B6F5002292EA /* libStaticLibTest.a */; };
+		EA80A4831AA8BCF7002292EA /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4821AA8BCF7002292EA /* InterfaceController.m */; };
+		EA80A4861AA8BCF7002292EA /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4851AA8BCF7002292EA /* NotificationController.m */; };
+		EA80A4881AA8BCF7002292EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4871AA8BCF7002292EA /* Images.xcassets */; };
+		EA80A48C1AA8BCF7002292EA /* HelloWorld WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = EA80A48B1AA8BCF7002292EA /* HelloWorld WatchKit App.app */; };
+		EA80A4941AA8BCF7002292EA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4921AA8BCF7002292EA /* Interface.storyboard */; };
+		EA80A4961AA8BCF7002292EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4951AA8BCF7002292EA /* Images.xcassets */; };
+		EA80A4991AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA80A47C1AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA96C7241AA6179000D5681B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C7231AA6179000D5681B /* main.m */; };
 		EA96C7271AA6179000D5681B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C7261AA6179000D5681B /* AppDelegate.m */; };
 		EA96C72A1AA6179000D5681B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA96C7291AA6179000D5681B /* ViewController.m */; };
@@ -17,6 +28,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA80A48D1AA8BCF7002292EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA96C7161AA6179000D5681B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA80A48A1AA8BCF7002292EA;
+			remoteInfo = "HelloWorld WatchKit App";
+		};
+		EA80A4971AA8BCF7002292EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA96C7161AA6179000D5681B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA80A47B1AA8BCF7002292EA;
+			remoteInfo = "HelloWorld WatchKit Extension";
+		};
 		EA96C7381AA6179000D5681B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA96C7161AA6179000D5681B /* Project object */;
@@ -26,7 +51,48 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EA80A3A71AA8962F002292EA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EA80A3F91AA89B3D002292EA /* FrameWorkTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A4A01AA8BCF7002292EA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EA80A4991AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EA80A3F71AA89B3D002292EA /* FrameWorkTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FrameWorkTest.framework; sourceTree = "<group>"; };
+		EA80A3FA1AA89C2A002292EA /* me.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me.jpeg; sourceTree = "<group>"; };
+		EA80A4751AA8B6F5002292EA /* EllipseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EllipseView.h; sourceTree = "<group>"; };
+		EA80A4761AA8B6F5002292EA /* libStaticLibTest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libStaticLibTest.a; sourceTree = "<group>"; };
+		EA80A47C1AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "HelloWorld WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A47F1AA8BCF7002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA80A4801AA8BCF7002292EA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		EA80A4811AA8BCF7002292EA /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		EA80A4821AA8BCF7002292EA /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		EA80A4841AA8BCF7002292EA /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		EA80A4851AA8BCF7002292EA /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		EA80A4871AA8BCF7002292EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA80A48B1AA8BCF7002292EA /* HelloWorld WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloWorld WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A4911AA8BCF7002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA80A4931AA8BCF7002292EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EA80A4951AA8BCF7002292EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA96C71E1AA6179000D5681B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA96C7221AA6179000D5681B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA96C7231AA6179000D5681B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,10 +109,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA80A4791AA8BCF7002292EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA96C71B1AA6179000D5681B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA80A3F81AA89B3D002292EA /* FrameWorkTest.framework in Frameworks */,
+				EA80A4771AA8B6F5002292EA /* libStaticLibTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,11 +135,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA80A4741AA8B6F5002292EA /* include */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4751AA8B6F5002292EA /* EllipseView.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		EA80A47D1AA8BCF7002292EA /* HelloWorld WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4811AA8BCF7002292EA /* InterfaceController.h */,
+				EA80A4821AA8BCF7002292EA /* InterfaceController.m */,
+				EA80A4841AA8BCF7002292EA /* NotificationController.h */,
+				EA80A4851AA8BCF7002292EA /* NotificationController.m */,
+				EA80A4871AA8BCF7002292EA /* Images.xcassets */,
+				EA80A47E1AA8BCF7002292EA /* Supporting Files */,
+			);
+			path = "HelloWorld WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		EA80A47E1AA8BCF7002292EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A47F1AA8BCF7002292EA /* Info.plist */,
+				EA80A4801AA8BCF7002292EA /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA80A48F1AA8BCF7002292EA /* HelloWorld WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4921AA8BCF7002292EA /* Interface.storyboard */,
+				EA80A4951AA8BCF7002292EA /* Images.xcassets */,
+				EA80A4901AA8BCF7002292EA /* Supporting Files */,
+			);
+			path = "HelloWorld WatchKit App";
+			sourceTree = "<group>";
+		};
+		EA80A4901AA8BCF7002292EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4911AA8BCF7002292EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EA96C7151AA6179000D5681B = {
 			isa = PBXGroup;
 			children = (
+				EA80A4741AA8B6F5002292EA /* include */,
+				EA80A4761AA8B6F5002292EA /* libStaticLibTest.a */,
+				EA80A3F71AA89B3D002292EA /* FrameWorkTest.framework */,
 				EA96C7201AA6179000D5681B /* HelloWorld */,
 				EA96C73A1AA6179000D5681B /* HelloWorldTests */,
+				EA80A47D1AA8BCF7002292EA /* HelloWorld WatchKit Extension */,
+				EA80A48F1AA8BCF7002292EA /* HelloWorld WatchKit App */,
 				EA96C71F1AA6179000D5681B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +202,8 @@
 			children = (
 				EA96C71E1AA6179000D5681B /* HelloWorld.app */,
 				EA96C7371AA6179000D5681B /* HelloWorldTests.xctest */,
+				EA80A47C1AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex */,
+				EA80A48B1AA8BCF7002292EA /* HelloWorld WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +218,7 @@
 				EA96C72B1AA6179000D5681B /* Main.storyboard */,
 				EA96C72E1AA6179000D5681B /* Images.xcassets */,
 				EA96C7301AA6179000D5681B /* LaunchScreen.xib */,
+				EA80A3FA1AA89C2A002292EA /* me.jpeg */,
 				EA96C7211AA6179000D5681B /* Supporting Files */,
 			);
 			path = HelloWorld;
@@ -122,6 +253,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA80A47B1AA8BCF7002292EA /* HelloWorld WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A49D1AA8BCF7002292EA /* Build configuration list for PBXNativeTarget "HelloWorld WatchKit Extension" */;
+			buildPhases = (
+				EA80A4781AA8BCF7002292EA /* Sources */,
+				EA80A4791AA8BCF7002292EA /* Frameworks */,
+				EA80A47A1AA8BCF7002292EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA80A48E1AA8BCF7002292EA /* PBXTargetDependency */,
+			);
+			name = "HelloWorld WatchKit Extension";
+			productName = "HelloWorld WatchKit Extension";
+			productReference = EA80A47C1AA8BCF7002292EA /* HelloWorld WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		EA80A48A1AA8BCF7002292EA /* HelloWorld WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A49A1AA8BCF7002292EA /* Build configuration list for PBXNativeTarget "HelloWorld WatchKit App" */;
+			buildPhases = (
+				EA80A4891AA8BCF7002292EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelloWorld WatchKit App";
+			productName = "HelloWorld WatchKit App";
+			productReference = EA80A48B1AA8BCF7002292EA /* HelloWorld WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		EA96C71D1AA6179000D5681B /* HelloWorld */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA96C7411AA6179000D5681B /* Build configuration list for PBXNativeTarget "HelloWorld" */;
@@ -129,10 +293,13 @@
 				EA96C71A1AA6179000D5681B /* Sources */,
 				EA96C71B1AA6179000D5681B /* Frameworks */,
 				EA96C71C1AA6179000D5681B /* Resources */,
+				EA80A3A71AA8962F002292EA /* Embed Frameworks */,
+				EA80A4A01AA8BCF7002292EA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EA80A4981AA8BCF7002292EA /* PBXTargetDependency */,
 			);
 			name = HelloWorld;
 			productName = HelloWorld;
@@ -166,6 +333,12 @@
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = luowei;
 				TargetAttributes = {
+					EA80A47B1AA8BCF7002292EA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EA80A48A1AA8BCF7002292EA = {
+						CreatedOnToolsVersion = 6.2;
+					};
 					EA96C71D1AA6179000D5681B = {
 						CreatedOnToolsVersion = 6.2;
 					};
@@ -190,16 +363,37 @@
 			targets = (
 				EA96C71D1AA6179000D5681B /* HelloWorld */,
 				EA96C7361AA6179000D5681B /* HelloWorldTests */,
+				EA80A47B1AA8BCF7002292EA /* HelloWorld WatchKit Extension */,
+				EA80A48A1AA8BCF7002292EA /* HelloWorld WatchKit App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA80A47A1AA8BCF7002292EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A48C1AA8BCF7002292EA /* HelloWorld WatchKit App.app in Resources */,
+				EA80A4881AA8BCF7002292EA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A4891AA8BCF7002292EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4941AA8BCF7002292EA /* Interface.storyboard in Resources */,
+				EA80A4961AA8BCF7002292EA /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA96C71C1AA6179000D5681B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA96C72D1AA6179000D5681B /* Main.storyboard in Resources */,
+				EA80A3FB1AA89C2A002292EA /* me.jpeg in Resources */,
 				EA96C7321AA6179000D5681B /* LaunchScreen.xib in Resources */,
 				EA96C72F1AA6179000D5681B /* Images.xcassets in Resources */,
 			);
@@ -215,6 +409,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA80A4781AA8BCF7002292EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4861AA8BCF7002292EA /* NotificationController.m in Sources */,
+				EA80A4831AA8BCF7002292EA /* InterfaceController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA96C71A1AA6179000D5681B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,6 +439,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA80A48E1AA8BCF7002292EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA80A48A1AA8BCF7002292EA /* HelloWorld WatchKit App */;
+			targetProxy = EA80A48D1AA8BCF7002292EA /* PBXContainerItemProxy */;
+		};
+		EA80A4981AA8BCF7002292EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA80A47B1AA8BCF7002292EA /* HelloWorld WatchKit Extension */;
+			targetProxy = EA80A4971AA8BCF7002292EA /* PBXContainerItemProxy */;
+		};
 		EA96C7391AA6179000D5681B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA96C71D1AA6179000D5681B /* HelloWorld */;
@@ -244,6 +457,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EA80A4921AA8BCF7002292EA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA80A4931AA8BCF7002292EA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		EA96C72B1AA6179000D5681B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,6 +484,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA80A49B1AA8BCF7002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = HelloWorld_WatchKit_Extension;
+				INFOPLIST_FILE = "HelloWorld WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		EA80A49C1AA8BCF7002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = HelloWorld_WatchKit_Extension;
+				INFOPLIST_FILE = "HelloWorld WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+		EA80A49E1AA8BCF7002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HelloWorld WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA80A49F1AA8BCF7002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HelloWorld WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		EA96C73F1AA6179000D5681B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,8 +620,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -355,8 +638,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -398,6 +689,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA80A49A1AA8BCF7002292EA /* Build configuration list for PBXNativeTarget "HelloWorld WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A49B1AA8BCF7002292EA /* Debug */,
+				EA80A49C1AA8BCF7002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA80A49D1AA8BCF7002292EA /* Build configuration list for PBXNativeTarget "HelloWorld WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A49E1AA8BCF7002292EA /* Debug */,
+				EA80A49F1AA8BCF7002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA96C7191AA6179000D5681B /* Build configuration list for PBXProject "HelloWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -414,6 +721,7 @@
 				EA96C7431AA6179000D5681B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA96C7441AA6179000D5681B /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +730,7 @@
 				EA96C7461AA6179000D5681B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

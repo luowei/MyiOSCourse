@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA80A4DF1AA8C81F002292EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4DE1AA8C81F002292EA /* main.m */; };
+		EA80A4E21AA8C81F002292EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4E11AA8C81F002292EA /* AppDelegate.m */; };
+		EA80A4E41AA8C81F002292EA /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4E31AA8C81F002292EA /* art.scnassets */; };
+		EA80A4E71AA8C81F002292EA /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4E61AA8C81F002292EA /* GameViewController.m */; };
+		EA80A4EA1AA8C81F002292EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4E81AA8C81F002292EA /* Main.storyboard */; };
+		EA80A4EC1AA8C81F002292EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4EB1AA8C81F002292EA /* Images.xcassets */; };
+		EA80A4EF1AA8C81F002292EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA80A4ED1AA8C81F002292EA /* LaunchScreen.xib */; };
+		EA80A4FB1AA8C81F002292EA /* sprite_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4FA1AA8C81F002292EA /* sprite_testTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA80A4F51AA8C81F002292EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA80A4D11AA8C81F002292EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA80A4D81AA8C81F002292EA;
+			remoteInfo = "sprite-test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA80A4D91AA8C81F002292EA /* sprite-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sprite-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A4DD1AA8C81F002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA80A4DE1AA8C81F002292EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA80A4E01AA8C81F002292EA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA80A4E11AA8C81F002292EA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA80A4E31AA8C81F002292EA /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		EA80A4E51AA8C81F002292EA /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		EA80A4E61AA8C81F002292EA /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		EA80A4E91AA8C81F002292EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA80A4EB1AA8C81F002292EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EA80A4EE1AA8C81F002292EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EA80A4F41AA8C81F002292EA /* sprite-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sprite-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A4F91AA8C81F002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA80A4FA1AA8C81F002292EA /* sprite_testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sprite_testTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA80A4D61AA8C81F002292EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A4F11AA8C81F002292EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA80A4D01AA8C81F002292EA = {
+			isa = PBXGroup;
+			children = (
+				EA80A4DB1AA8C81F002292EA /* sprite-test */,
+				EA80A4F71AA8C81F002292EA /* sprite-testTests */,
+				EA80A4DA1AA8C81F002292EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA80A4DA1AA8C81F002292EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4D91AA8C81F002292EA /* sprite-test.app */,
+				EA80A4F41AA8C81F002292EA /* sprite-testTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA80A4DB1AA8C81F002292EA /* sprite-test */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4E01AA8C81F002292EA /* AppDelegate.h */,
+				EA80A4E11AA8C81F002292EA /* AppDelegate.m */,
+				EA80A4E31AA8C81F002292EA /* art.scnassets */,
+				EA80A4E51AA8C81F002292EA /* GameViewController.h */,
+				EA80A4E61AA8C81F002292EA /* GameViewController.m */,
+				EA80A4E81AA8C81F002292EA /* Main.storyboard */,
+				EA80A4EB1AA8C81F002292EA /* Images.xcassets */,
+				EA80A4ED1AA8C81F002292EA /* LaunchScreen.xib */,
+				EA80A4DC1AA8C81F002292EA /* Supporting Files */,
+			);
+			path = "sprite-test";
+			sourceTree = "<group>";
+		};
+		EA80A4DC1AA8C81F002292EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4DD1AA8C81F002292EA /* Info.plist */,
+				EA80A4DE1AA8C81F002292EA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA80A4F71AA8C81F002292EA /* sprite-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4FA1AA8C81F002292EA /* sprite_testTests.m */,
+				EA80A4F81AA8C81F002292EA /* Supporting Files */,
+			);
+			path = "sprite-testTests";
+			sourceTree = "<group>";
+		};
+		EA80A4F81AA8C81F002292EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4F91AA8C81F002292EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA80A4D81AA8C81F002292EA /* sprite-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A4FE1AA8C81F002292EA /* Build configuration list for PBXNativeTarget "sprite-test" */;
+			buildPhases = (
+				EA80A4D51AA8C81F002292EA /* Sources */,
+				EA80A4D61AA8C81F002292EA /* Frameworks */,
+				EA80A4D71AA8C81F002292EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "sprite-test";
+			productName = "sprite-test";
+			productReference = EA80A4D91AA8C81F002292EA /* sprite-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA80A4F31AA8C81F002292EA /* sprite-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A5011AA8C81F002292EA /* Build configuration list for PBXNativeTarget "sprite-testTests" */;
+			buildPhases = (
+				EA80A4F01AA8C81F002292EA /* Sources */,
+				EA80A4F11AA8C81F002292EA /* Frameworks */,
+				EA80A4F21AA8C81F002292EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA80A4F61AA8C81F002292EA /* PBXTargetDependency */,
+			);
+			name = "sprite-testTests";
+			productName = "sprite-testTests";
+			productReference = EA80A4F41AA8C81F002292EA /* sprite-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA80A4D11AA8C81F002292EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = luowei;
+				TargetAttributes = {
+					EA80A4D81AA8C81F002292EA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EA80A4F31AA8C81F002292EA = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = EA80A4D81AA8C81F002292EA;
+					};
+				};
+			};
+			buildConfigurationList = EA80A4D41AA8C81F002292EA /* Build configuration list for PBXProject "sprite-test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA80A4D01AA8C81F002292EA;
+			productRefGroup = EA80A4DA1AA8C81F002292EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA80A4D81AA8C81F002292EA /* sprite-test */,
+				EA80A4F31AA8C81F002292EA /* sprite-testTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA80A4D71AA8C81F002292EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4EF1AA8C81F002292EA /* LaunchScreen.xib in Resources */,
+				EA80A4EC1AA8C81F002292EA /* Images.xcassets in Resources */,
+				EA80A4E41AA8C81F002292EA /* art.scnassets in Resources */,
+				EA80A4EA1AA8C81F002292EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A4F21AA8C81F002292EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA80A4D51AA8C81F002292EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4E21AA8C81F002292EA /* AppDelegate.m in Sources */,
+				EA80A4E71AA8C81F002292EA /* GameViewController.m in Sources */,
+				EA80A4DF1AA8C81F002292EA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A4F01AA8C81F002292EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4FB1AA8C81F002292EA /* sprite_testTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA80A4F61AA8C81F002292EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA80A4D81AA8C81F002292EA /* sprite-test */;
+			targetProxy = EA80A4F51AA8C81F002292EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA80A4E81AA8C81F002292EA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA80A4E91AA8C81F002292EA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA80A4ED1AA8C81F002292EA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA80A4EE1AA8C81F002292EA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA80A4FC1AA8C81F002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA80A4FD1AA8C81F002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA80A4FF1AA8C81F002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "sprite-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA80A5001AA8C81F002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "sprite-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EA80A5021AA8C81F002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "sprite-testTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sprite-test.app/sprite-test";
+			};
+			name = Debug;
+		};
+		EA80A5031AA8C81F002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "sprite-testTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/sprite-test.app/sprite-test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA80A4D41AA8C81F002292EA /* Build configuration list for PBXProject "sprite-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A4FC1AA8C81F002292EA /* Debug */,
+				EA80A4FD1AA8C81F002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA80A4FE1AA8C81F002292EA /* Build configuration list for PBXNativeTarget "sprite-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A4FF1AA8C81F002292EA /* Debug */,
+				EA80A5001AA8C81F002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA80A5011AA8C81F002292EA /* Build configuration list for PBXNativeTarget "sprite-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A5021AA8C81F002292EA /* Debug */,
+				EA80A5031AA8C81F002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA80A4D11AA8C81F002292EA /* Project object */;
+}

@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA80A4591AA8B64D002292EA /* StaticLibTest.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA80A4581AA8B64D002292EA /* StaticLibTest.h */; };
+		EA80A45B1AA8B64D002292EA /* StaticLibTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A45A1AA8B64D002292EA /* StaticLibTest.m */; };
+		EA80A4611AA8B64D002292EA /* libStaticLibTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA80A4551AA8B64D002292EA /* libStaticLibTest.a */; };
+		EA80A4711AA8B662002292EA /* EllipseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA80A4701AA8B662002292EA /* EllipseView.m */; };
+		EA80A4731AA8B685002292EA /* EllipseView.h in Headers */ = {isa = PBXBuildFile; fileRef = EA80A46F1AA8B662002292EA /* EllipseView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA80A4621AA8B64D002292EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA80A44D1AA8B64D002292EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA80A4541AA8B64D002292EA;
+			remoteInfo = StaticLibTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA80A4531AA8B64D002292EA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EA80A4591AA8B64D002292EA /* StaticLibTest.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA80A4551AA8B64D002292EA /* libStaticLibTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStaticLibTest.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A4581AA8B64D002292EA /* StaticLibTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticLibTest.h; sourceTree = "<group>"; };
+		EA80A45A1AA8B64D002292EA /* StaticLibTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticLibTest.m; sourceTree = "<group>"; };
+		EA80A4601AA8B64D002292EA /* StaticLibTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaticLibTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA80A4661AA8B64D002292EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA80A46F1AA8B662002292EA /* EllipseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EllipseView.h; sourceTree = "<group>"; };
+		EA80A4701AA8B662002292EA /* EllipseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EllipseView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA80A4521AA8B64D002292EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A45D1AA8B64D002292EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4611AA8B64D002292EA /* libStaticLibTest.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA80A44C1AA8B64D002292EA = {
+			isa = PBXGroup;
+			children = (
+				EA80A4571AA8B64D002292EA /* StaticLibTest */,
+				EA80A4641AA8B64D002292EA /* StaticLibTestTests */,
+				EA80A4561AA8B64D002292EA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA80A4561AA8B64D002292EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4551AA8B64D002292EA /* libStaticLibTest.a */,
+				EA80A4601AA8B64D002292EA /* StaticLibTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA80A4571AA8B64D002292EA /* StaticLibTest */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4581AA8B64D002292EA /* StaticLibTest.h */,
+				EA80A45A1AA8B64D002292EA /* StaticLibTest.m */,
+				EA80A46F1AA8B662002292EA /* EllipseView.h */,
+				EA80A4701AA8B662002292EA /* EllipseView.m */,
+			);
+			path = StaticLibTest;
+			sourceTree = "<group>";
+		};
+		EA80A4641AA8B64D002292EA /* StaticLibTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4651AA8B64D002292EA /* Supporting Files */,
+			);
+			path = StaticLibTestTests;
+			sourceTree = "<group>";
+		};
+		EA80A4651AA8B64D002292EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA80A4661AA8B64D002292EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EA80A4721AA8B67D002292EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A4731AA8B685002292EA /* EllipseView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EA80A4541AA8B64D002292EA /* StaticLibTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A4691AA8B64D002292EA /* Build configuration list for PBXNativeTarget "StaticLibTest" */;
+			buildPhases = (
+				EA80A4511AA8B64D002292EA /* Sources */,
+				EA80A4521AA8B64D002292EA /* Frameworks */,
+				EA80A4531AA8B64D002292EA /* CopyFiles */,
+				EA80A4721AA8B67D002292EA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StaticLibTest;
+			productName = StaticLibTest;
+			productReference = EA80A4551AA8B64D002292EA /* libStaticLibTest.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA80A45F1AA8B64D002292EA /* StaticLibTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA80A46C1AA8B64D002292EA /* Build configuration list for PBXNativeTarget "StaticLibTestTests" */;
+			buildPhases = (
+				EA80A45C1AA8B64D002292EA /* Sources */,
+				EA80A45D1AA8B64D002292EA /* Frameworks */,
+				EA80A45E1AA8B64D002292EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA80A4631AA8B64D002292EA /* PBXTargetDependency */,
+			);
+			name = StaticLibTestTests;
+			productName = StaticLibTestTests;
+			productReference = EA80A4601AA8B64D002292EA /* StaticLibTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA80A44D1AA8B64D002292EA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = luowei;
+				TargetAttributes = {
+					EA80A4541AA8B64D002292EA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					EA80A45F1AA8B64D002292EA = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = EA80A4501AA8B64D002292EA /* Build configuration list for PBXProject "StaticLibTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA80A44C1AA8B64D002292EA;
+			productRefGroup = EA80A4561AA8B64D002292EA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA80A4541AA8B64D002292EA /* StaticLibTest */,
+				EA80A45F1AA8B64D002292EA /* StaticLibTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA80A45E1AA8B64D002292EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA80A4511AA8B64D002292EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA80A45B1AA8B64D002292EA /* StaticLibTest.m in Sources */,
+				EA80A4711AA8B662002292EA /* EllipseView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA80A45C1AA8B64D002292EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA80A4631AA8B64D002292EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA80A4541AA8B64D002292EA /* StaticLibTest */;
+			targetProxy = EA80A4621AA8B64D002292EA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EA80A4671AA8B64D002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA80A4681AA8B64D002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA80A46A1AA8B64D002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA80A46B1AA8B64D002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EA80A46D1AA8B64D002292EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StaticLibTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EA80A46E1AA8B64D002292EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = StaticLibTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA80A4501AA8B64D002292EA /* Build configuration list for PBXProject "StaticLibTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A4671AA8B64D002292EA /* Debug */,
+				EA80A4681AA8B64D002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA80A4691AA8B64D002292EA /* Build configuration list for PBXNativeTarget "StaticLibTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A46A1AA8B64D002292EA /* Debug */,
+				EA80A46B1AA8B64D002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA80A46C1AA8B64D002292EA /* Build configuration list for PBXNativeTarget "StaticLibTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA80A46D1AA8B64D002292EA /* Debug */,
+				EA80A46E1AA8B64D002292EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA80A44D1AA8B64D002292EA /* Project object */;
+}

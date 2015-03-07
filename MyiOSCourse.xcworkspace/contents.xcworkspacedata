@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:HelloWorld/HelloWorld.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:HelloWorld_OS/HelloWorld_OS.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FrameWorkTest/FrameWorkTest.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:sprite-test/sprite-test.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StaticLibTest/StaticLibTest.xcodeproj">
+   </FileRef>
+</Workspace>
