@@ -17,6 +17,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 
+HelloWorld/Pods/
+
 .idea/
 
 # CocoaPods
