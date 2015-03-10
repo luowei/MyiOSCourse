@@ -16,4 +16,7 @@
    <FileRef
       location = "group:StaticLibTest/StaticLibTest.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:OCDemo/OCDemo.xcodeproj">
+   </FileRef>
 </Workspace>
