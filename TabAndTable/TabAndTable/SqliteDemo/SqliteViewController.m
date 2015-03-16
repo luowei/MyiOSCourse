@@ -121,12 +121,12 @@
 #pragma mark 加载数据
 
 - (void)loadStatusData {
-    _statusCells = [[NSMutableArray alloc] init];
+//    _statusCells = [[NSMutableArray alloc] init];
     _status = [[SDStatusService sharedSDStatusService] getAllStatus];
     [_status enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         SDStatusTableViewCell *cell = [[SDStatusTableViewCell alloc] init];
         cell.status = (SDStatus *) obj;
-        [_statusCells addObject:cell];
+//        [_statusCells addObject:cell];
     }];
     NSLog(@"%@", [_status lastObject]);
 }
@@ -149,6 +149,7 @@
     }
     cell.status = _status[(NSUInteger) indexPath.row];
     return cell;
+//    return _statusCells[(NSUInteger) indexPath.row];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

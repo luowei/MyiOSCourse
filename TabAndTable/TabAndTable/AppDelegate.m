@@ -55,16 +55,16 @@
 
     tabBarController.viewControllers = @[navigationController1,navigationController2,navigationController3,navigationController4];
 
-    //侧滑菜单
-    MenuItemsVC *sideMenuVC = [MenuItemsVC new];
-    ENSideMenuNavigationController *navVC = [[ENSideMenuNavigationController alloc]initWithMenuViewController:sideMenuVC contentViewController:tabBarController];
-
-    //toggle side menu
-    UIBarButtonItem *toggleButton = [[UIBarButtonItem alloc] initWithTitle:@"Toggle" style:UIBarButtonItemStylePlain target:tabBarController action:@selector(toggleSideMenuView)];
-    [tabBarController.navigationItem setLeftBarButtonItem:toggleButton];
+//    //侧滑菜单
+//    MenuItemsVC *sideMenuVC = [MenuItemsVC new];
+//    ENSideMenuNavigationController *navVC = [[ENSideMenuNavigationController alloc]initWithMenuViewController:sideMenuVC contentViewController:tabBarController];
+//
+//    //toggle side menu
+//    UIBarButtonItem *toggleButton = [[UIBarButtonItem alloc] initWithTitle:@"Toggle" style:UIBarButtonItemStylePlain target:tabBarController action:@selector(toggleSideMenuView)];
+//    [tabBarController.navigationItem setLeftBarButtonItem:toggleButton];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = tabBarController;//navVC;
     [self.window makeKeyAndVisible];
     
     return YES;

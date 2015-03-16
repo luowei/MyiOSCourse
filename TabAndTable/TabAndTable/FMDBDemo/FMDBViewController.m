@@ -31,10 +31,11 @@
     NSString *doc = PATH_OF_DOCUMENT;
     NSString *path = [doc stringByAppendingPathComponent:@"summary.sqlite"];
     self.dbPath = path;
-    
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"TABLECREATED_KEY"]) {
+
+    BOOL tableCreated = [[NSUserDefaults standardUserDefaults] boolForKey:@"SUMMARY_TABLECREATED_KEY"];
+    if (!tableCreated) {
         BOOL res = [self createTable];
-        [[NSUserDefaults standardUserDefaults] setBool:res forKey:@"TABLECREATED_KEY"];
+        [[NSUserDefaults standardUserDefaults] setBool:res forKey:@"SUMMARY_TABLECREATED_KEY"];
     }
     
     self.awarenessList = @[].mutableCopy;
