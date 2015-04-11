@@ -11,6 +11,13 @@
 #import "ContentRectViewController.h"
 #import "ClickViewController.h"
 #import "HitTestViewController.h"
+#import "ShadowViewController.h"
+#import "MaskViewController.h"
+#import "NearestViewController.h"
+#import "GroupOpacityViewController.h"
+#import "TransformViewController.h"
+#import "Transform3dViewController.h"
+#import "Cube3dViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +30,20 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//    self.window.rootViewController = storyboard.instantiateInitialViewController;
+
 //    self.window.rootViewController = [ContentRectViewController new];
 //    self.window.rootViewController = [ClickViewController new];
-    self.window.rootViewController = [HitTestViewController new];
+//    self.window.rootViewController = [HitTestViewController new];
+//    self.window.rootViewController = [ShadowViewController new];
+//    self.window.rootViewController = [MaskViewController new];
+//    self.window.rootViewController = [NearestViewController new];
+//    self.window.rootViewController = [GroupOpacityViewController new];
+//    self.window.rootViewController = [TransformViewController new];
+//    self.window.rootViewController = [Transform3dViewController new];
+    self.window.rootViewController = [Cube3dViewController new];
+
 
     [self.window makeKeyAndVisible];
 

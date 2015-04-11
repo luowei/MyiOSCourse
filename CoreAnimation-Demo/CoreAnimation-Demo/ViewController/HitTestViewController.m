@@ -23,7 +23,7 @@
     self.blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
     self.blueLayer.backgroundColor = [UIColor blueColor].CGColor;
     //add it to our view
-    self.blueLayer.opacity = 0.3;
+//    self.blueLayer.opacity = 0.3;
     [self.layerView.layer addSublayer:self.blueLayer];
 }
 

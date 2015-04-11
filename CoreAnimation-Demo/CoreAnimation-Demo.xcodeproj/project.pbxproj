@@ -20,6 +20,21 @@
 		EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FEF1AD91EE800CEEEFB /* ClickViewController.xib */; };
 		EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */; };
 		EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */; };
+		EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FF81AD9448600CEEEFB /* ShadowViewController.m */; };
+		EA9E4FFB1AD9448600CEEEFB /* ShadowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FF91AD9448600CEEEFB /* ShadowViewController.xib */; };
+		EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FFD1AD9494000CEEEFB /* MaskViewController.m */; };
+		EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FFE1AD9494000CEEEFB /* MaskViewController.xib */; };
+		EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50021AD950CA00CEEEFB /* NearestViewController.m */; };
+		EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50031AD950CA00CEEEFB /* NearestViewController.xib */; };
+		EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50071AD95BCC00CEEEFB /* GroupOpacityViewController.m */; };
+		EA9E500A1AD95BCC00CEEEFB /* GroupOpacityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50081AD95BCC00CEEEFB /* GroupOpacityViewController.xib */; };
+		EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E500C1AD9661200CEEEFB /* TransformViewController.m */; };
+		EA9E500F1AD9661200CEEEFB /* TransformViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E500D1AD9661200CEEEFB /* TransformViewController.xib */; };
+		EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50111AD97AD600CEEEFB /* Transform3dViewController.m */; };
+		EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50121AD97AD600CEEEFB /* Transform3dViewController.xib */; };
+		EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */; };
+		EA9E50191AD9804500CEEEFB /* Cube3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */; };
+		EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9E501A1AD9890600CEEEFB /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +71,28 @@
 		EA9E4FF21AD933F900CEEEFB /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
 		EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
 		EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HitTestViewController.xib; sourceTree = "<group>"; };
+		EA9E4FF71AD9448600CEEEFB /* ShadowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowViewController.h; sourceTree = "<group>"; };
+		EA9E4FF81AD9448600CEEEFB /* ShadowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowViewController.m; sourceTree = "<group>"; };
+		EA9E4FF91AD9448600CEEEFB /* ShadowViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShadowViewController.xib; sourceTree = "<group>"; };
+		EA9E4FFC1AD9494000CEEEFB /* MaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskViewController.h; sourceTree = "<group>"; };
+		EA9E4FFD1AD9494000CEEEFB /* MaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskViewController.m; sourceTree = "<group>"; };
+		EA9E4FFE1AD9494000CEEEFB /* MaskViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaskViewController.xib; sourceTree = "<group>"; };
+		EA9E50011AD950CA00CEEEFB /* NearestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearestViewController.h; sourceTree = "<group>"; };
+		EA9E50021AD950CA00CEEEFB /* NearestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearestViewController.m; sourceTree = "<group>"; };
+		EA9E50031AD950CA00CEEEFB /* NearestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearestViewController.xib; sourceTree = "<group>"; };
+		EA9E50061AD95BCC00CEEEFB /* GroupOpacityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupOpacityViewController.h; sourceTree = "<group>"; };
+		EA9E50071AD95BCC00CEEEFB /* GroupOpacityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupOpacityViewController.m; sourceTree = "<group>"; };
+		EA9E50081AD95BCC00CEEEFB /* GroupOpacityViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupOpacityViewController.xib; sourceTree = "<group>"; };
+		EA9E500B1AD9661200CEEEFB /* TransformViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformViewController.h; sourceTree = "<group>"; };
+		EA9E500C1AD9661200CEEEFB /* TransformViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformViewController.m; sourceTree = "<group>"; };
+		EA9E500D1AD9661200CEEEFB /* TransformViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransformViewController.xib; sourceTree = "<group>"; };
+		EA9E50101AD97AD600CEEEFB /* Transform3dViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transform3dViewController.h; sourceTree = "<group>"; };
+		EA9E50111AD97AD600CEEEFB /* Transform3dViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transform3dViewController.m; sourceTree = "<group>"; };
+		EA9E50121AD97AD600CEEEFB /* Transform3dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Transform3dViewController.xib; sourceTree = "<group>"; };
+		EA9E50151AD9804500CEEEFB /* Cube3dViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube3dViewController.h; sourceTree = "<group>"; };
+		EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube3dViewController.m; sourceTree = "<group>"; };
+		EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube3dViewController.xib; sourceTree = "<group>"; };
+		EA9E501A1AD9890600CEEEFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +117,7 @@
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
+				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
 				EA9E4FD21AD8D4B600CEEEFB /* CoreAnimation-DemoTests */,
 				EA9E4FB71AD8D4B600CEEEFB /* Products */,
@@ -149,6 +188,27 @@
 				EA9E4FF21AD933F900CEEEFB /* HitTestViewController.h */,
 				EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */,
 				EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */,
+				EA9E4FF71AD9448600CEEEFB /* ShadowViewController.h */,
+				EA9E4FF81AD9448600CEEEFB /* ShadowViewController.m */,
+				EA9E4FF91AD9448600CEEEFB /* ShadowViewController.xib */,
+				EA9E4FFC1AD9494000CEEEFB /* MaskViewController.h */,
+				EA9E4FFD1AD9494000CEEEFB /* MaskViewController.m */,
+				EA9E4FFE1AD9494000CEEEFB /* MaskViewController.xib */,
+				EA9E50011AD950CA00CEEEFB /* NearestViewController.h */,
+				EA9E50021AD950CA00CEEEFB /* NearestViewController.m */,
+				EA9E50031AD950CA00CEEEFB /* NearestViewController.xib */,
+				EA9E50061AD95BCC00CEEEFB /* GroupOpacityViewController.h */,
+				EA9E50071AD95BCC00CEEEFB /* GroupOpacityViewController.m */,
+				EA9E50081AD95BCC00CEEEFB /* GroupOpacityViewController.xib */,
+				EA9E500B1AD9661200CEEEFB /* TransformViewController.h */,
+				EA9E500C1AD9661200CEEEFB /* TransformViewController.m */,
+				EA9E500D1AD9661200CEEEFB /* TransformViewController.xib */,
+				EA9E50101AD97AD600CEEEFB /* Transform3dViewController.h */,
+				EA9E50111AD97AD600CEEEFB /* Transform3dViewController.m */,
+				EA9E50121AD97AD600CEEEFB /* Transform3dViewController.xib */,
+				EA9E50151AD9804500CEEEFB /* Cube3dViewController.h */,
+				EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */,
+				EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -233,12 +293,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
 				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,
+				EA9E500A1AD95BCC00CEEEFB /* GroupOpacityViewController.xib in Resources */,
+				EA9E50191AD9804500CEEEFB /* Cube3dViewController.xib in Resources */,
+				EA9E4FFB1AD9448600CEEEFB /* ShadowViewController.xib in Resources */,
 				EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */,
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
+				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
 				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
+				EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */,
+				EA9E500F1AD9661200CEEEFB /* TransformViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,8 +327,15 @@
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
 				EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */,
+				EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */,
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
+				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
+				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
+				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
+				EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */,
+				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
+				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,6 +471,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

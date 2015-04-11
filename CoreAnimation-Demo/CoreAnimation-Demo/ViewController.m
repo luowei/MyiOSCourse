@@ -30,7 +30,8 @@
 
 //    给图层添加寄宿图
     [super viewDidLoad]; //load an image
-    UIImage *image = [UIImage imageNamed:@"jingtian"];
+    //如果是jpg图片的话，名字要完整
+    UIImage *image = [UIImage imageNamed:@"jingtian.jpg"];
 
     //类型不兼容通过bridged关键字转换
     //add it directly to our view's layer
