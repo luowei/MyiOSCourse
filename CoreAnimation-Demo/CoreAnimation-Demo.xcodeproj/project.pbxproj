@@ -14,6 +14,12 @@
 		EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FC61AD8D4B600CEEEFB /* Images.xcassets */; };
 		EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FC81AD8D4B600CEEEFB /* LaunchScreen.xib */; };
 		EA9E4FD61AD8D4B600CEEEFB /* CoreAnimation_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FD51AD8D4B600CEEEFB /* CoreAnimation_DemoTests.m */; };
+		EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FE91AD8ECA400CEEEFB /* ContentRectViewController.m */; };
+		EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FEA1AD8ECA400CEEEFB /* ContentRectViewController.xib */; };
+		EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FEE1AD91EE800CEEEFB /* ClickViewController.m */; };
+		EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FEF1AD91EE800CEEEFB /* ClickViewController.xib */; };
+		EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */; };
+		EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +47,15 @@
 		EA9E4FD41AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FD51AD8D4B600CEEEFB /* CoreAnimation_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreAnimation_DemoTests.m; sourceTree = "<group>"; };
 		EA9E4FDF1AD8E2D800CEEEFB /* doc */ = {isa = PBXFileReference; lastKnownFileType = folder; path = doc; sourceTree = "<group>"; };
+		EA9E4FE81AD8ECA400CEEEFB /* ContentRectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentRectViewController.h; sourceTree = "<group>"; };
+		EA9E4FE91AD8ECA400CEEEFB /* ContentRectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentRectViewController.m; sourceTree = "<group>"; };
+		EA9E4FEA1AD8ECA400CEEEFB /* ContentRectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContentRectViewController.xib; sourceTree = "<group>"; };
+		EA9E4FED1AD91EE800CEEEFB /* ClickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClickViewController.h; sourceTree = "<group>"; };
+		EA9E4FEE1AD91EE800CEEEFB /* ClickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClickViewController.m; sourceTree = "<group>"; };
+		EA9E4FEF1AD91EE800CEEEFB /* ClickViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClickViewController.xib; sourceTree = "<group>"; };
+		EA9E4FF21AD933F900CEEEFB /* HitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HitTestViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +98,7 @@
 		EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA9E4FE41AD8EBB400CEEEFB /* ViewController */,
 				EA9E4FBD1AD8D4B600CEEEFB /* AppDelegate.h */,
 				EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */,
 				EA9E4FC01AD8D4B600CEEEFB /* ViewController.h */,
@@ -119,6 +135,22 @@
 				EA9E4FD41AD8D4B600CEEEFB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA9E4FE41AD8EBB400CEEEFB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA9E4FE81AD8ECA400CEEEFB /* ContentRectViewController.h */,
+				EA9E4FE91AD8ECA400CEEEFB /* ContentRectViewController.m */,
+				EA9E4FEA1AD8ECA400CEEEFB /* ContentRectViewController.xib */,
+				EA9E4FED1AD91EE800CEEEFB /* ClickViewController.h */,
+				EA9E4FEE1AD91EE800CEEEFB /* ClickViewController.m */,
+				EA9E4FEF1AD91EE800CEEEFB /* ClickViewController.xib */,
+				EA9E4FF21AD933F900CEEEFB /* HitTestViewController.h */,
+				EA9E4FF31AD933F900CEEEFB /* HitTestViewController.m */,
+				EA9E4FF41AD933F900CEEEFB /* HitTestViewController.xib */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +233,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,
 				EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */,
+				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
+				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,8 +256,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
+				EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */,
+				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +454,7 @@
 				EA9E4FDB1AD8D4B600CEEEFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA9E4FDC1AD8D4B600CEEEFB /* Build configuration list for PBXNativeTarget "CoreAnimation-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +463,7 @@
 				EA9E4FDE1AD8D4B600CEEEFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

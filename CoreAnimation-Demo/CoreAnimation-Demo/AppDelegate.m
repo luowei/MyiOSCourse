@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "ContentRectViewController.h"
+#import "ClickViewController.h"
+#import "HitTestViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,11 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//
-//    self.window.rootViewController = [ViewController new];
-//
-//    [self.window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+//    self.window.rootViewController = [ContentRectViewController new];
+//    self.window.rootViewController = [ClickViewController new];
+    self.window.rootViewController = [HitTestViewController new];
+
+    [self.window makeKeyAndVisible];
 
     return YES;
 }
