@@ -44,9 +44,9 @@
 //    self.window.rootViewController = [GroupOpacityViewController new];
 //    self.window.rootViewController = [TransformViewController new];
 //    self.window.rootViewController = [Transform3dViewController new];
-//    self.window.rootViewController = [Cube3dViewController new];
+    self.window.rootViewController = [Cube3dViewController new];
 //    self.window.rootViewController = [ImplicitAnimationViewController new];
-    self.window.rootViewController = [PresentationViewController new];
+//    self.window.rootViewController = [PresentationViewController new];
 
 
     [self.window makeKeyAndVisible];

@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				EA9E50211AD9912000CEEEFB /* AnimationVC */,
-				EA9E4FE41AD8EBB400CEEEFB /* ViewController */,
+				EA9E4FE41AD8EBB400CEEEFB /* LayerVC */,
 				EA9E4FBD1AD8D4B600CEEEFB /* AppDelegate.h */,
 				EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */,
 				EA9E4FC01AD8D4B600CEEEFB /* ViewController.h */,
@@ -187,7 +187,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EA9E4FE41AD8EBB400CEEEFB /* ViewController */ = {
+		EA9E4FE41AD8EBB400CEEEFB /* LayerVC */ = {
 			isa = PBXGroup;
 			children = (
 				EA9E4FE81AD8ECA400CEEEFB /* ContentRectViewController.h */,
@@ -221,7 +221,7 @@
 				EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */,
 				EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */,
 			);
-			path = ViewController;
+			path = LayerVC;
 			sourceTree = "<group>";
 		};
 		EA9E50211AD9912000CEEEFB /* AnimationVC */ = {
