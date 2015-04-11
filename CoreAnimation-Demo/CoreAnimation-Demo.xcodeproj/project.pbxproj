@@ -35,6 +35,10 @@
 		EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */; };
 		EA9E50191AD9804500CEEEFB /* Cube3dViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */; };
 		EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9E501A1AD9890600CEEEFB /* GLKit.framework */; };
+		EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50231AD9912000CEEEFB /* ImplicitAnimationViewController.m */; };
+		EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50241AD9912000CEEEFB /* ImplicitAnimationViewController.xib */; };
+		EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */; };
+		EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +97,12 @@
 		EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube3dViewController.m; sourceTree = "<group>"; };
 		EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cube3dViewController.xib; sourceTree = "<group>"; };
 		EA9E501A1AD9890600CEEEFB /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		EA9E50221AD9912000CEEEFB /* ImplicitAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImplicitAnimationViewController.h; sourceTree = "<group>"; };
+		EA9E50231AD9912000CEEEFB /* ImplicitAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImplicitAnimationViewController.m; sourceTree = "<group>"; };
+		EA9E50241AD9912000CEEEFB /* ImplicitAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImplicitAnimationViewController.xib; sourceTree = "<group>"; };
+		EA9E50271AD9A5A200CEEEFB /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
+		EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
+		EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +147,7 @@
 		EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA9E50211AD9912000CEEEFB /* AnimationVC */,
 				EA9E4FE41AD8EBB400CEEEFB /* ViewController */,
 				EA9E4FBD1AD8D4B600CEEEFB /* AppDelegate.h */,
 				EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */,
@@ -211,6 +222,19 @@
 				EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA9E50211AD9912000CEEEFB /* AnimationVC */ = {
+			isa = PBXGroup;
+			children = (
+				EA9E50221AD9912000CEEEFB /* ImplicitAnimationViewController.h */,
+				EA9E50231AD9912000CEEEFB /* ImplicitAnimationViewController.m */,
+				EA9E50241AD9912000CEEEFB /* ImplicitAnimationViewController.xib */,
+				EA9E50271AD9A5A200CEEEFB /* PresentationViewController.h */,
+				EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */,
+				EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */,
+			);
+			path = AnimationVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
+				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
 				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,
 				EA9E500A1AD95BCC00CEEEFB /* GroupOpacityViewController.xib in Resources */,
@@ -303,6 +328,7 @@
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
+				EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */,
 				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
 				EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */,
 				EA9E500F1AD9661200CEEEFB /* TransformViewController.xib in Resources */,
@@ -329,7 +355,9 @@
 				EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */,
 				EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */,
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
+				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
+				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
