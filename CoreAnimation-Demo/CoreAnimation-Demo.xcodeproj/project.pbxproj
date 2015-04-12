@@ -39,6 +39,14 @@
 		EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50241AD9912000CEEEFB /* ImplicitAnimationViewController.xib */; };
 		EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */; };
 		EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */; };
+		EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6687E1ADA4591007E8EE3 /* BasicAnimationViewController.m */; };
+		EAF668811ADA4591007E8EE3 /* BasicAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6687F1ADA4591007E8EE3 /* BasicAnimationViewController.xib */; };
+		EAF668851ADA4591007E8EE3 /* KeyFrameAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF668831ADA4591007E8EE3 /* KeyFrameAnimationViewController.m */; };
+		EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF668841ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib */; };
+		EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF668881ADAB629007E8EE3 /* BezierAnimationViewController.m */; };
+		EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF668891ADAB629007E8EE3 /* BezierAnimationViewController.xib */; };
+		EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6688D1ADAC047007E8EE3 /* TransitionViewController.m */; };
+		EAF668901ADAC047007E8EE3 /* TransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6688E1ADAC047007E8EE3 /* TransitionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +111,18 @@
 		EA9E50271AD9A5A200CEEEFB /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
+		EAF6687D1ADA4591007E8EE3 /* BasicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationViewController.h; sourceTree = "<group>"; };
+		EAF6687E1ADA4591007E8EE3 /* BasicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationViewController.m; sourceTree = "<group>"; };
+		EAF6687F1ADA4591007E8EE3 /* BasicAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAnimationViewController.xib; sourceTree = "<group>"; };
+		EAF668821ADA4591007E8EE3 /* KeyFrameAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyFrameAnimationViewController.h; sourceTree = "<group>"; };
+		EAF668831ADA4591007E8EE3 /* KeyFrameAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyFrameAnimationViewController.m; sourceTree = "<group>"; };
+		EAF668841ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyFrameAnimationViewController.xib; sourceTree = "<group>"; };
+		EAF668871ADAB629007E8EE3 /* BezierAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierAnimationViewController.h; sourceTree = "<group>"; };
+		EAF668881ADAB629007E8EE3 /* BezierAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierAnimationViewController.m; sourceTree = "<group>"; };
+		EAF668891ADAB629007E8EE3 /* BezierAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BezierAnimationViewController.xib; sourceTree = "<group>"; };
+		EAF6688C1ADAC047007E8EE3 /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		EAF6688D1ADAC047007E8EE3 /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		EAF6688E1ADAC047007E8EE3 /* TransitionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransitionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +253,18 @@
 				EA9E50271AD9A5A200CEEEFB /* PresentationViewController.h */,
 				EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */,
 				EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */,
+				EAF6687D1ADA4591007E8EE3 /* BasicAnimationViewController.h */,
+				EAF6687E1ADA4591007E8EE3 /* BasicAnimationViewController.m */,
+				EAF6687F1ADA4591007E8EE3 /* BasicAnimationViewController.xib */,
+				EAF668821ADA4591007E8EE3 /* KeyFrameAnimationViewController.h */,
+				EAF668831ADA4591007E8EE3 /* KeyFrameAnimationViewController.m */,
+				EAF668841ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib */,
+				EAF668871ADAB629007E8EE3 /* BezierAnimationViewController.h */,
+				EAF668881ADAB629007E8EE3 /* BezierAnimationViewController.m */,
+				EAF668891ADAB629007E8EE3 /* BezierAnimationViewController.xib */,
+				EAF6688C1ADAC047007E8EE3 /* TransitionViewController.h */,
+				EAF6688D1ADAC047007E8EE3 /* TransitionViewController.m */,
+				EAF6688E1ADAC047007E8EE3 /* TransitionViewController.xib */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -318,9 +350,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
+				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
+				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
 				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
 				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,
+				EAF668811ADA4591007E8EE3 /* BasicAnimationViewController.xib in Resources */,
 				EA9E500A1AD95BCC00CEEEFB /* GroupOpacityViewController.xib in Resources */,
 				EA9E50191AD9804500CEEEFB /* Cube3dViewController.xib in Resources */,
 				EA9E4FFB1AD9448600CEEEFB /* ShadowViewController.xib in Resources */,
@@ -329,6 +364,7 @@
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
 				EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */,
+				EAF668901ADAC047007E8EE3 /* TransitionViewController.xib in Resources */,
 				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
 				EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */,
 				EA9E500F1AD9661200CEEEFB /* TransformViewController.xib in Resources */,
@@ -352,17 +388,21 @@
 				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
+				EAF668851ADA4591007E8EE3 /* KeyFrameAnimationViewController.m in Sources */,
 				EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */,
 				EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */,
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
 				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
 				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
+				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
+				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
 				EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
+				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
