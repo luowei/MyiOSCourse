@@ -25,6 +25,12 @@
 #import "BezierAnimationViewController.h"
 #import "TransitionViewController.h"
 #import "StopAnimationViewController.h"
+#import "ShapeLayerViewController.h"
+#import "TextLayerViewController.h"
+#import "TransformLayerViewController.h"
+#import "GradientLayerViewController.h"
+#import "ReplicatorLayerViewController.h"
+#import "TiledLayerViewController.h"
 
 @interface AppDelegate ()
 
@@ -56,7 +62,14 @@
 //    self.window.rootViewController = [KeyFrameAnimationViewController new];
 //    self.window.rootViewController = [BezierAnimationViewController new];
 //    self.window.rootViewController = [TransitionViewController new];
-    self.window.rootViewController = [StopAnimationViewController new];
+//    self.window.rootViewController = [StopAnimationViewController new];
+//    self.window.rootViewController = [ShapeLayerViewController new];
+//    self.window.rootViewController = [TextLayerViewController new];
+//    self.window.rootViewController = [TransformLayerViewController new];
+//    self.window.rootViewController = [GradientLayerViewController new];
+//    self.window.rootViewController = [ReplicatorLayerViewController new];
+    self.window.rootViewController = [TiledLayerViewController new];
+
 
 
 //    //添加tabBar

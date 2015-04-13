@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */; };
 		EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */; };
+		EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29261ADB6DBE00E8C078 /* ShapeLayerViewController.m */; };
+		EA1D292A1ADB704200E8C078 /* TextLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29291ADB704200E8C078 /* TextLayerViewController.m */; };
+		EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1D292B1ADB732A00E8C078 /* CoreText.framework */; };
+		EA1D29331ADB74A100E8C078 /* LayerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29321ADB74A100E8C078 /* LayerLabel.m */; };
+		EA1D29361ADB760600E8C078 /* TransformLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29351ADB760600E8C078 /* TransformLayerViewController.m */; };
+		EA1D29391ADB76F100E8C078 /* GradientLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29381ADB76F100E8C078 /* GradientLayerViewController.m */; };
+		EA1D293C1ADB89B500E8C078 /* ReplicatorLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D293B1ADB89B500E8C078 /* ReplicatorLayerViewController.m */; };
+		EA1D293F1ADB8CC300E8C078 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D293E1ADB8CC300E8C078 /* ReflectionView.m */; };
+		EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29411ADB924100E8C078 /* ScrollLayerView.m */; };
+		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
+		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -65,6 +76,26 @@
 		EA1D29201ADB67F100E8C078 /* StopAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopAnimationViewController.h; sourceTree = "<group>"; };
 		EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAnimationViewController.m; sourceTree = "<group>"; };
 		EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopAnimationViewController.xib; sourceTree = "<group>"; };
+		EA1D29251ADB6DBE00E8C078 /* ShapeLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeLayerViewController.h; sourceTree = "<group>"; };
+		EA1D29261ADB6DBE00E8C078 /* ShapeLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeLayerViewController.m; sourceTree = "<group>"; };
+		EA1D29281ADB704200E8C078 /* TextLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextLayerViewController.h; sourceTree = "<group>"; };
+		EA1D29291ADB704200E8C078 /* TextLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextLayerViewController.m; sourceTree = "<group>"; };
+		EA1D292B1ADB732A00E8C078 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		EA1D29311ADB74A100E8C078 /* LayerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerLabel.h; sourceTree = "<group>"; };
+		EA1D29321ADB74A100E8C078 /* LayerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerLabel.m; sourceTree = "<group>"; };
+		EA1D29341ADB760600E8C078 /* TransformLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformLayerViewController.h; sourceTree = "<group>"; };
+		EA1D29351ADB760600E8C078 /* TransformLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransformLayerViewController.m; sourceTree = "<group>"; };
+		EA1D29371ADB76F100E8C078 /* GradientLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientLayerViewController.h; sourceTree = "<group>"; };
+		EA1D29381ADB76F100E8C078 /* GradientLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientLayerViewController.m; sourceTree = "<group>"; };
+		EA1D293A1ADB89B500E8C078 /* ReplicatorLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplicatorLayerViewController.h; sourceTree = "<group>"; };
+		EA1D293B1ADB89B500E8C078 /* ReplicatorLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplicatorLayerViewController.m; sourceTree = "<group>"; };
+		EA1D293D1ADB8CC300E8C078 /* ReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionView.h; sourceTree = "<group>"; };
+		EA1D293E1ADB8CC300E8C078 /* ReflectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionView.m; sourceTree = "<group>"; };
+		EA1D29401ADB924100E8C078 /* ScrollLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollLayerView.h; sourceTree = "<group>"; };
+		EA1D29411ADB924100E8C078 /* ScrollLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollLayerView.m; sourceTree = "<group>"; };
+		EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledLayerViewController.h; sourceTree = "<group>"; };
+		EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledLayerViewController.m; sourceTree = "<group>"; };
+		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -135,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */,
 				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,9 +181,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA1D29301ADB74A100E8C078 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D29311ADB74A100E8C078 /* LayerLabel.h */,
+				EA1D29321ADB74A100E8C078 /* LayerLabel.m */,
+				EA1D293D1ADB8CC300E8C078 /* ReflectionView.h */,
+				EA1D293E1ADB8CC300E8C078 /* ReflectionView.m */,
+				EA1D29401ADB924100E8C078 /* ScrollLayerView.h */,
+				EA1D29411ADB924100E8C078 /* ScrollLayerView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
+				EA1D292B1ADB732A00E8C078 /* CoreText.framework */,
 				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
 				EA9E4FD21AD8D4B600CEEEFB /* CoreAnimation-DemoTests */,
@@ -215,6 +261,7 @@
 		EA9E4FE41AD8EBB400CEEEFB /* LayerVC */ = {
 			isa = PBXGroup;
 			children = (
+				EA1D29301ADB74A100E8C078 /* CustomView */,
 				EA9E4FE81AD8ECA400CEEEFB /* ContentRectViewController.h */,
 				EA9E4FE91AD8ECA400CEEEFB /* ContentRectViewController.m */,
 				EA9E4FEA1AD8ECA400CEEEFB /* ContentRectViewController.xib */,
@@ -245,6 +292,19 @@
 				EA9E50151AD9804500CEEEFB /* Cube3dViewController.h */,
 				EA9E50161AD9804500CEEEFB /* Cube3dViewController.m */,
 				EA9E50171AD9804500CEEEFB /* Cube3dViewController.xib */,
+				EA1D29251ADB6DBE00E8C078 /* ShapeLayerViewController.h */,
+				EA1D29261ADB6DBE00E8C078 /* ShapeLayerViewController.m */,
+				EA1D29281ADB704200E8C078 /* TextLayerViewController.h */,
+				EA1D29291ADB704200E8C078 /* TextLayerViewController.m */,
+				EA1D29341ADB760600E8C078 /* TransformLayerViewController.h */,
+				EA1D29351ADB760600E8C078 /* TransformLayerViewController.m */,
+				EA1D29371ADB76F100E8C078 /* GradientLayerViewController.h */,
+				EA1D29381ADB76F100E8C078 /* GradientLayerViewController.m */,
+				EA1D293A1ADB89B500E8C078 /* ReplicatorLayerViewController.h */,
+				EA1D293B1ADB89B500E8C078 /* ReplicatorLayerViewController.m */,
+				EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */,
+				EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */,
+				EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */,
 			);
 			path = LayerVC;
 			sourceTree = "<group>";
@@ -358,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
+				EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */,
 				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
 				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
 				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
@@ -395,21 +456,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
+				EA1D293C1ADB89B500E8C078 /* ReplicatorLayerViewController.m in Sources */,
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
 				EAF668851ADA4591007E8EE3 /* KeyFrameAnimationViewController.m in Sources */,
 				EA9E4FEB1AD8ECA400CEEEFB /* ContentRectViewController.m in Sources */,
 				EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */,
+				EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */,
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
 				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
+				EA1D29391ADB76F100E8C078 /* GradientLayerViewController.m in Sources */,
+				EA1D29361ADB760600E8C078 /* TransformLayerViewController.m in Sources */,
 				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
+				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,
+				EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
+				EA1D29331ADB74A100E8C078 /* LayerLabel.m in Sources */,
+				EA1D293F1ADB8CC300E8C078 /* ReflectionView.m in Sources */,
 				EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */,
+				EA1D292A1ADB704200E8C078 /* TextLayerViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
 				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
