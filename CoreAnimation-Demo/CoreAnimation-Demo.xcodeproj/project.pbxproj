@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */; };
+		EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -60,6 +62,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA1D29201ADB67F100E8C078 /* StopAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopAnimationViewController.h; sourceTree = "<group>"; };
+		EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAnimationViewController.m; sourceTree = "<group>"; };
+		EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopAnimationViewController.xib; sourceTree = "<group>"; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,6 +270,9 @@
 				EAF6688C1ADAC047007E8EE3 /* TransitionViewController.h */,
 				EAF6688D1ADAC047007E8EE3 /* TransitionViewController.m */,
 				EAF6688E1ADAC047007E8EE3 /* TransitionViewController.xib */,
+				EA1D29201ADB67F100E8C078 /* StopAnimationViewController.h */,
+				EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */,
+				EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */,
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
+				EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
 				EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */,
 				EAF668901ADAC047007E8EE3 /* TransitionViewController.xib in Resources */,
@@ -402,6 +411,7 @@
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
 				EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
+				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
 			);

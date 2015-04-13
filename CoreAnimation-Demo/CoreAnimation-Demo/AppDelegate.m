@@ -24,6 +24,7 @@
 #import "KeyFrameAnimationViewController.h"
 #import "BezierAnimationViewController.h"
 #import "TransitionViewController.h"
+#import "StopAnimationViewController.h"
 
 @interface AppDelegate ()
 
@@ -54,12 +55,37 @@
 //    self.window.rootViewController = [BasicAnimationViewController new];
 //    self.window.rootViewController = [KeyFrameAnimationViewController new];
 //    self.window.rootViewController = [BezierAnimationViewController new];
-    self.window.rootViewController = [TransitionViewController new];
+//    self.window.rootViewController = [TransitionViewController new];
+    self.window.rootViewController = [StopAnimationViewController new];
+
+
+//    //添加tabBar
+//    UIViewController *viewController1 = [TransitionViewController new];
+//    viewController1.tabBarItem.title = @"aaaa";
+//    viewController1.tabBarItem.image = [UIImage imageNamed:@"aa"];
+//    UIViewController *viewController2 = [ClickViewController new];
+//    viewController2.tabBarItem.title = @"bbbb";
+//    viewController2.tabBarItem.image = [UIImage imageNamed:@"bb"];
+//
+//    self.tabBarController = [[UITabBarController alloc] init];
+//    self.tabBarController.viewControllers = @[viewController1, viewController2];
+//    self.tabBarController.delegate = self;
+//    self.window.rootViewController = self.tabBarController;
 
 
     [self.window makeKeyAndVisible];
 
     return YES;
+}
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+
+    //给TabBar设置过渡动画
+    //set up crossfade transition
+    CATransition *transition = [CATransition animation];
+    transition.type = kCATransitionFade;
+    //apply transition to tab bar controller's view
+    [self.tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

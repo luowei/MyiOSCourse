@@ -27,6 +27,8 @@
 
 - (IBAction)switchImage
 {
+    /*
+    //使用CATransition来过渡动画
     //set up crossfade transition
     CATransition *transition = [CATransition animation];
     transition.type = kCATransitionFade;
@@ -37,7 +39,51 @@
     NSUInteger index = [self.images indexOfObject:currentImage];
     index = (index + 1) % [self.images count];
     self.imageView.image = self.images[index];
+    */
+
+    /*
+    //使用UIKit提供的方法来做过渡动画
+    [UIView transitionWithView:self.imageView duration:1.0
+                       options:UIViewAnimationOptionTransitionFlipFromLeft
+                    animations:^{
+                        //cycle to next image
+                        UIImage *currentImage = self.imageView.image;
+                        NSUInteger index = [self.images indexOfObject:currentImage];
+                        index = (index + 1) % [self.images count];
+                        self.imageView.image = self.images[index];
+                    }
+                    completion:NULL];
+    */
+
+//    自定义过渡效果
+    //preserve the current view snapshot
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *coverImage = UIGraphicsGetImageFromCurrentImageContext();
+    //insert snapshot view in front of this one
+    UIView *coverView = [[UIImageView alloc] initWithImage:coverImage];
+    coverView.frame = self.view.bounds;
+    [self.view addSubview:coverView];
+    //update the view (we'll simply randomize the layer background color)
+    CGFloat red = arc4random() / (CGFloat)INT_MAX;
+    CGFloat green = arc4random() / (CGFloat)INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    //perform animation (anything you like)
+    [UIView animateWithDuration:1.0 animations:^{
+        //scale, rotate and fade the view
+        CGAffineTransform transform = CGAffineTransformMakeScale(0.01, 0.01);
+        transform = CGAffineTransformRotate(transform, M_PI_2);
+        coverView.transform = transform;
+        coverView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        //remove the cover view now we're finished with it
+        [coverView removeFromSuperview];
+    }];
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
