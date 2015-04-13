@@ -20,6 +20,11 @@
 		EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29411ADB924100E8C078 /* ScrollLayerView.m */; };
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
+		EA3782601ADC14340031C056 /* EmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA37825F1ADC14340031C056 /* EmitterLayerViewController.m */; };
+		EA3782631ADC1A880031C056 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3782621ADC1A880031C056 /* EAGLLayerViewController.m */; };
+		EA3782661ADC1C4F0031C056 /* PlayerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3782651ADC1C4F0031C056 /* PlayerLayerViewController.m */; };
+		EA3782681ADC1C9D0031C056 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3782671ADC1C9D0031C056 /* AVFoundation.framework */; };
+		EA37826B1ADC1D540031C056 /* MyShow.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA37826A1ADC1D540031C056 /* MyShow.mp4 */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -96,6 +101,14 @@
 		EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledLayerViewController.h; sourceTree = "<group>"; };
 		EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledLayerViewController.m; sourceTree = "<group>"; };
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
+		EA37825E1ADC14340031C056 /* EmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterLayerViewController.h; sourceTree = "<group>"; };
+		EA37825F1ADC14340031C056 /* EmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterLayerViewController.m; sourceTree = "<group>"; };
+		EA3782611ADC1A880031C056 /* EAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLLayerViewController.h; sourceTree = "<group>"; };
+		EA3782621ADC1A880031C056 /* EAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLLayerViewController.m; sourceTree = "<group>"; };
+		EA3782641ADC1C4F0031C056 /* PlayerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLayerViewController.h; sourceTree = "<group>"; };
+		EA3782651ADC1C4F0031C056 /* PlayerLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLayerViewController.m; sourceTree = "<group>"; };
+		EA3782671ADC1C9D0031C056 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EA37826A1ADC1D540031C056 /* MyShow.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyShow.mp4; sourceTree = "<group>"; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3782681ADC1C9D0031C056 /* AVFoundation.framework in Frameworks */,
 				EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */,
 				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
@@ -194,9 +208,18 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		EA3782691ADC1D440031C056 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA37826A1ADC1D540031C056 /* MyShow.mp4 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
+				EA3782671ADC1C9D0031C056 /* AVFoundation.framework */,
 				EA1D292B1ADB732A00E8C078 /* CoreText.framework */,
 				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
@@ -218,6 +241,7 @@
 		EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA3782691ADC1D440031C056 /* Resources */,
 				EA9E50211AD9912000CEEEFB /* AnimationVC */,
 				EA9E4FE41AD8EBB400CEEEFB /* LayerVC */,
 				EA9E4FBD1AD8D4B600CEEEFB /* AppDelegate.h */,
@@ -305,6 +329,12 @@
 				EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */,
 				EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */,
 				EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */,
+				EA37825E1ADC14340031C056 /* EmitterLayerViewController.h */,
+				EA37825F1ADC14340031C056 /* EmitterLayerViewController.m */,
+				EA3782611ADC1A880031C056 /* EAGLLayerViewController.h */,
+				EA3782621ADC1A880031C056 /* EAGLLayerViewController.m */,
+				EA3782641ADC1C4F0031C056 /* PlayerLayerViewController.h */,
+				EA3782651ADC1C4F0031C056 /* PlayerLayerViewController.m */,
 			);
 			path = LayerVC;
 			sourceTree = "<group>";
@@ -419,6 +449,7 @@
 			files = (
 				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
 				EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */,
+				EA37826B1ADC1D540031C056 /* MyShow.mp4 in Resources */,
 				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
 				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
 				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
@@ -472,6 +503,7 @@
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
+				EA3782601ADC14340031C056 /* EmitterLayerViewController.m in Sources */,
 				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,
 				EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
@@ -484,6 +516,8 @@
 				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
+				EA3782631ADC1A880031C056 /* EAGLLayerViewController.m in Sources */,
+				EA3782661ADC1C4F0031C056 /* PlayerLayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

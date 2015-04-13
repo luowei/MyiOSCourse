@@ -31,6 +31,9 @@
 #import "GradientLayerViewController.h"
 #import "ReplicatorLayerViewController.h"
 #import "TiledLayerViewController.h"
+#import "EmitterLayerViewController.h"
+#import "EAGLLayerViewController.h"
+#import "PlayerLayerViewController.h"
 
 @interface AppDelegate ()
 
@@ -68,7 +71,10 @@
 //    self.window.rootViewController = [TransformLayerViewController new];
 //    self.window.rootViewController = [GradientLayerViewController new];
 //    self.window.rootViewController = [ReplicatorLayerViewController new];
-    self.window.rootViewController = [TiledLayerViewController new];
+//    self.window.rootViewController = [TiledLayerViewController new];
+//    self.window.rootViewController = [EmitterLayerViewController new];
+//    self.window.rootViewController = [EAGLLayerViewController new];
+    self.window.rootViewController = [PlayerLayerViewController new];
 
 
 
