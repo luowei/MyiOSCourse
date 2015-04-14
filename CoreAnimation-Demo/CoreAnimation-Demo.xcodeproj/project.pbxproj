@@ -20,6 +20,9 @@
 		EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29411ADB924100E8C078 /* ScrollLayerView.m */; };
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
+		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
+		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
+		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -96,6 +99,11 @@
 		EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledLayerViewController.h; sourceTree = "<group>"; };
 		EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledLayerViewController.m; sourceTree = "<group>"; };
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
+		EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
+		EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
+		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
+		EA48884F1ADD258600078FCB /* OpenDoorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDoorViewController.h; sourceTree = "<group>"; };
+		EA4888501ADD258600078FCB /* OpenDoorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDoorViewController.m; sourceTree = "<group>"; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -333,6 +341,11 @@
 				EA1D29201ADB67F100E8C078 /* StopAnimationViewController.h */,
 				EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */,
 				EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */,
+				EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */,
+				EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */,
+				EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */,
+				EA48884F1ADD258600078FCB /* OpenDoorViewController.h */,
+				EA4888501ADD258600078FCB /* OpenDoorViewController.m */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -430,6 +443,7 @@
 				EA9E4FFB1AD9448600CEEEFB /* ShadowViewController.xib in Resources */,
 				EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */,
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
+				EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */,
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
 				EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
@@ -466,10 +480,12 @@
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
 				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
+				EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */,
 				EA1D29391ADB76F100E8C078 /* GradientLayerViewController.m in Sources */,
 				EA1D29361ADB760600E8C078 /* TransformLayerViewController.m in Sources */,
 				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
+				EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
 				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,

@@ -31,6 +31,8 @@
 #import "GradientLayerViewController.h"
 #import "ReplicatorLayerViewController.h"
 #import "TiledLayerViewController.h"
+#import "MediaTimingViewController.h"
+#import "OpenDoorViewController.h"
 
 @interface AppDelegate ()
 
@@ -68,7 +70,9 @@
 //    self.window.rootViewController = [TransformLayerViewController new];
 //    self.window.rootViewController = [GradientLayerViewController new];
 //    self.window.rootViewController = [ReplicatorLayerViewController new];
-    self.window.rootViewController = [TiledLayerViewController new];
+//    self.window.rootViewController = [TiledLayerViewController new];
+//    self.window.rootViewController = [MediaTimingViewController new];
+    self.window.rootViewController = [OpenDoorViewController new];
 
 
 
