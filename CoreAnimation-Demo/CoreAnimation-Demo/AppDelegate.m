@@ -33,6 +33,7 @@
 #import "TiledLayerViewController.h"
 #import "MediaTimingViewController.h"
 #import "OpenDoorViewController.h"
+#import "RelativeTimeViewController.h"
 
 @interface AppDelegate ()
 
@@ -73,6 +74,7 @@
 //    self.window.rootViewController = [TiledLayerViewController new];
 //    self.window.rootViewController = [MediaTimingViewController new];
     self.window.rootViewController = [OpenDoorViewController new];
+//    self.window.rootViewController = [RelativeTimeViewController new];
 
 
 

@@ -23,6 +23,8 @@
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
 		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
 		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
+		EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */; };
+		EA78D02C1ADD4CC20019DB31 /* RelativeTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -104,6 +106,9 @@
 		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
 		EA48884F1ADD258600078FCB /* OpenDoorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDoorViewController.h; sourceTree = "<group>"; };
 		EA4888501ADD258600078FCB /* OpenDoorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDoorViewController.m; sourceTree = "<group>"; };
+		EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelativeTimeViewController.h; sourceTree = "<group>"; };
+		EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelativeTimeViewController.m; sourceTree = "<group>"; };
+		EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelativeTimeViewController.xib; sourceTree = "<group>"; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -346,6 +351,9 @@
 				EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */,
 				EA48884F1ADD258600078FCB /* OpenDoorViewController.h */,
 				EA4888501ADD258600078FCB /* OpenDoorViewController.m */,
+				EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */,
+				EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */,
+				EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -431,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E50141AD97AD600CEEEFB /* Transform3dViewController.xib in Resources */,
+				EA78D02C1ADD4CC20019DB31 /* RelativeTimeViewController.xib in Resources */,
 				EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */,
 				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
 				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
@@ -470,6 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
+				EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */,
 				EA1D293C1ADB89B500E8C078 /* ReplicatorLayerViewController.m in Sources */,
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
