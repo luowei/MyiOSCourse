@@ -57,6 +57,12 @@
 		EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50241AD9912000CEEEFB /* ImplicitAnimationViewController.xib */; };
 		EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */; };
 		EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */; };
+		EA9EB7631ADE775700159A10 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9EB7621ADE775700159A10 /* MyView.m */; };
+		EAEC6A2D1ADE056400A62585 /* MediaTimingFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEC6A2B1ADE056400A62585 /* MediaTimingFunctionViewController.m */; };
+		EAEC6A2E1ADE056400A62585 /* MediaTimingFunctionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAEC6A2C1ADE056400A62585 /* MediaTimingFunctionViewController.xib */; };
+		EAEC6A631ADE357B00A62585 /* ReboundBallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEC6A621ADE357B00A62585 /* ReboundBallViewController.m */; };
+		EAEC6A661ADE709000A62585 /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEC6A651ADE709000A62585 /* DrawingView.m */; };
+		EAEC6A6B1ADE727E00A62585 /* DrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAEC6A6A1ADE727E00A62585 /* DrawViewController.m */; };
 		EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF6687E1ADA4591007E8EE3 /* BasicAnimationViewController.m */; };
 		EAF668811ADA4591007E8EE3 /* BasicAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAF6687F1ADA4591007E8EE3 /* BasicAnimationViewController.xib */; };
 		EAF668851ADA4591007E8EE3 /* KeyFrameAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF668831ADA4591007E8EE3 /* KeyFrameAnimationViewController.m */; };
@@ -160,6 +166,17 @@
 		EA9E50271AD9A5A200CEEEFB /* PresentationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentationViewController.h; sourceTree = "<group>"; };
 		EA9E50281AD9A5A200CEEEFB /* PresentationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentationViewController.m; sourceTree = "<group>"; };
 		EA9E50291AD9A5A200CEEEFB /* PresentationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PresentationViewController.xib; sourceTree = "<group>"; };
+		EA9EB7611ADE775700159A10 /* MyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
+		EA9EB7621ADE775700159A10 /* MyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		EAEC6A2A1ADE056400A62585 /* MediaTimingFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingFunctionViewController.h; sourceTree = "<group>"; };
+		EAEC6A2B1ADE056400A62585 /* MediaTimingFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingFunctionViewController.m; sourceTree = "<group>"; };
+		EAEC6A2C1ADE056400A62585 /* MediaTimingFunctionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingFunctionViewController.xib; sourceTree = "<group>"; };
+		EAEC6A611ADE357B00A62585 /* ReboundBallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReboundBallViewController.h; sourceTree = "<group>"; };
+		EAEC6A621ADE357B00A62585 /* ReboundBallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReboundBallViewController.m; sourceTree = "<group>"; };
+		EAEC6A641ADE709000A62585 /* DrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		EAEC6A651ADE709000A62585 /* DrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		EAEC6A691ADE727E00A62585 /* DrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawViewController.h; sourceTree = "<group>"; };
+		EAEC6A6A1ADE727E00A62585 /* DrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawViewController.m; sourceTree = "<group>"; };
 		EAF6687D1ADA4591007E8EE3 /* BasicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicAnimationViewController.h; sourceTree = "<group>"; };
 		EAF6687E1ADA4591007E8EE3 /* BasicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicAnimationViewController.m; sourceTree = "<group>"; };
 		EAF6687F1ADA4591007E8EE3 /* BasicAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicAnimationViewController.xib; sourceTree = "<group>"; };
@@ -197,12 +214,16 @@
 		EA1D29301ADB74A100E8C078 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				EA9EB7611ADE775700159A10 /* MyView.h */,
+				EA9EB7621ADE775700159A10 /* MyView.m */,
 				EA1D29311ADB74A100E8C078 /* LayerLabel.h */,
 				EA1D29321ADB74A100E8C078 /* LayerLabel.m */,
 				EA1D293D1ADB8CC300E8C078 /* ReflectionView.h */,
 				EA1D293E1ADB8CC300E8C078 /* ReflectionView.m */,
 				EA1D29401ADB924100E8C078 /* ScrollLayerView.h */,
 				EA1D29411ADB924100E8C078 /* ScrollLayerView.m */,
+				EAEC6A641ADE709000A62585 /* DrawingView.h */,
+				EAEC6A651ADE709000A62585 /* DrawingView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -318,6 +339,8 @@
 				EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */,
 				EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */,
 				EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */,
+				EAEC6A691ADE727E00A62585 /* DrawViewController.h */,
+				EAEC6A6A1ADE727E00A62585 /* DrawViewController.m */,
 			);
 			path = LayerVC;
 			sourceTree = "<group>";
@@ -354,6 +377,11 @@
 				EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */,
 				EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */,
 				EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */,
+				EAEC6A2A1ADE056400A62585 /* MediaTimingFunctionViewController.h */,
+				EAEC6A2B1ADE056400A62585 /* MediaTimingFunctionViewController.m */,
+				EAEC6A2C1ADE056400A62585 /* MediaTimingFunctionViewController.xib */,
+				EAEC6A611ADE357B00A62585 /* ReboundBallViewController.h */,
+				EAEC6A621ADE357B00A62585 /* ReboundBallViewController.m */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -457,6 +485,7 @@
 				EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
 				EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */,
+				EAEC6A2E1ADE056400A62585 /* MediaTimingFunctionViewController.xib in Resources */,
 				EAF668901ADAC047007E8EE3 /* TransitionViewController.xib in Resources */,
 				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
 				EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */,
@@ -478,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAEC6A6B1ADE727E00A62585 /* DrawViewController.m in Sources */,
 				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
 				EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */,
 				EA1D293C1ADB89B500E8C078 /* ReplicatorLayerViewController.m in Sources */,
@@ -491,15 +521,18 @@
 				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
 				EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */,
+				EAEC6A661ADE709000A62585 /* DrawingView.m in Sources */,
 				EA1D29391ADB76F100E8C078 /* GradientLayerViewController.m in Sources */,
 				EA1D29361ADB760600E8C078 /* TransformLayerViewController.m in Sources */,
 				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
+				EA9EB7631ADE775700159A10 /* MyView.m in Sources */,
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
 				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,
 				EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */,
+				EAEC6A2D1ADE056400A62585 /* MediaTimingFunctionViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
 				EA1D29331ADB74A100E8C078 /* LayerLabel.m in Sources */,
@@ -508,6 +541,7 @@
 				EA1D292A1ADB704200E8C078 /* TextLayerViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
 				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
+				EAEC6A631ADE357B00A62585 /* ReboundBallViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
 			);

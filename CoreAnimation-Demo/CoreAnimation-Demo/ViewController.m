@@ -7,9 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MyView.h"
 
 @interface ViewController ()
-
 @property (nonatomic, weak) IBOutlet UIView *layerView;
 
 @end
@@ -18,6 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+//    [self addMyView];
+
+
     // Do any additional setup after loading the view, typically from a nib.
 
 ////    给视图添加一个蓝色子图层
@@ -48,6 +52,34 @@
 //    UIView有一个叫做clipsToBounds的属性可以用来决定是否显示超出边界的内容，
 //  CALayer对应的属性叫做masksToBounds，把它设置为YES,图像就在边界了
     self.layerView.layer.masksToBounds = YES;
+}
+
+- (void)addMyView {
+    MyView *myView = [[MyView alloc] initWithFrame: CGRectMake(0, 0, 375, 667)];
+    myView.backgroundColor = [UIColor grayColor];
+
+    [self.view addSubview:myView];
+
+
+    UIImage *image = [UIImage imageNamed:@"earth.png"];
+    //add it directly to our view's layer
+    myView.layer.contents = (__bridge id)image.CGImage;
+//    myView.contentMode = UIViewContentModeCenter;//UIViewContentModeScaleAspectFit;
+    myView.layer.contentsGravity = kCAGravityResizeAspect;//kCAGravityCenter;
+    //设置中间区域拉伸
+//    myView.layer.contentsCenter = CGRectMake(0.25, 0.25, 0.5, 0.5);
+
+    //create sublayer
+    CALayer *blueLayer = [CALayer layer];
+    blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
+    blueLayer.backgroundColor = [UIColor blueColor].CGColor;
+    //set controller as layer delegate
+    blueLayer.delegate = self;
+    //ensure that layer backing image uses correct scale
+    blueLayer.contentsScale = [UIScreen mainScreen].scale; //add layer to our view
+    [myView.layer addSublayer:blueLayer];
+    //force layer to redraw
+    [blueLayer display];
 }
 
 - (void)didReceiveMemoryWarning {

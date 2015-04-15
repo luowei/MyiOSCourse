@@ -34,6 +34,9 @@
 #import "MediaTimingViewController.h"
 #import "OpenDoorViewController.h"
 #import "RelativeTimeViewController.h"
+#import "MediaTimingFunctionViewController.h"
+#import "ReboundBallViewController.h"
+#import "DrawViewController.h"
 
 @interface AppDelegate ()
 
@@ -73,8 +76,11 @@
 //    self.window.rootViewController = [ReplicatorLayerViewController new];
 //    self.window.rootViewController = [TiledLayerViewController new];
 //    self.window.rootViewController = [MediaTimingViewController new];
-    self.window.rootViewController = [OpenDoorViewController new];
+//    self.window.rootViewController = [OpenDoorViewController new];
 //    self.window.rootViewController = [RelativeTimeViewController new];
+//    self.window.rootViewController = [MediaTimingFunctionViewController new];
+//    self.window.rootViewController = [ReboundBallViewController new];
+    self.window.rootViewController = [DrawViewController new];
 
 
 

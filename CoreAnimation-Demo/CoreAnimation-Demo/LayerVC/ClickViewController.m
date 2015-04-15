@@ -90,6 +90,7 @@
     [self setAngle:secondAngle forHand:self.secondHand animated:animated];
 }
 
+/*
 - (void)setAngle:(CGFloat)angle forHand:(UIView *)handView animated:(BOOL)animated {
     //generate transform
     CATransform3D transform = CATransform3DMakeRotation(angle, 0, 0, 1);
@@ -103,6 +104,29 @@
         animation.delegate = self;
         [animation setValue:handView forKey:@"handView"];
         [handView.layer addAnimation:animation forKey:nil];
+    } else {
+        //set transform directly
+        handView.layer.transform = transform;
+    }
+}
+*/
+
+//添加了自定义缓冲函数的时钟程序
+- (void)setAngle:(CGFloat)angle forHand:(UIView *)handView animated:(BOOL)animated{
+    //generate transform
+    CATransform3D transform = CATransform3DMakeRotation(angle, 0, 0, 1);
+    if (animated) {
+        //create transform animation
+        CABasicAnimation *animation = [CABasicAnimation animation];
+        animation.keyPath = @"transform";
+        animation.fromValue = [handView.layer.presentationLayer valueForKey:@"transform"];
+        animation.toValue = [NSValue valueWithCATransform3D:transform];
+        animation.duration = 0.5;
+        animation.delegate = self;
+        animation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:1 :0 :0.75 :1];
+        //apply animation
+        handView.layer.transform = transform;
+        [handView.layer addAnimation:animation forKey:@"handView"];
     } else {
         //set transform directly
         handView.layer.transform = transform;
