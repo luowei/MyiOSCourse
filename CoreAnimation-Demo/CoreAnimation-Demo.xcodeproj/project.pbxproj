@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF060C3A60EB4AA8EDE9D74 /* BrushDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E73DCD1216F629A2A65 /* BrushDrawingView.m */; };
 		EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */; };
 		EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */; };
 		EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29261ADB6DBE00E8C078 /* ShapeLayerViewController.m */; };
@@ -84,6 +85,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEF060BDCC09E86B2B8C601D /* BrushDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrushDrawingView.h; sourceTree = "<group>"; };
+		BEF06E73DCD1216F629A2A65 /* BrushDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrushDrawingView.m; sourceTree = "<group>"; };
 		EA1D29201ADB67F100E8C078 /* StopAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StopAnimationViewController.h; sourceTree = "<group>"; };
 		EA1D29211ADB67F100E8C078 /* StopAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StopAnimationViewController.m; sourceTree = "<group>"; };
 		EA1D29221ADB67F100E8C078 /* StopAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StopAnimationViewController.xib; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 				EA1D29411ADB924100E8C078 /* ScrollLayerView.m */,
 				EAEC6A641ADE709000A62585 /* DrawingView.h */,
 				EAEC6A651ADE709000A62585 /* DrawingView.m */,
+				BEF06E73DCD1216F629A2A65 /* BrushDrawingView.m */,
+				BEF060BDCC09E86B2B8C601D /* BrushDrawingView.h */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				EAEC6A631ADE357B00A62585 /* ReboundBallViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
+				BEF060C3A60EB4AA8EDE9D74 /* BrushDrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
