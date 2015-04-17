@@ -16,7 +16,22 @@
 
 @implementation BrushDrawingView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        self.backgroundColor = [UIColor whiteColor];
+        [self setup];
+    }
+
+    return self;
+}
+
+
 - (void)awakeFromNib {
+    [self setup];
+}
+
+- (void)setup {
     //create array
     self.strokes = [NSMutableArray array];
 }
@@ -33,6 +48,13 @@
     CGPoint point = [[touches anyObject] locationInView:self];
     //add brush stroke
     [self addBrushStrokeAtPoint:point];
+}
+
+- (void)clearDraw{
+    if (self.strokes) {
+        [self.strokes removeAllObjects];
+        [self setNeedsDisplay];
+    }
 }
 
 /*
@@ -57,6 +79,8 @@
 }
 */
 
+
+//用-setNeedsDisplayInRect:来减少不必要的绘制
 - (void)addBrushStrokeAtPoint:(CGPoint)point {
     //add brush stroke to array
     [self.strokes addObject:[NSValue valueWithCGPoint:point]];
@@ -79,7 +103,7 @@
         //only draw brush stroke if it intersects dirty rect
         if (CGRectIntersectsRect(rect, brushRect)) {
             //draw brush stroke
-            [[UIImage imageNamed:@"mm.jpg"] drawInRect:brushRect];
+            [[UIImage imageNamed:@"luowei"] drawInRect:brushRect];
         }
     }
 }

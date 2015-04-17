@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BrushDrawingView : UIView
-
+- (void)clearDraw;
 @end
