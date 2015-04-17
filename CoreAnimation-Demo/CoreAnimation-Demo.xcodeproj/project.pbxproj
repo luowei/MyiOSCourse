@@ -22,12 +22,26 @@
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
 		EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */; };
-		EA26CC1C1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
 		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
 		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
 		EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */; };
 		EA78D02C1ADD4CC20019DB31 /* RelativeTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */; };
+		EA7F56AD1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */; };
+		EA7F56B11AE1744000CFF6D0 /* OptimizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */; };
+		EA7F56BD1AE179B400CFF6D0 /* Ship1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B31AE179B400CFF6D0 /* Ship1.png */; };
+		EA7F56BE1AE179B400CFF6D0 /* Ship10.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B41AE179B400CFF6D0 /* Ship10.png */; };
+		EA7F56BF1AE179B400CFF6D0 /* Ship2.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B51AE179B400CFF6D0 /* Ship2.png */; };
+		EA7F56C01AE179B400CFF6D0 /* Ship3.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B61AE179B400CFF6D0 /* Ship3.png */; };
+		EA7F56C11AE179B400CFF6D0 /* Ship4.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B71AE179B400CFF6D0 /* Ship4.png */; };
+		EA7F56C21AE179B400CFF6D0 /* Ship5.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B81AE179B400CFF6D0 /* Ship5.png */; };
+		EA7F56C31AE179B400CFF6D0 /* Ship6.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B91AE179B400CFF6D0 /* Ship6.png */; };
+		EA7F56C41AE179B400CFF6D0 /* Ship7.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56BA1AE179B400CFF6D0 /* Ship7.png */; };
+		EA7F56C51AE179B400CFF6D0 /* Ship8.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56BB1AE179B400CFF6D0 /* Ship8.png */; };
+		EA7F56C61AE179B400CFF6D0 /* Ship9.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56BC1AE179B400CFF6D0 /* Ship9.png */; };
+		EA7F56C91AE1801000CFF6D0 /* ImageIOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F56C81AE1801000CFF6D0 /* ImageIOViewController.m */; };
+		EA7F56E81AE18AAD00CFF6D0 /* mmPhotos in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56E71AE18AAD00CFF6D0 /* mmPhotos */; };
+		EA7F56EA1AE18C0D00CFF6D0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F56E91AE18C0D00CFF6D0 /* ImageIO.framework */; };
 		EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBB1AD8D4B600CEEEFB /* main.m */; };
 		EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FBE1AD8D4B600CEEEFB /* AppDelegate.m */; };
 		EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9E4FC11AD8D4B600CEEEFB /* ViewController.m */; };
@@ -114,7 +128,6 @@
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
 		EA26CB261AE1092000C5A1D4 /* ChipmunkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkViewController.h; sourceTree = "<group>"; };
 		EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkViewController.m; sourceTree = "<group>"; };
-		EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chipmunk6_iOS.framework; sourceTree = "<group>"; };
 		EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
 		EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
 		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
@@ -123,6 +136,23 @@
 		EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelativeTimeViewController.h; sourceTree = "<group>"; };
 		EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelativeTimeViewController.m; sourceTree = "<group>"; };
 		EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelativeTimeViewController.xib; sourceTree = "<group>"; };
+		EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chipmunk6_iOS.framework; path = FrameWork/Release/Chipmunk6_iOS.framework; sourceTree = "<group>"; };
+		EA7F56AF1AE1744000CFF6D0 /* OptimizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizeViewController.h; sourceTree = "<group>"; };
+		EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptimizeViewController.m; sourceTree = "<group>"; };
+		EA7F56B31AE179B400CFF6D0 /* Ship1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship1.png; sourceTree = "<group>"; };
+		EA7F56B41AE179B400CFF6D0 /* Ship10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship10.png; sourceTree = "<group>"; };
+		EA7F56B51AE179B400CFF6D0 /* Ship2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship2.png; sourceTree = "<group>"; };
+		EA7F56B61AE179B400CFF6D0 /* Ship3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship3.png; sourceTree = "<group>"; };
+		EA7F56B71AE179B400CFF6D0 /* Ship4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship4.png; sourceTree = "<group>"; };
+		EA7F56B81AE179B400CFF6D0 /* Ship5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship5.png; sourceTree = "<group>"; };
+		EA7F56B91AE179B400CFF6D0 /* Ship6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship6.png; sourceTree = "<group>"; };
+		EA7F56BA1AE179B400CFF6D0 /* Ship7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship7.png; sourceTree = "<group>"; };
+		EA7F56BB1AE179B400CFF6D0 /* Ship8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship8.png; sourceTree = "<group>"; };
+		EA7F56BC1AE179B400CFF6D0 /* Ship9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship9.png; sourceTree = "<group>"; };
+		EA7F56C71AE1801000CFF6D0 /* ImageIOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageIOViewController.h; sourceTree = "<group>"; };
+		EA7F56C81AE1801000CFF6D0 /* ImageIOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageIOViewController.m; sourceTree = "<group>"; };
+		EA7F56E71AE18AAD00CFF6D0 /* mmPhotos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = mmPhotos; sourceTree = "<group>"; };
+		EA7F56E91AE18C0D00CFF6D0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		EA9E4FB61AD8D4B600CEEEFB /* CoreAnimation-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreAnimation-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA9E4FBA1AD8D4B600CEEEFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA9E4FBB1AD8D4B600CEEEFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -204,7 +234,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA26CC1C1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework in Frameworks */,
+				EA7F56EA1AE18C0D00CFF6D0 /* ImageIO.framework in Frameworks */,
+				EA7F56AD1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework in Frameworks */,
 				EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */,
 				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
@@ -239,10 +270,39 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		EA7F56AE1AE1742400CFF6D0 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F56AF1AE1744000CFF6D0 /* OptimizeViewController.h */,
+				EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */,
+				EA7F56C71AE1801000CFF6D0 /* ImageIOViewController.h */,
+				EA7F56C81AE1801000CFF6D0 /* ImageIOViewController.m */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
+		EA7F56B21AE179B400CFF6D0 /* shipes */ = {
+			isa = PBXGroup;
+			children = (
+				EA7F56B31AE179B400CFF6D0 /* Ship1.png */,
+				EA7F56B41AE179B400CFF6D0 /* Ship10.png */,
+				EA7F56B51AE179B400CFF6D0 /* Ship2.png */,
+				EA7F56B61AE179B400CFF6D0 /* Ship3.png */,
+				EA7F56B71AE179B400CFF6D0 /* Ship4.png */,
+				EA7F56B81AE179B400CFF6D0 /* Ship5.png */,
+				EA7F56B91AE179B400CFF6D0 /* Ship6.png */,
+				EA7F56BA1AE179B400CFF6D0 /* Ship7.png */,
+				EA7F56BB1AE179B400CFF6D0 /* Ship8.png */,
+				EA7F56BC1AE179B400CFF6D0 /* Ship9.png */,
+			);
+			path = shipes;
+			sourceTree = "<group>";
+		};
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
-				EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */,
+				EA7F56E91AE18C0D00CFF6D0 /* ImageIO.framework */,
+				EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */,
 				EA1D292B1ADB732A00E8C078 /* CoreText.framework */,
 				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
@@ -264,6 +324,9 @@
 		EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA7F56E71AE18AAD00CFF6D0 /* mmPhotos */,
+				EA7F56B21AE179B400CFF6D0 /* shipes */,
+				EA7F56AE1AE1742400CFF6D0 /* Performance */,
 				EA9E50211AD9912000CEEEFB /* AnimationVC */,
 				EA9E4FE41AD8EBB400CEEEFB /* LayerVC */,
 				EA9E4FBD1AD8D4B600CEEEFB /* AppDelegate.h */,
@@ -485,24 +548,35 @@
 				EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */,
 				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
 				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
+				EA7F56C31AE179B400CFF6D0 /* Ship6.png in Resources */,
+				EA7F56E81AE18AAD00CFF6D0 /* mmPhotos in Resources */,
+				EA7F56C21AE179B400CFF6D0 /* Ship5.png in Resources */,
+				EA7F56C41AE179B400CFF6D0 /* Ship7.png in Resources */,
 				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
 				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,
+				EA7F56BF1AE179B400CFF6D0 /* Ship2.png in Resources */,
 				EAF668811ADA4591007E8EE3 /* BasicAnimationViewController.xib in Resources */,
 				EA9E500A1AD95BCC00CEEEFB /* GroupOpacityViewController.xib in Resources */,
+				EA7F56C51AE179B400CFF6D0 /* Ship8.png in Resources */,
 				EA9E50191AD9804500CEEEFB /* Cube3dViewController.xib in Resources */,
 				EA9E4FFB1AD9448600CEEEFB /* ShadowViewController.xib in Resources */,
 				EA9E4FCA1AD8D4B600CEEEFB /* LaunchScreen.xib in Resources */,
+				EA7F56BD1AE179B400CFF6D0 /* Ship1.png in Resources */,
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
 				EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */,
+				EA7F56BE1AE179B400CFF6D0 /* Ship10.png in Resources */,
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
+				EA7F56C01AE179B400CFF6D0 /* Ship3.png in Resources */,
 				EA1D29241ADB67F100E8C078 /* StopAnimationViewController.xib in Resources */,
 				EA9E4FC71AD8D4B600CEEEFB /* Images.xcassets in Resources */,
 				EA9E50261AD9912000CEEEFB /* ImplicitAnimationViewController.xib in Resources */,
+				EA7F56C61AE179B400CFF6D0 /* Ship9.png in Resources */,
 				EAEC6A2E1ADE056400A62585 /* MediaTimingFunctionViewController.xib in Resources */,
 				EAF668901ADAC047007E8EE3 /* TransitionViewController.xib in Resources */,
 				EA9E4FF11AD91EE800CEEEFB /* ClickViewController.xib in Resources */,
 				EA9E50001AD9494000CEEEFB /* MaskViewController.xib in Resources */,
+				EA7F56C11AE179B400CFF6D0 /* Ship4.png in Resources */,
 				EA9E500F1AD9661200CEEEFB /* TransformViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +606,7 @@
 				EA9E50131AD97AD600CEEEFB /* Transform3dViewController.m in Sources */,
 				EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */,
 				EA9E4FF01AD91EE800CEEEFB /* ClickViewController.m in Sources */,
+				EA7F56B11AE1744000CFF6D0 /* OptimizeViewController.m in Sources */,
 				EA9E50251AD9912000CEEEFB /* ImplicitAnimationViewController.m in Sources */,
 				EA9E4FFA1AD9448600CEEEFB /* ShadowViewController.m in Sources */,
 				EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */,
@@ -540,6 +615,7 @@
 				EA1D29361ADB760600E8C078 /* TransformLayerViewController.m in Sources */,
 				EA9E502A1AD9A5A200CEEEFB /* PresentationViewController.m in Sources */,
 				EA9EB7631ADE775700159A10 /* MyView.m in Sources */,
+				EA7F56C91AE1801000CFF6D0 /* ImageIOViewController.m in Sources */,
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */,
 				EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */,
@@ -686,10 +762,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FrameWork",
+					"$(PROJECT_DIR)/FrameWork/Debug",
+					"$(PROJECT_DIR)/FrameWork/Release",
 				);
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FrameWork/Release/Chipmunk6_iOS.framework",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -701,10 +784,17 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FrameWork",
+					"$(PROJECT_DIR)/FrameWork/Debug",
+					"$(PROJECT_DIR)/FrameWork/Release",
 				);
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FrameWork/Release/Chipmunk6_iOS.framework",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

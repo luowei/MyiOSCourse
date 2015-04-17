@@ -15,7 +15,7 @@
 - (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         //set image
-        self.image = [UIImage imageNamed:@"Ball"];
+        self.image = [UIImage imageNamed:@"luowei"];
         self.contentMode = UIViewContentModeScaleAspectFill;
         //create the body
         self.body = cpBodyNew(MASS, cpMomentForBox(MASS, frame.size.width, frame.size.height));
@@ -48,7 +48,7 @@
 
 
 @interface ChipmunkViewController ()
-@property (nonatomic, strong) UIView *containerView;
+@property(nonatomic, strong) UIView *containerView;
 @property(nonatomic, assign) cpSpace *space;
 @property(nonatomic, strong) CADisplayLink *timer;
 @property(nonatomic, assign) CFTimeInterval lastStep;
@@ -58,6 +58,7 @@
 
 #define GRAVITY 1000
 
+/*
 - (void)viewDidLoad {
 
     self.containerView = [[UIView alloc] initWithFrame:self.view.frame];
@@ -81,6 +82,66 @@
     [self.timer addToRunLoop:[NSRunLoop mainRunLoop]
                      forMode:NSDefaultRunLoopMode];
 }
+*/
+
+
+//使用围墙及加速计
+- (void)addCrateWithFrame:(CGRect)frame {
+    Crate *crate = [[Crate alloc] initWithFrame:frame];
+    [self.containerView addSubview:crate];
+    cpSpaceAddBody(self.space, crate.body);
+    cpSpaceAddShape(self.space, crate.shape);
+}
+
+- (void)addWallShapeWithStart:(cpVect)start end:(cpVect)end {
+    cpShape *wall = cpSegmentShapeNew(self.space->staticBody, start, end, 1);
+    cpShapeSetCollisionType(wall, 2);
+    cpShapeSetFriction(wall, 0.5);
+    cpShapeSetElasticity(wall, 0.8);
+    cpSpaceAddStaticShape(self.space, wall);
+}
+
+- (void)viewDidLoad {
+    self.containerView = [[UIView alloc] initWithFrame:self.view.frame];
+    self.containerView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.containerView];
+
+    //invert view coordinate system to match physics
+    self.containerView.layer.geometryFlipped = YES;
+    //set up physics space
+    self.space = cpSpaceNew();
+    cpSpaceSetGravity(self.space, cpv(0, -GRAVITY));
+
+    CGFloat width = self.view.frame.size.width;
+    CGFloat height = self.view.frame.size.height;
+
+    //add wall around edge of view
+    [self addWallShapeWithStart:cpv(0, 0) end:cpv(width, 0)];
+    [self addWallShapeWithStart:cpv(width, 0) end:cpv(width, height)];
+    [self addWallShapeWithStart:cpv(width, height) end:cpv(0, height)];
+    [self addWallShapeWithStart:cpv(0, height) end:cpv(0, 0)];
+    //add a crates
+    [self addCrateWithFrame:CGRectMake(0, 0, 32, 32)];
+    [self addCrateWithFrame:CGRectMake(32, 0, 32, 32)];
+    [self addCrateWithFrame:CGRectMake(64, 0, 64, 64)];
+    [self addCrateWithFrame:CGRectMake(128, 0, 32, 32)];
+    [self addCrateWithFrame:CGRectMake(0, 32, 64, 64)];
+    //start the timer
+    self.lastStep = CACurrentMediaTime();
+    self.timer = [CADisplayLink displayLinkWithTarget:self
+                                             selector:@selector(step:)];
+    [self.timer addToRunLoop:[NSRunLoop mainRunLoop]
+                     forMode:NSDefaultRunLoopMode];
+    //update gravity using accelerometer
+    [UIAccelerometer sharedAccelerometer].delegate = self;
+    [UIAccelerometer sharedAccelerometer].updateInterval = 1 / 60.0;
+}
+
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration {
+    //update gravity
+    cpSpaceSetGravity(self.space, cpv(acceleration.x * GRAVITY, acceleration.y * GRAVITY));
+}
+
 
 void updateShape(cpShape *shape, void *unused) {
     //get the crate object associated with the shape
@@ -91,6 +152,7 @@ void updateShape(cpShape *shape, void *unused) {
     crate.transform = CGAffineTransformMakeRotation(cpBodyGetAngle(body));
 }
 
+/*
 - (void)step:(CADisplayLink *)timer {
     //calculate step duration
     CFTimeInterval thisStep = CACurrentMediaTime();
@@ -101,6 +163,24 @@ void updateShape(cpShape *shape, void *unused) {
     //update all the shapes
     cpSpaceEachShape(self.space, &updateShape, NULL);
 }
+*/
+
+//固定时间步长的木箱模拟,这里用120分之一秒
+#define SIMULATION_STEP (1/120.0)
+
+- (void)step:(CADisplayLink *)timer {
+    //calculate frame step duration
+    CFTimeInterval frameTime = CACurrentMediaTime();
+    //update simulation
+    while (self.lastStep < frameTime) {
+        cpSpaceStep(self.space, SIMULATION_STEP);
+        self.lastStep += SIMULATION_STEP;
+    }
+
+    //update all the shapes
+    cpSpaceEachShape(self.space, &updateShape, NULL);
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -38,6 +38,8 @@
 #import "ReboundBallViewController.h"
 #import "DrawViewController.h"
 #import "ChipmunkViewController.h"
+#import "OptimizeViewController.h"
+#import "ImageIOViewController.h"
 
 @interface AppDelegate ()
 
@@ -82,7 +84,9 @@
 //    self.window.rootViewController = [MediaTimingFunctionViewController new];
 //    self.window.rootViewController = [ReboundBallViewController new];
 //    self.window.rootViewController = [DrawViewController new];
-    self.window.rootViewController = [ChipmunkViewController new];
+//    self.window.rootViewController = [ChipmunkViewController new];
+//    self.window.rootViewController = [OptimizeViewController new];
+    self.window.rootViewController = [ImageIOViewController new];
 
 
 
