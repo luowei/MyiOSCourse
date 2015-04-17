@@ -21,6 +21,8 @@
 		EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29411ADB924100E8C078 /* ScrollLayerView.m */; };
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
+		EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */; };
+		EA26CC1C1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
 		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
 		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
@@ -110,6 +112,9 @@
 		EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledLayerViewController.h; sourceTree = "<group>"; };
 		EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledLayerViewController.m; sourceTree = "<group>"; };
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
+		EA26CB261AE1092000C5A1D4 /* ChipmunkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkViewController.h; sourceTree = "<group>"; };
+		EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkViewController.m; sourceTree = "<group>"; };
+		EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chipmunk6_iOS.framework; sourceTree = "<group>"; };
 		EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
 		EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
 		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
@@ -199,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA26CC1C1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework in Frameworks */,
 				EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */,
 				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
@@ -236,6 +242,7 @@
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
+				EA26CC1B1AE10F9700C5A1D4 /* Chipmunk6_iOS.framework */,
 				EA1D292B1ADB732A00E8C078 /* CoreText.framework */,
 				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
@@ -387,6 +394,8 @@
 				EAEC6A2C1ADE056400A62585 /* MediaTimingFunctionViewController.xib */,
 				EAEC6A611ADE357B00A62585 /* ReboundBallViewController.h */,
 				EAEC6A621ADE357B00A62585 /* ReboundBallViewController.m */,
+				EA26CB261AE1092000C5A1D4 /* ChipmunkViewController.h */,
+				EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */,
 			);
 			path = AnimationVC;
 			sourceTree = "<group>";
@@ -533,6 +542,7 @@
 				EA9EB7631ADE775700159A10 /* MyView.m in Sources */,
 				EAF6688F1ADAC047007E8EE3 /* TransitionViewController.m in Sources */,
 				EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */,
+				EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */,
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
 				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,
@@ -673,6 +683,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -684,6 +698,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "CoreAnimation-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

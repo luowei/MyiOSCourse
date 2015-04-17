@@ -37,6 +37,7 @@
 #import "MediaTimingFunctionViewController.h"
 #import "ReboundBallViewController.h"
 #import "DrawViewController.h"
+#import "ChipmunkViewController.h"
 
 @interface AppDelegate ()
 
@@ -80,7 +81,8 @@
 //    self.window.rootViewController = [RelativeTimeViewController new];
 //    self.window.rootViewController = [MediaTimingFunctionViewController new];
 //    self.window.rootViewController = [ReboundBallViewController new];
-    self.window.rootViewController = [DrawViewController new];
+//    self.window.rootViewController = [DrawViewController new];
+    self.window.rootViewController = [ChipmunkViewController new];
 
 
 
