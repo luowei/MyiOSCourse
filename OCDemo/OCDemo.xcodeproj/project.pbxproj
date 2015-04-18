@@ -10,6 +10,8 @@
 		BEF0607DD9BED983281B9C2D /* NewCppClass.mm in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A910D211590AFB3C9CA /* NewCppClass.mm */; };
 		BEF0659D5DB9D1FA06FD4A6E /* NewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0674D792D7FED584D0E30 /* NewClass.m */; };
 		BEF067E409F36401E03E6AD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06C6B112A53E441C64C8C /* main.m */; };
+		EA652CFB1AE2B6FB000E5071 /* RTTest.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CFA1AE2B6FB000E5071 /* RTTest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA652CFF1AE2B6FB000E5071 /* MyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CFE1AE2B6FB000E5071 /* MyClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,10 @@
 		BEF06B2C23C402199E192B69 /* OCDemo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OCDemo; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEF06B70494F9B4E4E0A848E /* NewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewClass.h; sourceTree = "<group>"; };
 		BEF06C6B112A53E441C64C8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA652CFA1AE2B6FB000E5071 /* RTTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTTest.m; sourceTree = "<group>"; };
+		EA652CFC1AE2B6FB000E5071 /* RTTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTTest.h; sourceTree = "<group>"; };
+		EA652CFD1AE2B6FB000E5071 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		EA652CFE1AE2B6FB000E5071 /* MyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		BEF06246C6B9677F8D579EA4 = {
 			isa = PBXGroup;
 			children = (
+				EA652CF51AE2B6FB000E5071 /* RunTime */,
 				BEF060496CD43F8DFA2015BD /* Products */,
 				BEF06F8EFB562A6254979533 /* OCDemo */,
 			);
@@ -70,6 +77,17 @@
 				BEF069181068C8742B37302B /* NewCppClass.h */,
 			);
 			path = OCDemo;
+			sourceTree = "<group>";
+		};
+		EA652CF51AE2B6FB000E5071 /* RunTime */ = {
+			isa = PBXGroup;
+			children = (
+				EA652CFC1AE2B6FB000E5071 /* RTTest.h */,
+				EA652CFA1AE2B6FB000E5071 /* RTTest.m */,
+				EA652CFD1AE2B6FB000E5071 /* MyClass.h */,
+				EA652CFE1AE2B6FB000E5071 /* MyClass.m */,
+			);
+			name = RunTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEF067E409F36401E03E6AD1 /* main.m in Sources */,
+				EA652CFB1AE2B6FB000E5071 /* RTTest.m in Sources */,
+				EA652CFF1AE2B6FB000E5071 /* MyClass.m in Sources */,
 				BEF0659D5DB9D1FA06FD4A6E /* NewClass.m in Sources */,
 				BEF0607DD9BED983281B9C2D /* NewCppClass.mm in Sources */,
 			);
@@ -229,6 +249,7 @@
 				BEF065CF3A1BDBB1E438F0F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BEF06AB2AE216E11669522CD /* Build configuration list for PBXProject "OCDemo" */ = {
 			isa = XCConfigurationList;
