@@ -22,9 +22,16 @@
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
 		EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */; };
+		EA3386601AE24FFA0029816B /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */; };
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
 		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
 		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
+		EA652CE01AE28D17000E5071 /* CollectionScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CDF1AE28D17000E5071 /* CollectionScrollViewController.m */; };
+		EA652CE91AE293B1000E5071 /* CollectionTiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CE81AE293B1000E5071 /* CollectionTiledLayerViewController.m */; };
+		EA652CEC1AE2A15C000E5071 /* PVRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CEB1AE2A15C000E5071 /* PVRImageViewController.m */; };
+		EA652CEE1AE2A1B6000E5071 /* me.pvr in Resources */ = {isa = PBXBuildFile; fileRef = EA652CED1AE2A1B6000E5071 /* me.pvr */; };
+		EA652CF01AE2A1C7000E5071 /* me.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA652CEF1AE2A1C7000E5071 /* me.txt */; };
+		EA652CF31AE2A84D000E5071 /* Matrix3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CF21AE2A84D000E5071 /* Matrix3DViewController.m */; };
 		EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */; };
 		EA78D02C1ADD4CC20019DB31 /* RelativeTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */; };
 		EA7F56AD1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */; };
@@ -128,11 +135,23 @@
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
 		EA26CB261AE1092000C5A1D4 /* ChipmunkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkViewController.h; sourceTree = "<group>"; };
 		EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkViewController.m; sourceTree = "<group>"; };
+		EA33865E1AE24FFA0029816B /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
+		EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
 		EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
 		EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
 		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
 		EA48884F1ADD258600078FCB /* OpenDoorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenDoorViewController.h; sourceTree = "<group>"; };
 		EA4888501ADD258600078FCB /* OpenDoorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenDoorViewController.m; sourceTree = "<group>"; };
+		EA652CDE1AE28D17000E5071 /* CollectionScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionScrollViewController.h; sourceTree = "<group>"; };
+		EA652CDF1AE28D17000E5071 /* CollectionScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionScrollViewController.m; sourceTree = "<group>"; };
+		EA652CE71AE293B1000E5071 /* CollectionTiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTiledLayerViewController.h; sourceTree = "<group>"; };
+		EA652CE81AE293B1000E5071 /* CollectionTiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionTiledLayerViewController.m; sourceTree = "<group>"; };
+		EA652CEA1AE2A15C000E5071 /* PVRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVRImageViewController.h; sourceTree = "<group>"; };
+		EA652CEB1AE2A15C000E5071 /* PVRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVRImageViewController.m; sourceTree = "<group>"; };
+		EA652CED1AE2A1B6000E5071 /* me.pvr */ = {isa = PBXFileReference; lastKnownFileType = file; path = me.pvr; sourceTree = "<group>"; };
+		EA652CEF1AE2A1C7000E5071 /* me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = me.txt; sourceTree = "<group>"; };
+		EA652CF11AE2A84D000E5071 /* Matrix3DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix3DViewController.h; sourceTree = "<group>"; };
+		EA652CF21AE2A84D000E5071 /* Matrix3DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matrix3DViewController.m; sourceTree = "<group>"; };
 		EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelativeTimeViewController.h; sourceTree = "<group>"; };
 		EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelativeTimeViewController.m; sourceTree = "<group>"; };
 		EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelativeTimeViewController.xib; sourceTree = "<group>"; };
@@ -273,10 +292,22 @@
 		EA7F56AE1AE1742400CFF6D0 /* Performance */ = {
 			isa = PBXGroup;
 			children = (
+				EA652CEF1AE2A1C7000E5071 /* me.txt */,
+				EA652CED1AE2A1B6000E5071 /* me.pvr */,
+				EA652CE71AE293B1000E5071 /* CollectionTiledLayerViewController.h */,
+				EA652CE81AE293B1000E5071 /* CollectionTiledLayerViewController.m */,
+				EA33865E1AE24FFA0029816B /* RGCardViewLayout.h */,
+				EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */,
 				EA7F56AF1AE1744000CFF6D0 /* OptimizeViewController.h */,
 				EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */,
 				EA7F56C71AE1801000CFF6D0 /* ImageIOViewController.h */,
 				EA7F56C81AE1801000CFF6D0 /* ImageIOViewController.m */,
+				EA652CDE1AE28D17000E5071 /* CollectionScrollViewController.h */,
+				EA652CDF1AE28D17000E5071 /* CollectionScrollViewController.m */,
+				EA652CEA1AE2A15C000E5071 /* PVRImageViewController.h */,
+				EA652CEB1AE2A15C000E5071 /* PVRImageViewController.m */,
+				EA652CF11AE2A84D000E5071 /* Matrix3DViewController.h */,
+				EA652CF21AE2A84D000E5071 /* Matrix3DViewController.m */,
 			);
 			path = Performance;
 			sourceTree = "<group>";
@@ -549,6 +580,7 @@
 				EAF668861ADA4591007E8EE3 /* KeyFrameAnimationViewController.xib in Resources */,
 				EAF6688B1ADAB629007E8EE3 /* BezierAnimationViewController.xib in Resources */,
 				EA7F56C31AE179B400CFF6D0 /* Ship6.png in Resources */,
+				EA652CEE1AE2A1B6000E5071 /* me.pvr in Resources */,
 				EA7F56E81AE18AAD00CFF6D0 /* mmPhotos in Resources */,
 				EA7F56C21AE179B400CFF6D0 /* Ship5.png in Resources */,
 				EA7F56C41AE179B400CFF6D0 /* Ship7.png in Resources */,
@@ -565,6 +597,7 @@
 				EA7F56BD1AE179B400CFF6D0 /* Ship1.png in Resources */,
 				EA9E4FEC1AD8ECA400CEEEFB /* ContentRectViewController.xib in Resources */,
 				EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */,
+				EA652CF01AE2A1C7000E5071 /* me.txt in Resources */,
 				EA7F56BE1AE179B400CFF6D0 /* Ship10.png in Resources */,
 				EA9E50051AD950CA00CEEEFB /* NearestViewController.xib in Resources */,
 				EA7F56C01AE179B400CFF6D0 /* Ship3.png in Resources */,
@@ -597,7 +630,9 @@
 			files = (
 				EAEC6A6B1ADE727E00A62585 /* DrawViewController.m in Sources */,
 				EA9E4FF51AD933F900CEEEFB /* HitTestViewController.m in Sources */,
+				EA652CE01AE28D17000E5071 /* CollectionScrollViewController.m in Sources */,
 				EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */,
+				EA3386601AE24FFA0029816B /* RGCardViewLayout.m in Sources */,
 				EA1D293C1ADB89B500E8C078 /* ReplicatorLayerViewController.m in Sources */,
 				EA9E4FC21AD8D4B600CEEEFB /* ViewController.m in Sources */,
 				EA9E4FBF1AD8D4B600CEEEFB /* AppDelegate.m in Sources */,
@@ -626,16 +661,19 @@
 				EAEC6A2D1ADE056400A62585 /* MediaTimingFunctionViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
 				EA9E50181AD9804500CEEEFB /* Cube3dViewController.m in Sources */,
+				EA652CE91AE293B1000E5071 /* CollectionTiledLayerViewController.m in Sources */,
 				EA1D29331ADB74A100E8C078 /* LayerLabel.m in Sources */,
 				EA1D293F1ADB8CC300E8C078 /* ReflectionView.m in Sources */,
 				EA9E500E1AD9661200CEEEFB /* TransformViewController.m in Sources */,
 				EA1D292A1ADB704200E8C078 /* TextLayerViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
 				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
+				EA652CF31AE2A84D000E5071 /* Matrix3DViewController.m in Sources */,
 				EAEC6A631ADE357B00A62585 /* ReboundBallViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,
 				EA9E4FFF1AD9494000CEEEFB /* MaskViewController.m in Sources */,
 				BEF060C3A60EB4AA8EDE9D74 /* BrushDrawingView.m in Sources */,
+				EA652CEC1AE2A15C000E5071 /* PVRImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

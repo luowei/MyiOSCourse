@@ -25,6 +25,25 @@
     maskLayer.contents = (__bridge id)maskImage.CGImage;
     //apply mask to image layer?
     self.imageView.layer.mask = maskLayer;
+
+/*
+    //load color image
+    UIImage *image = [UIImage imageNamed:@"mm.jpg"];
+    //load mask image
+    UIImage *mask = [UIImage imageNamed:@"Cone.png"];
+    //convert mask to correct format
+    CGColorSpaceRef graySpace = CGColorSpaceCreateDeviceGray();
+    CGImageRef maskRef = CGImageCreateCopyWithColorSpace(mask.CGImage, graySpace);
+    CGColorSpaceRelease(graySpace);
+    //combine images
+    CGImageRef resultRef = CGImageCreateWithMask(image.CGImage, maskRef);
+    UIImage *result = [UIImage imageWithCGImage:resultRef];
+    CGImageRelease(resultRef);
+    CGImageRelease(maskRef);
+    //display result
+    self.imageView.image = result;
+*/
+
 }
 
 - (void)didReceiveMemoryWarning {

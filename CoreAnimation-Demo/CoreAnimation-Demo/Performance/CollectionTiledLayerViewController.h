@@ -1,5 +1,5 @@
 //
-//  ImageIOViewController.h
+//  TiledLayerViewController.h
 //  CoreAnimation-Demo
 //
 //  Created by luowei on 15/4/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageIOViewController : UIViewController
+@interface CollectionTiledLayerViewController : UIViewController
 
 @end

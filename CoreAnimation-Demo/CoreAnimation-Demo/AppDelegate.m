@@ -40,6 +40,10 @@
 #import "ChipmunkViewController.h"
 #import "OptimizeViewController.h"
 #import "ImageIOViewController.h"
+#import "CollectionScrollViewController.h"
+#import "CollectionTiledLayerViewController.h"
+#import "PVRImageViewController.h"
+#import "Matrix3DViewController.h"
 
 @interface AppDelegate ()
 
@@ -55,6 +59,8 @@
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 //    self.window.rootViewController = storyboard.instantiateInitialViewController;
 
+//    self.window.rootViewController = [ShapeLayerViewController new];
+//    self.window.rootViewController = [MaskViewController new];
 //    self.window.rootViewController = [ContentRectViewController new];
 //    self.window.rootViewController = [ClickViewController new];
 //    self.window.rootViewController = [HitTestViewController new];
@@ -86,7 +92,11 @@
 //    self.window.rootViewController = [DrawViewController new];
 //    self.window.rootViewController = [ChipmunkViewController new];
 //    self.window.rootViewController = [OptimizeViewController new];
-    self.window.rootViewController = [ImageIOViewController new];
+//    self.window.rootViewController = [ImageIOViewController new];
+//    self.window.rootViewController = [CollectionScrollViewController new];
+//    self.window.rootViewController = [CollectionTiledLayerViewController new];
+//    self.window.rootViewController = [PVRImageViewController new];
+    self.window.rootViewController = [Matrix3DViewController new];
 
 
 

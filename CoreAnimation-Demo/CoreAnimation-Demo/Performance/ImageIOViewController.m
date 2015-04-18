@@ -7,32 +7,39 @@
 //
 
 #import "ImageIOViewController.h"
+#import "AppDelegate.h"
+#import "RGCardViewLayout.h"
 #import <ImageIO/ImageIO.h>
 
-@interface ImageIOViewController ()
+#define SCROLL_SPEED 5
+
+@interface ImageIOViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 @property(nonatomic, copy) NSArray *imagePaths;
 @property(nonatomic, strong) UICollectionView *collectionView;
 @end
 
-@implementation ImageIOViewController
+@implementation ImageIOViewController {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UICollectionViewFlowLayout *flowLayout= [[UICollectionViewFlowLayout alloc]init];
+
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+    flowLayout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     self.collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame collectionViewLayout:flowLayout];
+
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     self.collectionView.backgroundColor = [UIColor grayColor];
+
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.view addSubview:self.collectionView];
 
+
     //set up data
     self.imagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"mmPhotos"];
-    NSBundle *mainBundle = [NSBundle mainBundle];
-    NSLog(@"%@",mainBundle.resourcePath);
 
-    //register cell class
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -82,25 +89,83 @@
         //set image on main thread, but only if index still matches up
         dispatch_async(dispatch_get_main_queue(), ^{
             if (index == cell.tag) {
-                imageView.image = image; }
+                imageView.image = image;
+            }
         });
     });
 */
 
 
+/*
     //绕过UIKit，像下面这样使用ImageIO框架加载图片
     NSInteger index = indexPath.row;
     NSURL *imageURL = [NSURL fileURLWithPath:self.imagePaths[index]];
-    NSDictionary *options = @{(__bridge id)kCGImageSourceShouldCache: @YES};
-    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef)imageURL, NULL);
-    CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, 0,(__bridge CFDictionaryRef)options);
+    NSDictionary *options = @{(__bridge id) kCGImageSourceShouldCache : @YES};
+    CGImageSourceRef source = CGImageSourceCreateWithURL((__bridge CFURLRef) imageURL, NULL);
+    CGImageRef imageRef = CGImageSourceCreateImageAtIndex(source, 0, (__bridge CFDictionaryRef) options);
     UIImage *image = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
     CFRelease(source);
 
     imageView.image = image;
+*/
+
+    //使用自定义缓存加载图片
+    //set or load image for this index
+    imageView.image = [self loadImageAtIndex:indexPath.item];
+    //preload image for previous and next index
+    if (indexPath.item < [self.imagePaths count] - 1) {
+        [self loadImageAtIndex:indexPath.item + 1]; }
+    if (indexPath.item > 0) {
+        [self loadImageAtIndex:indexPath.item - 1]; }
 
     return cell;
+}
+
+//利用NSCache创建自定缓存加载图片
+- (UIImage *)loadImageAtIndex:(NSUInteger)index {
+    //set up cache
+    static NSCache *cache = nil;
+    if (!cache) {
+        cache = [[NSCache alloc] init];
+    }
+    //if already cached, return immediately
+    UIImage *image = [cache objectForKey:@(index)];
+    if (image) {
+        return [image isKindOfClass:[NSNull class]] ? nil : image;
+    }
+    //set placeholder to avoid reloading image multiple times
+    [cache setObject:[NSNull null] forKey:@(index)];
+    //switch to background thread
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        //load image
+        NSString *imagePath = self.imagePaths[index];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+        //redraw image using device context
+        UIGraphicsBeginImageContextWithOptions(image.size, YES, 0);
+        [image drawAtPoint:CGPointZero];
+        image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        //set image for correct image view
+        dispatch_async(dispatch_get_main_queue(), ^{ //cache the image
+            [cache setObject:image forKey:@(index)];
+            //display the image
+            NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+            UICollectionViewCell *cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+            UIImageView *imageView = [cell.contentView.subviews lastObject];
+            imageView.image = image;
+        });
+    });
+    //not loaded yet
+    return nil;
+}
+
+#pragma mark --UICollectionViewDelegateFlowLayout
+
+//定义每个UICollectionView cell的大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+//    return CGSizeMake(fDeviceWidth, fDeviceHeight);
+    return self.collectionView.frame.size;
 }
 
 - (void)didReceiveMemoryWarning {

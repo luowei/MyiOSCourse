@@ -63,6 +63,27 @@
     [self.view.layer addSublayer:shapeLayer];
     [self.view.layer addSublayer:shapeLayer2];
 
+
+    //用CAShapeLayer画一个圆角矩形
+    //create shape layer
+    CAShapeLayer *blueLayer = [CAShapeLayer layer];
+    blueLayer.frame = CGRectMake(200, 450, 100, 100);
+    blueLayer.fillColor = [UIColor blueColor].CGColor;
+    blueLayer.path = [UIBezierPath bezierPathWithRoundedRect:
+            CGRectMake(0, 0, 100, 100) cornerRadius:20].CGPath;
+
+    //add it to our view
+    [self.view.layer addSublayer:blueLayer];
+
+    //create layer
+    CALayer *imageLayer = [CALayer layer];
+    imageLayer.frame = CGRectMake(200, 300, 100, 100);
+    imageLayer.contentsCenter = CGRectMake(0.5, 0.5, 0.0, 0.0);
+    imageLayer.contentsScale = [UIScreen mainScreen].scale;
+    imageLayer.contents = (__bridge id)[UIImage imageNamed:@"Ship1"].CGImage;
+    //add it to our view
+    [self.view.layer addSublayer:imageLayer];
+
 }
 
 - (void)didReceiveMemoryWarning {

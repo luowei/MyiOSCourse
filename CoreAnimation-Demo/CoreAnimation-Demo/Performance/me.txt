@@ -1,0 +1,119 @@
+Simple plain text exporter for demo purposes
+
+See http://www.grantlee.org/apidox/for_themers.html for more information
+
+Texture data:
+    texture.width  = 464
+    texture.height = 464
+
+    texture.trimmedName = me
+    texture.fullName = me.pvr
+    texture.absoluteFileName = /Users/luowei/Pictures/me.pvr
+
+SmartUpdateHash: $TexturePacker:SmartUpdate:6d0f292a5f3be542b1f0dfe9cafd1a8d$
+
+Settings:
+
+Access to all values in the settings (.tps file):
+
+settings.premultiplyAlpha = false
+settings.dataFormat = plain
+settings.allowRotation = true
+settings.flipPVR = false
+settings.ditherType = 0
+...
+
+Sprite data:
+
+There are 2 variants:
+- sprites - contains the sprites, aliases are available in the
+  aliasList property and are not added top level
+
+- allSprites - list of all sprites
+
+Load javascript filter plugin, must be located in the exporter's folder in a subfolder
+grantlee/0.2/makecssselector.qs
+
+
+// set width & height for calculations using the javascript filter
+
+
+
+
+    =========================================================================
+
+    Use the javascript filter plugin to replace -hover with :hover
+    me.jpeg
+
+    -- name without image type extension
+    sprite.trimmedName      = me.jpeg
+
+    -- name with image extension
+    sprite.fullName         = me.jpeg
+
+    -- offset of the center of the trimmed sprite from the
+    -- center of the original sprite (used by cocos2d)
+    sprite.absoluteOffset.x = 
+    sprite.absoluteOffset.y = 
+
+    -- list of alias sprites for this one
+    sprite.aliasList = 
+
+    --- frame rectangle with pixel coordinates
+    sprite.frameRect.x = 2
+    sprite.frameRect.y = 2
+    sprite.frameRect.width = 460
+    sprite.frameRect.height = 460
+
+    --- frame rectangle with uv coordinates (0..1)
+    sprite.frameRectRel.x = 0.00431034482758621
+    sprite.frameRectRel.y = 0.00431034482758621
+    sprite.frameRectRel.width = 0.991379310344828
+    sprite.frameRectRel.height = 0.991379310344828
+
+    --- frame rectangle with uv coordinates (0..1) calculated through JS
+    sprite.frameRectRel.x = 0.004310344827586207
+    sprite.frameRectRel.y = 0.004310344827586207
+    sprite.frameRectRel.width = 0.9913793103448276
+    sprite.frameRectRel.height = 0.9913793103448276
+
+    --- version of the frame rect with "original" width and height
+    sprite.frameRectWithoutRotation.x = 2
+    sprite.frameRectWithoutRotation.y = 2
+    sprite.frameRectWithoutRotation.width = 460
+    sprite.frameRectWithoutRotation.height = 460
+
+    -- true if the sprite was rotated
+    sprite.rotated        = false
+
+    -- true if the sprite does not contain any transparent pixels
+    sprite.isSolid        = true
+
+    -- true if the sprite was trimmed
+    sprite.trimmed        = false
+
+    sprite.sourceRect.x = 0
+    sprite.sourceRect.y = 0
+    sprite.sourceRect.width = 460
+    sprite.sourceRect.height = 460
+
+    sprite.cornerOffset.x = 0
+    sprite.cornerOffset.y = 0
+
+    sprite.untrimmedSize.width = 460
+    sprite.untrimmedSize.height = 460
+
+    -- the file absolute file name of the sprite
+    sprite.fileData.absoluteFileName = /Users/luowei/Pictures/me.jpeg
+
+    -- the modification date of the sprite
+    sprite.fileData.lastModified = 2015-03-05T22:02:15
+
+    -- the creation date of the sprite
+    sprite.fileData.created = 2015-04-18T22:05:37
+
+    -- the file size of the sprite
+    sprite.fileData.fileSize = 58323
+
+
+

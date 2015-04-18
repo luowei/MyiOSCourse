@@ -1,5 +1,5 @@
 //
-//  ImageIOViewController.h
+//  Matrix3DViewController.h
 //  CoreAnimation-Demo
 //
 //  Created by luowei on 15/4/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageIOViewController : UIViewController
+@interface Matrix3DViewController : UIViewController
 
 @end

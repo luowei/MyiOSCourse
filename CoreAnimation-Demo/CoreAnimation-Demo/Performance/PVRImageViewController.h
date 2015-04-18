@@ -1,5 +1,5 @@
 //
-//  ImageIOViewController.h
+//  PVRImageViewController.h
 //  CoreAnimation-Demo
 //
 //  Created by luowei on 15/4/18.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageIOViewController : UIViewController
+@interface PVRImageViewController : UIViewController
 
 @end
