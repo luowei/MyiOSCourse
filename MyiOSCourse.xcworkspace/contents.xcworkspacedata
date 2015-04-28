@@ -22,4 +22,7 @@
    <FileRef
       location = "group:CoreAnimation-Demo/CoreAnimation-Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Webkit-Demo/Webkit-Demo.xcodeproj">
+   </FileRef>
 </Workspace>
