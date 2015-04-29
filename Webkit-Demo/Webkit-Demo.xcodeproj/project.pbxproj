@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA15E8EF1AF078A100DEC7F3 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */; };
+		EA15E8F11AF07A2400DEC7F3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */; };
 		EA5BEBCD1AEF6F7C0082B344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCC1AEF6F7C0082B344 /* main.m */; };
 		EA5BEBD01AEF6F7C0082B344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */; };
 		EA5BEBD31AEF6F7C0082B344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBD21AEF6F7C0082B344 /* ViewController.m */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA15E8ED1AF078A100DEC7F3 /* BSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
+		EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
+		EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EA5BEBC71AEF6F7C0082B344 /* Webkit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Webkit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5BEBCB1AEF6F7C0082B344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5BEBCC1AEF6F7C0082B344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA15E8F11AF07A2400DEC7F3 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +72,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */ = {
+			isa = PBXGroup;
+			children = (
+				EA15E8ED1AF078A100DEC7F3 /* BSViewController.h */,
+				EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */,
+			);
+			path = BroserSimple;
+			sourceTree = "<group>";
+		};
 		EA5BEBBE1AEF6F7C0082B344 = {
 			isa = PBXGroup;
 			children = (
+				EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */,
 				EA5BEBC91AEF6F7C0082B344 /* Webkit-Demo */,
 				EA5BEBE31AEF6F7C0082B344 /* Webkit-DemoTests */,
 				EA5BEBC81AEF6F7C0082B344 /* Products */,
@@ -87,6 +103,7 @@
 		EA5BEBC91AEF6F7C0082B344 /* Webkit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */,
 				EA5BEBF01AEF75310082B344 /* Themes */,
 				EA5BEBCE1AEF6F7C0082B344 /* AppDelegate.h */,
 				EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */,
@@ -240,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5BEBD31AEF6F7C0082B344 /* ViewController.m in Sources */,
+				EA15E8EF1AF078A100DEC7F3 /* BSViewController.m in Sources */,
 				EA5BEBD01AEF6F7C0082B344 /* AppDelegate.m in Sources */,
 				EA5BEBCD1AEF6F7C0082B344 /* main.m in Sources */,
 			);
@@ -368,7 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -379,7 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -438,6 +456,7 @@
 				EA5BEBEC1AEF6F7C0082B344 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA5BEBED1AEF6F7C0082B344 /* Build configuration list for PBXNativeTarget "Webkit-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +465,7 @@
 				EA5BEBEF1AEF6F7C0082B344 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
