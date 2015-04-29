@@ -49,7 +49,8 @@
     self.tableViewController.tableView.dataSource = self;
 
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.tableViewController];
-    self.window.rootViewController = self.navigationController;
+//    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[BSViewController new]];
 
     [_window makeKeyAndVisible];
     return YES;

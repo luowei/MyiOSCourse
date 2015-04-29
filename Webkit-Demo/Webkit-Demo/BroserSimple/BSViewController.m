@@ -33,6 +33,7 @@
     
     //进度条
     self.progressView = [[UIProgressView alloc] initWithProgressViewStyle:UIProgressViewStyleDefault];
+    self.progressView.trackTintColor = [UIColor whiteColor];
     [self.view addSubview:self.progressView];
 //    self.progressView.frame = CGRectMake(0, 0, self.view.frame.size.width, 3);
     [self.view insertSubview:self.webView belowSubview:self.progressView];
@@ -54,12 +55,19 @@
     self.urlField.autocorrectionType = UITextAutocorrectionTypeNo;
 
     //底部工具栏
-    self.bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-30, self.view.frame.size.width, 30)];
-    self.backBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(back:)];
-    self.forwardBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(forward:)];
-    self.reloadBtn = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(reload:)];
-    self.bottomToolbar.items = @[self.backBtn, self.forwardBtn, self.reloadBtn];
+    self.bottomToolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-120, self.view.frame.size.width, 40)];
+    self.bottomToolbar.backgroundColor = [UIColor whiteColor];
+    self.backBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(back:)];
+    self.forwardBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"forward"] style:UIBarButtonItemStylePlain target:self action:@selector(forward:)];
+    self.reloadBtn = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"refresh"] style:UIBarButtonItemStylePlain target:self action:@selector(reload:)];
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    fixedSpace.width = 20;
+
+
+    self.bottomToolbar.items = @[self.backBtn,fixedSpace, self.forwardBtn,flexibleSpace, self.reloadBtn];
     [self.view addSubview:self.bottomToolbar];
+    [self.view bringSubviewToFront:self.bottomToolbar];
 
     self.backBtn.enabled = NO;
     self.forwardBtn.enabled = NO;
@@ -101,30 +109,24 @@
     }
 }
 
+- (void)back:(UIBarButtonItem *)item {
+    [self.webView goBack];
+}
 
 - (void)reload:(UIBarButtonItem *)item {
-    [self.webView goBack];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.webView.URL]];
 }
 
 - (void)forward:(UIBarButtonItem *)item {
     [self.webView goForward];
 }
 
-- (void)back:(UIBarButtonItem *)item {
-    [self.webView loadRequest:[NSURLRequest requestWithURL:self.webView.URL]];
-}
-
 - (void)addConstraints {
-    //webView
-    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[webView]|"
-                                                                      options:nil
-                                                                      metrics:nil
-                                                                        views:@{@"webView" : self.webView}]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[webView]|"
-                                                                      options:nil
-                                                                      metrics:nil
-                                                                        views:@{@"webView" : self.webView}]];
+    //导航条View
+    self.barView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight |
+            UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin |
+            UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
+
     //progressView进度条
     self.progressView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[progressView]|"
@@ -135,12 +137,6 @@
                                                                       options:nil
                                                                       metrics:nil
                                                                         views:@{@"progressView" : self.progressView}]];
-
-    //导航条View
-    self.barView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight |
-            UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin |
-            UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
-
     //textfield输入框
     self.urlField.translatesAutoresizingMaskIntoConstraints = NO;
     [self.barView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[urlField]-5-|"
@@ -151,6 +147,29 @@
                                                                          options:nil
                                                                          metrics:nil
                                                                            views:@{@"urlField" : self.urlField}]];
+
+    //底部工具栏
+    self.bottomToolbar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[bottomToolbar]|"
+                                                                      options:nil
+                                                                      metrics:nil
+                                                                        views:@{@"bottomToolbar" : self.bottomToolbar}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottomToolbar(40)]|"
+                                                                      options:nil
+                                                                      metrics:nil
+                                                                        views:@{@"bottomToolbar" : self.bottomToolbar}]];
+    //webView
+    self.webView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[webView]|"
+                                                                      options:nil
+                                                                      metrics:nil
+                                                                        views:@{@"webView" : self.webView}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[progressView]-0-[webView]|"
+                                                                      options:nil
+                                                                      metrics:nil
+                                                                        views:@{@"webView" : self.webView,
+                                                                                @"progressView":self.progressView,
+                                                                                @"bootomToolbar":self.bottomToolbar}]];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -176,6 +195,7 @@
 //当页面加载完成
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation{
     [self.progressView setProgress:0.0 animated:NO];
+    self.progressView.trackTintColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
