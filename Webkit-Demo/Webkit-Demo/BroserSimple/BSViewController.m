@@ -29,6 +29,7 @@
     //添加webview
     self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
     self.webView.navigationDelegate = self;
+    self.webView.allowsBackForwardNavigationGestures = YES;
 //    [self.view addSubview:self.webView];
     
     //进度条
@@ -97,6 +98,12 @@
 
     
 }
+
+- (void)dealloc {
+    [self.webView removeObserver:self forKeyPath:@"loading"];
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+}
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"loading"]) {
