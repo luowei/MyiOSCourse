@@ -20,6 +20,8 @@
 		EA3F28331AF28A8E00B45030 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF31AEF755B0082B344 /* index.html */; };
 		EA3F28341AF28A8E00B45030 /* Gray.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF11AEF755B0082B344 /* Gray.css */; };
 		EA3F28351AF28A8E00B45030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBD71AEF6F7C0082B344 /* Images.xcassets */; };
+		EA5BD8EE1AF51CE50028CFEE /* postingMsg.js in Resources */ = {isa = PBXBuildFile; fileRef = EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */; };
+		EA5BD8EF1AF51CE50028CFEE /* postingMsg.js in Resources */ = {isa = PBXBuildFile; fileRef = EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */; };
 		EA5BEBCD1AEF6F7C0082B344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCC1AEF6F7C0082B344 /* main.m */; };
 		EA5BEBD01AEF6F7C0082B344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */; };
 		EA5BEBD31AEF6F7C0082B344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBD21AEF6F7C0082B344 /* ViewController.m */; };
@@ -48,6 +50,7 @@
 		EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		EA3F28391AF28A8E00B45030 /* MyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MyBrowser-Info.plist"; path = "/Users/luowei/Movies/iOS开发实战精讲/projects/MyiOSCourse/Webkit-Demo/MyBrowser-Info.plist"; sourceTree = "<absolute>"; };
+		EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = postingMsg.js; sourceTree = "<group>"; };
 		EA5BEBC71AEF6F7C0082B344 /* Webkit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Webkit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5BEBCB1AEF6F7C0082B344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5BEBCC1AEF6F7C0082B344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -126,6 +129,7 @@
 		EA5BEBC91AEF6F7C0082B344 /* Webkit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */,
 				EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */,
 				EA5BEBF01AEF75310082B344 /* Themes */,
 				EA5BEBCE1AEF6F7C0082B344 /* AppDelegate.h */,
@@ -276,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA3F28301AF28A8E00B45030 /* HUDdy.css in Resources */,
+				EA5BD8EF1AF51CE50028CFEE /* postingMsg.js in Resources */,
 				EA3F28311AF28A8E00B45030 /* Main.storyboard in Resources */,
 				EA3F28321AF28A8E00B45030 /* LaunchScreen.xib in Resources */,
 				EA3F28331AF28A8E00B45030 /* index.html in Resources */,
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5BEBF51AEF755B0082B344 /* HUDdy.css in Resources */,
+				EA5BD8EE1AF51CE50028CFEE /* postingMsg.js in Resources */,
 				EA5BEBD61AEF6F7C0082B344 /* Main.storyboard in Resources */,
 				EA5BEBDB1AEF6F7C0082B344 /* LaunchScreen.xib in Resources */,
 				EA5BEBF61AEF755B0082B344 /* index.html in Resources */,
