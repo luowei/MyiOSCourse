@@ -25,4 +25,7 @@
    <FileRef
       location = "group:Webkit-Demo/Webkit-Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:CoreText-Demo/CoreText-Demo.xcodeproj">
+   </FileRef>
 </Workspace>
