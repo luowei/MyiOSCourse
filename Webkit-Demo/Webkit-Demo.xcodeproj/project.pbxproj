@@ -9,6 +9,19 @@
 /* Begin PBXBuildFile section */
 		EA15E8EF1AF078A100DEC7F3 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */; };
 		EA15E8F11AF07A2400DEC7F3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */; };
+		EA3F28291AF28A8E00B45030 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBD21AEF6F7C0082B344 /* ViewController.m */; };
+		EA3F282A1AF28A8E00B45030 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */; };
+		EA3F282B1AF28A8E00B45030 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */; };
+		EA3F282C1AF28A8E00B45030 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCC1AEF6F7C0082B344 /* main.m */; };
+		EA3F282E1AF28A8E00B45030 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */; };
+		EA3F28301AF28A8E00B45030 /* HUDdy.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF21AEF755B0082B344 /* HUDdy.css */; };
+		EA3F28311AF28A8E00B45030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBD41AEF6F7C0082B344 /* Main.storyboard */; };
+		EA3F28321AF28A8E00B45030 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBD91AEF6F7C0082B344 /* LaunchScreen.xib */; };
+		EA3F28331AF28A8E00B45030 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF31AEF755B0082B344 /* index.html */; };
+		EA3F28341AF28A8E00B45030 /* Gray.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF11AEF755B0082B344 /* Gray.css */; };
+		EA3F28351AF28A8E00B45030 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBD71AEF6F7C0082B344 /* Images.xcassets */; };
+		EA5BD8EE1AF51CE50028CFEE /* postingMsg.js in Resources */ = {isa = PBXBuildFile; fileRef = EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */; };
+		EA5BD8EF1AF51CE50028CFEE /* postingMsg.js in Resources */ = {isa = PBXBuildFile; fileRef = EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */; };
 		EA5BEBCD1AEF6F7C0082B344 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCC1AEF6F7C0082B344 /* main.m */; };
 		EA5BEBD01AEF6F7C0082B344 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */; };
 		EA5BEBD31AEF6F7C0082B344 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA5BEBD21AEF6F7C0082B344 /* ViewController.m */; };
@@ -35,6 +48,9 @@
 		EA15E8ED1AF078A100DEC7F3 /* BSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
 		EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
 		EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		EA3F28391AF28A8E00B45030 /* MyBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MyBrowser-Info.plist"; path = "/Users/luowei/Movies/iOS开发实战精讲/projects/MyiOSCourse/Webkit-Demo/MyBrowser-Info.plist"; sourceTree = "<absolute>"; };
+		EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = postingMsg.js; sourceTree = "<group>"; };
 		EA5BEBC71AEF6F7C0082B344 /* Webkit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Webkit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5BEBCB1AEF6F7C0082B344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5BEBCC1AEF6F7C0082B344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +70,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA3F282D1AF28A8E00B45030 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3F282E1AF28A8E00B45030 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA5BEBC41AEF6F7C0082B344 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,6 +112,7 @@
 				EA5BEBC91AEF6F7C0082B344 /* Webkit-Demo */,
 				EA5BEBE31AEF6F7C0082B344 /* Webkit-DemoTests */,
 				EA5BEBC81AEF6F7C0082B344 /* Products */,
+				EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +121,7 @@
 			children = (
 				EA5BEBC71AEF6F7C0082B344 /* Webkit-Demo.app */,
 				EA5BEBE01AEF6F7C0082B344 /* Webkit-DemoTests.xctest */,
+				EA3F28391AF28A8E00B45030 /* MyBrowser.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +129,7 @@
 		EA5BEBC91AEF6F7C0082B344 /* Webkit-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */,
 				EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */,
 				EA5BEBF01AEF75310082B344 /* Themes */,
 				EA5BEBCE1AEF6F7C0082B344 /* AppDelegate.h */,
@@ -156,6 +183,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA3F28271AF28A8E00B45030 /* MyBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA3F28361AF28A8E00B45030 /* Build configuration list for PBXNativeTarget "MyBrowser" */;
+			buildPhases = (
+				EA3F28281AF28A8E00B45030 /* Sources */,
+				EA3F282D1AF28A8E00B45030 /* Frameworks */,
+				EA3F282F1AF28A8E00B45030 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyBrowser;
+			productName = "Webkit-Demo";
+			productReference = EA3F28391AF28A8E00B45030 /* MyBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
 		EA5BEBC61AEF6F7C0082B344 /* Webkit-Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA5BEBEA1AEF6F7C0082B344 /* Build configuration list for PBXNativeTarget "Webkit-Demo" */;
@@ -202,6 +246,7 @@
 				TargetAttributes = {
 					EA5BEBC61AEF6F7C0082B344 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = G3A2KYKYBU;
 					};
 					EA5BEBDF1AEF6F7C0082B344 = {
 						CreatedOnToolsVersion = 6.3;
@@ -224,16 +269,32 @@
 			targets = (
 				EA5BEBC61AEF6F7C0082B344 /* Webkit-Demo */,
 				EA5BEBDF1AEF6F7C0082B344 /* Webkit-DemoTests */,
+				EA3F28271AF28A8E00B45030 /* MyBrowser */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA3F282F1AF28A8E00B45030 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3F28301AF28A8E00B45030 /* HUDdy.css in Resources */,
+				EA5BD8EF1AF51CE50028CFEE /* postingMsg.js in Resources */,
+				EA3F28311AF28A8E00B45030 /* Main.storyboard in Resources */,
+				EA3F28321AF28A8E00B45030 /* LaunchScreen.xib in Resources */,
+				EA3F28331AF28A8E00B45030 /* index.html in Resources */,
+				EA3F28341AF28A8E00B45030 /* Gray.css in Resources */,
+				EA3F28351AF28A8E00B45030 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA5BEBC51AEF6F7C0082B344 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EA5BEBF51AEF755B0082B344 /* HUDdy.css in Resources */,
+				EA5BD8EE1AF51CE50028CFEE /* postingMsg.js in Resources */,
 				EA5BEBD61AEF6F7C0082B344 /* Main.storyboard in Resources */,
 				EA5BEBDB1AEF6F7C0082B344 /* LaunchScreen.xib in Resources */,
 				EA5BEBF61AEF755B0082B344 /* index.html in Resources */,
@@ -252,6 +313,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA3F28281AF28A8E00B45030 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3F28291AF28A8E00B45030 /* ViewController.m in Sources */,
+				EA3F282A1AF28A8E00B45030 /* BSViewController.m in Sources */,
+				EA3F282B1AF28A8E00B45030 /* AppDelegate.m in Sources */,
+				EA3F282C1AF28A8E00B45030 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA5BEBC31AEF6F7C0082B344 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +373,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA3F28371AF28A8E00B45030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MyBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = MyBrowser;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		EA3F28381AF28A8E00B45030 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "MyBrowser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = MyBrowser;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
 		EA5BEBE81AEF6F7C0082B344 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -386,10 +486,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -398,10 +500,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -442,6 +546,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA3F28361AF28A8E00B45030 /* Build configuration list for PBXNativeTarget "MyBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA3F28371AF28A8E00B45030 /* Debug */,
+				EA3F28381AF28A8E00B45030 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA5BEBC21AEF6F7C0082B344 /* Build configuration list for PBXProject "Webkit-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

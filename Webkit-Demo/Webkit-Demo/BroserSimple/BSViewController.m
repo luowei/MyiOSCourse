@@ -8,7 +8,7 @@
 
 #import "BSViewController.h"
 
-@interface BSViewController () <UITextFieldDelegate,WKNavigationDelegate>
+@interface BSViewController () <UITextFieldDelegate,WKNavigationDelegate,WKScriptMessageHandler>
 
 @property(nonatomic, strong) WKWebView *webView;
 @property(nonatomic, strong) UIView *barView;
@@ -19,6 +19,7 @@
 @property(nonatomic, strong) UIBarButtonItem *forwardBtn;
 @property(nonatomic, strong) UIBarButtonItem *reloadBtn;
 @property(nonatomic, strong) UIProgressView *progressView;
+@property(nonatomic, strong) WKWebViewConfiguration *webViewConfiguration;
 @end
 
 @implementation BSViewController
@@ -27,8 +28,10 @@
     [super loadView];
 
     //添加webview
-    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame];
+    self.webViewConfiguration = [[WKWebViewConfiguration alloc] init];
+    self.webView = [[WKWebView alloc] initWithFrame:self.view.frame configuration:self.webViewConfiguration];
     self.webView.navigationDelegate = self;
+    self.webView.allowsBackForwardNavigationGestures = YES;
 //    [self.view addSubview:self.webView];
     
     //进度条
@@ -88,6 +91,7 @@
     //添加对webView的监听器
     [self.webView addObserver:self forKeyPath:@"loading" options:NSKeyValueObservingOptionNew context:nil];
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [self.webView addObserver:self forKeyPath:@"title" options:NSKeyValueObservingOptionNew context:nil];
 
     [self addConstraints];
     
@@ -95,8 +99,17 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[[NSURL alloc] initWithString:@"http://www.baidu.com"]];
     [self.webView loadRequest:request];
 
-    
+    //加载用户js文件,修改加载网页内容
+    [self addUserScriptsToWeb];
+
 }
+
+- (void)dealloc {
+    [self.webView removeObserver:self forKeyPath:@"loading"];
+    [self.webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [self.webView removeObserver:self forKeyPath:@"title"];
+}
+
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([keyPath isEqualToString:@"loading"]) {
@@ -106,6 +119,9 @@
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
         self. progressView.hidden = self.webView.estimatedProgress == 1;
         [self.progressView setProgress:(float) self.webView.estimatedProgress animated:YES];
+    }
+    if([keyPath isEqualToString:@"title"]){
+        self.title = self.webView.title;
     }
 }
 
@@ -197,6 +213,52 @@
     [self.progressView setProgress:0.0 animated:NO];
     self.progressView.trackTintColor = [UIColor whiteColor];
 }
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction
+decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    if(navigationAction.navigationType == WKNavigationTypeLinkActivated && navigationAction.request.URL.host!=nil
+            && [navigationAction.request.URL.host.lowercaseString hasPrefix:@"www.youku.com"]){
+        //用用户默认浏览器safari打开
+        [[UIApplication sharedApplication] openURL:navigationAction.request.URL];
+        decisionHandler(WKNavigationActionPolicyCancel);
+    }else{
+        decisionHandler(WKNavigationActionPolicyAllow);
+    }
+}
+
+
+//当接收到html页面脚本发来的消息
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+//    [userContentController addScriptMessageHandler:self name:@"myName"];
+    if([message.name isEqualToString:@"myName"]){
+        //处理消息内容
+//        [[[UIAlertView alloc] initWithTitle:@"message" message:message.body delegate:self
+//                          cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+    }
+}
+
+//加载用户js文件
+-(void)addUserScriptsToWeb{
+
+    NSString *scriptString = [NSString stringWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"postingMsg" withExtension:@"js"]
+                                                  encoding:NSUTF8StringEncoding error:NULL];
+//    NSString *scriptString = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"postingMsg" ofType:@"js"]
+//                                                       encoding:NSUTF8StringEncoding error:NULL];
+
+//    NSString *path = [[NSBundle mainBundle] pathsForResourcesOfType:@"js" inDirectory:@"Resource"][0];
+//    NSString *scriptString = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+
+//    //在document加载前执行注入js脚本
+//    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:scriptString injectionTime:WKUserScriptInjectionTimeAtDocumentStart
+//                                                   forMainFrameOnly:YES];
+    //在document加载完成后执行注入js脚本
+    WKUserScript *userScript = [[WKUserScript alloc] initWithSource:scriptString injectionTime:WKUserScriptInjectionTimeAtDocumentEnd
+                                                   forMainFrameOnly:YES];
+    [self.webViewConfiguration.userContentController addUserScript:userScript];
+    //添加js脚本到处理器中
+    [self.webViewConfiguration.userContentController addScriptMessageHandler:self name:@"myName"];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
