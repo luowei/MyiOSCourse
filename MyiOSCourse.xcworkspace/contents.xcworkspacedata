@@ -27,8 +27,11 @@
    </FileRef>
    <FileRef
       location = "group:CoreText-Demo/CoreText-Demo.xcodeproj">
-      </FileRef>
+   </FileRef>
    <FileRef
       location = "group:TextKit-Demo/TextKit-Demo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Network-Demo/Network-Demo.xcodeproj">
    </FileRef>
 </Workspace>
