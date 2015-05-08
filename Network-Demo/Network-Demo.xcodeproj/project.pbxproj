@@ -16,6 +16,10 @@
 		EA56E86A1AFB39F50072D72D /* Network_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8691AFB39F50072D72D /* Network_DemoTests.m */; };
 		EA56E8761AFB3A3A0072D72D /* BackgroundTransferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8751AFB3A3A0072D72D /* BackgroundTransferViewController.m */; };
 		EA56E87A1AFB3A460072D72D /* LoadingPic.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8791AFB3A460072D72D /* LoadingPic.m */; };
+		EA7E9EFF1AFCC08F0084F984 /* SerialConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E9EFE1AFCC08F0084F984 /* SerialConnection.m */; };
+		EA7E9F051AFCC72A0084F984 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E9F021AFCC72A0084F984 /* GCDAsyncSocket.m */; };
+		EA7E9F061AFCC72A0084F984 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E9F041AFCC72A0084F984 /* GCDAsyncUdpSocket.m */; };
+		EA7E9F091AFCC74B0084F984 /* SocketConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7E9F081AFCC74B0084F984 /* SocketConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,14 @@
 		EA56E8751AFB3A3A0072D72D /* BackgroundTransferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTransferViewController.m; sourceTree = "<group>"; };
 		EA56E8781AFB3A460072D72D /* LoadingPic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPic.h; sourceTree = "<group>"; };
 		EA56E8791AFB3A460072D72D /* LoadingPic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPic.m; sourceTree = "<group>"; };
+		EA7E9EFD1AFCC08F0084F984 /* SerialConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialConnection.h; sourceTree = "<group>"; };
+		EA7E9EFE1AFCC08F0084F984 /* SerialConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialConnection.m; sourceTree = "<group>"; };
+		EA7E9F011AFCC72A0084F984 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		EA7E9F021AFCC72A0084F984 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		EA7E9F031AFCC72A0084F984 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		EA7E9F041AFCC72A0084F984 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		EA7E9F071AFCC74B0084F984 /* SocketConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketConnection.h; sourceTree = "<group>"; };
+		EA7E9F081AFCC74B0084F984 /* SocketConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF062116845BE539F4CFF6D /* Connection */ = {
+			isa = PBXGroup;
+			children = (
+				EA7E9F071AFCC74B0084F984 /* SocketConnection.h */,
+				EA7E9F081AFCC74B0084F984 /* SocketConnection.m */,
+				EA7E9EFD1AFCC08F0084F984 /* SerialConnection.h */,
+				EA7E9EFE1AFCC08F0084F984 /* SerialConnection.m */,
+			);
+			path = Connection;
+			sourceTree = "<group>";
+		};
 		EA56E8411AFB39F50072D72D = {
 			isa = PBXGroup;
 			children = (
+				EA7E9F001AFCC72A0084F984 /* CocoaAsyncSocket */,
 				EA56E84C1AFB39F50072D72D /* Network-Demo */,
 				EA56E8661AFB39F50072D72D /* Network-DemoTests */,
 				EA56E84B1AFB39F50072D72D /* Products */,
@@ -97,6 +121,7 @@
 				EA56E85A1AFB39F50072D72D /* Images.xcassets */,
 				EA56E85C1AFB39F50072D72D /* LaunchScreen.xib */,
 				EA56E84D1AFB39F50072D72D /* Supporting Files */,
+				BEF062116845BE539F4CFF6D /* Connection */,
 			);
 			path = "Network-Demo";
 			sourceTree = "<group>";
@@ -143,6 +168,17 @@
 				EA56E8791AFB3A460072D72D /* LoadingPic.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EA7E9F001AFCC72A0084F984 /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				EA7E9F011AFCC72A0084F984 /* GCDAsyncSocket.h */,
+				EA7E9F021AFCC72A0084F984 /* GCDAsyncSocket.m */,
+				EA7E9F031AFCC72A0084F984 /* GCDAsyncUdpSocket.h */,
+				EA7E9F041AFCC72A0084F984 /* GCDAsyncUdpSocket.m */,
+			);
+			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +283,12 @@
 			files = (
 				EA56E8561AFB39F50072D72D /* ViewController.m in Sources */,
 				EA56E8761AFB3A3A0072D72D /* BackgroundTransferViewController.m in Sources */,
+				EA7E9F091AFCC74B0084F984 /* SocketConnection.m in Sources */,
 				EA56E8531AFB39F50072D72D /* AppDelegate.m in Sources */,
+				EA7E9EFF1AFCC08F0084F984 /* SerialConnection.m in Sources */,
+				EA7E9F061AFCC72A0084F984 /* GCDAsyncUdpSocket.m in Sources */,
 				EA56E87A1AFB3A460072D72D /* LoadingPic.m in Sources */,
+				EA7E9F051AFCC72A0084F984 /* GCDAsyncSocket.m in Sources */,
 				EA56E8501AFB39F50072D72D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +486,7 @@
 				EA56E86F1AFB39F50072D72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA56E8701AFB39F50072D72D /* Build configuration list for PBXNativeTarget "Network-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +495,7 @@
 				EA56E8721AFB39F50072D72D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
