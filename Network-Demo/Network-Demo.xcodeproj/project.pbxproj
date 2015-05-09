@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF0659FD2549A5D7CECA2F0 /* BSDSocketServer.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF067C375274D887ED5B2E0 /* BSDSocketServer.m */; };
 		EA56E8501AFB39F50072D72D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E84F1AFB39F50072D72D /* main.m */; };
 		EA56E8531AFB39F50072D72D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8521AFB39F50072D72D /* AppDelegate.m */; };
 		EA56E8561AFB39F50072D72D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA56E8551AFB39F50072D72D /* ViewController.m */; };
@@ -33,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEF067C375274D887ED5B2E0 /* BSDSocketServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDSocketServer.m; sourceTree = "<group>"; };
+		BEF06B64658CCD33785DABB7 /* BSDSocketServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDSocketServer.h; sourceTree = "<group>"; };
+		EA21CDDC1AFDD5EA005EA253 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		EA56E84A1AFB39F50072D72D /* Network-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Network-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA56E84E1AFB39F50072D72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA56E84F1AFB39F50072D72D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				EA7E9F081AFCC74B0084F984 /* SocketConnection.m */,
 				EA7E9EFD1AFCC08F0084F984 /* SerialConnection.h */,
 				EA7E9EFE1AFCC08F0084F984 /* SerialConnection.m */,
+				BEF067C375274D887ED5B2E0 /* BSDSocketServer.m */,
+				BEF06B64658CCD33785DABB7 /* BSDSocketServer.h */,
 			);
 			path = Connection;
 			sourceTree = "<group>";
@@ -92,6 +98,7 @@
 		EA56E8411AFB39F50072D72D = {
 			isa = PBXGroup;
 			children = (
+				EA21CDDC1AFDD5EA005EA253 /* MobileCoreServices.framework */,
 				EA7E9F001AFCC72A0084F984 /* CocoaAsyncSocket */,
 				EA56E84C1AFB39F50072D72D /* Network-Demo */,
 				EA56E8661AFB39F50072D72D /* Network-DemoTests */,
@@ -290,6 +297,7 @@
 				EA56E87A1AFB3A460072D72D /* LoadingPic.m in Sources */,
 				EA7E9F051AFCC72A0084F984 /* GCDAsyncSocket.m in Sources */,
 				EA56E8501AFB39F50072D72D /* main.m in Sources */,
+				BEF0659FD2549A5D7CECA2F0 /* BSDSocketServer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
