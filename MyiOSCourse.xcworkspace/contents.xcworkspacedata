@@ -37,4 +37,7 @@
    <FileRef
       location = "group:Map-Demo/Map-Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:AVPlayer-Demo/AVPlayer-Demo.xcodeproj">
+   </FileRef>
 </Workspace>

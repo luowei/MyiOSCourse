@@ -6,7 +6,9 @@
 //  Copyright (c) 2015年 luowei. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
+#import "AVPlaybackView.h"
 
 @implementation ViewController
 
