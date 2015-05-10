@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
 
     //绘制一个火柴人
     //create path

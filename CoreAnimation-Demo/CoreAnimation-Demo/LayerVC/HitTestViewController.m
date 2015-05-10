@@ -18,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //create sublayer
     self.blueLayer = [CALayer layer];
     self.blueLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);

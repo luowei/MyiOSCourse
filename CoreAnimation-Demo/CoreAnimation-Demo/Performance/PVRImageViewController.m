@@ -83,6 +83,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     CGRect frame = self.view.frame;
     CGFloat y = (frame.size.height-frame.size.width)/2;
     self.glView = [[UIView alloc] initWithFrame:CGRectMake(0, y, frame.size.width, frame.size.height -y*2)];

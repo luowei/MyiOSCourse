@@ -9,7 +9,7 @@
 #import "BezierAnimationViewController.h"
 
 @interface BezierAnimationViewController ()
-@property (nonatomic, weak) IBOutlet UIView *containerView;
+@property(nonatomic, weak) IBOutlet UIView *containerView;
 @end
 
 @implementation BezierAnimationViewController
@@ -57,9 +57,11 @@
 
 */
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //create a path
     UIBezierPath *bezierPath = [[UIBezierPath alloc] init];
     [bezierPath moveToPoint:CGPointMake(150, 350)];
@@ -85,7 +87,7 @@
     //create the color animation
     CABasicAnimation *animation2 = [CABasicAnimation animation];
     animation2.keyPath = @"backgroundColor";
-    animation2.toValue = (__bridge id)[UIColor redColor].CGColor;
+    animation2.toValue = (__bridge id) [UIColor redColor].CGColor;
     //create group animation
     CAAnimationGroup *groupAnimation = [CAAnimationGroup animation];
     groupAnimation.animations = @[animation1, animation2];

@@ -9,20 +9,23 @@
 #import "NearestViewController.h"
 
 @interface NearestViewController ()
-@property (nonatomic, strong) IBOutletCollection(UIView) NSArray *digitViews;
-@property (nonatomic, weak) NSTimer *timer;
+@property(nonatomic, strong) IBOutletCollection(UIView) NSArray *digitViews;
+@property(nonatomic, weak) NSTimer *timer;
 @end
 
 @implementation NearestViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad]; //get spritesheet image
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
+    //get spritesheet image
     UIImage *digits = [UIImage imageNamed:@"Digits"];
     //set up digit views
     for (UIView *view in self.digitViews) {
         //set contents
-        view.layer.contents = (__bridge id)digits.CGImage;
+        view.layer.contents = (__bridge id) digits.CGImage;
         view.layer.contentsRect = CGRectMake(0, 0, 0.1, 1.0);
         view.layer.contentsGravity = kCAGravityResizeAspect;
 
@@ -34,15 +37,15 @@
     //set initial clock time
     [self tick];
 }
-- (void)setDigit:(NSInteger)digit forView:(UIView *)view
-{
+
+- (void)setDigit:(NSInteger)digit forView:(UIView *)view {
     //adjust contentsRect to select correct digit
     view.layer.contentsRect = CGRectMake(digit * 0.1, 0, 0.1, 1.0);
 }
-- (void)tick
-{
+
+- (void)tick {
     //convert time to hours, minutes and seconds
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier: NSGregorianCalendar];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSUInteger units = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
 
     NSDateComponents *components = [calendar components:units fromDate:[NSDate date]];

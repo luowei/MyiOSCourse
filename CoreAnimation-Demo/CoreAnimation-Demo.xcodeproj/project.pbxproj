@@ -21,6 +21,9 @@
 		EA1D29421ADB924100E8C078 /* ScrollLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29411ADB924100E8C078 /* ScrollLayerView.m */; };
 		EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */; };
 		EA1D29471ADB97BB00E8C078 /* TiledLayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */; };
+		EA225BD11AFFBD780083AC10 /* PlayerLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA225BD01AFFBD780083AC10 /* PlayerLayerViewController.m */; };
+		EA225BD61AFFBDC40083AC10 /* EmitterLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA225BD31AFFBDC40083AC10 /* EmitterLayerViewController.m */; };
+		EA225BD71AFFBDC40083AC10 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA225BD51AFFBDC40083AC10 /* EAGLLayerViewController.m */; };
 		EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */; };
 		EA3386601AE24FFA0029816B /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */; };
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
@@ -133,6 +136,12 @@
 		EA1D29431ADB97BB00E8C078 /* TiledLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledLayerViewController.h; sourceTree = "<group>"; };
 		EA1D29441ADB97BB00E8C078 /* TiledLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TiledLayerViewController.m; sourceTree = "<group>"; };
 		EA1D29451ADB97BB00E8C078 /* TiledLayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TiledLayerViewController.xib; sourceTree = "<group>"; };
+		EA225BCF1AFFBD780083AC10 /* PlayerLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerLayerViewController.h; sourceTree = "<group>"; };
+		EA225BD01AFFBD780083AC10 /* PlayerLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerLayerViewController.m; sourceTree = "<group>"; };
+		EA225BD21AFFBDC40083AC10 /* EmitterLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterLayerViewController.h; sourceTree = "<group>"; };
+		EA225BD31AFFBDC40083AC10 /* EmitterLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterLayerViewController.m; sourceTree = "<group>"; };
+		EA225BD41AFFBDC40083AC10 /* EAGLLayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLLayerViewController.h; sourceTree = "<group>"; };
+		EA225BD51AFFBDC40083AC10 /* EAGLLayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLLayerViewController.m; sourceTree = "<group>"; };
 		EA26CB261AE1092000C5A1D4 /* ChipmunkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChipmunkViewController.h; sourceTree = "<group>"; };
 		EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkViewController.m; sourceTree = "<group>"; };
 		EA33865E1AE24FFA0029816B /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
@@ -402,6 +411,12 @@
 			isa = PBXGroup;
 			children = (
 				EA1D29301ADB74A100E8C078 /* CustomView */,
+				EA225BD21AFFBDC40083AC10 /* EmitterLayerViewController.h */,
+				EA225BD31AFFBDC40083AC10 /* EmitterLayerViewController.m */,
+				EA225BD41AFFBDC40083AC10 /* EAGLLayerViewController.h */,
+				EA225BD51AFFBDC40083AC10 /* EAGLLayerViewController.m */,
+				EA225BCF1AFFBD780083AC10 /* PlayerLayerViewController.h */,
+				EA225BD01AFFBD780083AC10 /* PlayerLayerViewController.m */,
 				EA9E4FE81AD8ECA400CEEEFB /* ContentRectViewController.h */,
 				EA9E4FE91AD8ECA400CEEEFB /* ContentRectViewController.m */,
 				EA9E4FEA1AD8ECA400CEEEFB /* ContentRectViewController.xib */,
@@ -657,6 +672,8 @@
 				EA9E50041AD950CA00CEEEFB /* NearestViewController.m in Sources */,
 				EAF668801ADA4591007E8EE3 /* BasicAnimationViewController.m in Sources */,
 				EA1D29271ADB6DBE00E8C078 /* ShapeLayerViewController.m in Sources */,
+				EA225BD61AFFBDC40083AC10 /* EmitterLayerViewController.m in Sources */,
+				EA225BD71AFFBDC40083AC10 /* EAGLLayerViewController.m in Sources */,
 				EA1D29461ADB97BB00E8C078 /* TiledLayerViewController.m in Sources */,
 				EAEC6A2D1ADE056400A62585 /* MediaTimingFunctionViewController.m in Sources */,
 				EA9E4FBC1AD8D4B600CEEEFB /* main.m in Sources */,
@@ -668,6 +685,7 @@
 				EA1D292A1ADB704200E8C078 /* TextLayerViewController.m in Sources */,
 				EA9E50091AD95BCC00CEEEFB /* GroupOpacityViewController.m in Sources */,
 				EA1D29231ADB67F100E8C078 /* StopAnimationViewController.m in Sources */,
+				EA225BD11AFFBD780083AC10 /* PlayerLayerViewController.m in Sources */,
 				EA652CF31AE2A84D000E5071 /* Matrix3DViewController.m in Sources */,
 				EAEC6A631ADE357B00A62585 /* ReboundBallViewController.m in Sources */,
 				EAF6688A1ADAB629007E8EE3 /* BezierAnimationViewController.m in Sources */,

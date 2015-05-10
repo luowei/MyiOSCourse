@@ -20,6 +20,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     // Do any additional setup after loading the view from its nib.
     //create sublayer
     self.colorLayer = [CALayer layer];

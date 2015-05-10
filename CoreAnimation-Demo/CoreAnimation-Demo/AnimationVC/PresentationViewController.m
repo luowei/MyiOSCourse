@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //create a red layer
     self.colorLayer = [CALayer layer];
     self.colorLayer.frame = CGRectMake(0, 0, 100, 100);

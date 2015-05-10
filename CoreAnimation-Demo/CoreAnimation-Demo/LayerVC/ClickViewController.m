@@ -60,6 +60,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //adjust anchor points
     self.secondHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);
     self.minuteHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);

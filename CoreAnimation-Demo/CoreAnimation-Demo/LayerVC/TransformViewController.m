@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
 
     //如果是jpg图片的话，名字要跟上后缀
     UIImage *image = [UIImage imageNamed:@"mm.jpg"];

@@ -139,6 +139,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.frame];
 //    self.scrollView.delegate = self;
     [self.view addSubview:self.scrollView];

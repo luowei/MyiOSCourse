@@ -17,6 +17,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     // Do any additional setup after loading the view.
     _containerView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 300, 400)];
     _containerView.backgroundColor = [UIColor lightGrayColor];

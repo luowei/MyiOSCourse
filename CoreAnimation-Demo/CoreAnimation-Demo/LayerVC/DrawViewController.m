@@ -44,6 +44,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     // Do any additional setup after loading the view.
 
     CGRect clearBtnFrame= CGRectMake(self.view.frame.size.width/2 - 50, self.view.frame.size.height-35, 100, 30);

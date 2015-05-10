@@ -18,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     // Do any additional setup after loading the view from its nib.
     //set the corner radius on our layers
     self.layerView1.layer.cornerRadius = 20.0f;

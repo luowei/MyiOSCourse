@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //add the tiled layer
     CATiledLayer *tileLayer = [CATiledLayer layer];
     tileLayer.frame = CGRectMake(0, 0, 2048, 2048);

@@ -64,6 +64,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     self.view.backgroundColor = [UIColor whiteColor];
 
     //set up the perspective transform

@@ -17,11 +17,12 @@
 #define fDeviceWidth ([UIScreen mainScreen].bounds.size.width)
 #define fDeviceHeight ([UIScreen mainScreen].bounds.size.height-StatusBarHeight)
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate,UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-
-@property(nonatomic, strong) UITabBarController *tabBarController;
+@property(nonatomic, strong) UINavigationController *navViewController1;
+@property(nonatomic, strong) UINavigationController *navViewController2;
+@property(nonatomic, strong) UINavigationController *navViewController3;
 @end
 

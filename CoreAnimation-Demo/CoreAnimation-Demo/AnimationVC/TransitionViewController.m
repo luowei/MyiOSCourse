@@ -9,15 +9,17 @@
 #import "TransitionViewController.h"
 
 @interface TransitionViewController ()
-@property (nonatomic, weak) IBOutlet UIImageView *imageView;
-@property (nonatomic, copy) NSArray *images;
+@property(nonatomic, weak) IBOutlet UIImageView *imageView;
+@property(nonatomic, copy) NSArray *images;
 @end
 
 @implementation TransitionViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //set up images
     self.images = @[[UIImage imageNamed:@"Cone"],
             [UIImage imageNamed:@"house"],
@@ -25,8 +27,7 @@
             [UIImage imageNamed:@"mm.jpg"]];
 }
 
-- (IBAction)switchImage
-{
+- (IBAction)switchImage {
     /*
     //使用CATransition来过渡动画
     //set up crossfade transition
@@ -65,9 +66,9 @@
     coverView.frame = self.view.bounds;
     [self.view addSubview:coverView];
     //update the view (we'll simply randomize the layer background color)
-    CGFloat red = arc4random() / (CGFloat)INT_MAX;
-    CGFloat green = arc4random() / (CGFloat)INT_MAX;
-    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    CGFloat red = arc4random() / (CGFloat) INT_MAX;
+    CGFloat green = arc4random() / (CGFloat) INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat) INT_MAX;
     self.view.backgroundColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     //perform animation (anything you like)
     [UIView animateWithDuration:1.0 animations:^{
@@ -76,13 +77,12 @@
         transform = CGAffineTransformRotate(transform, M_PI_2);
         coverView.transform = transform;
         coverView.alpha = 0.0;
-    } completion:^(BOOL finished) {
+    }                completion:^(BOOL finished) {
         //remove the cover view now we're finished with it
         [coverView removeFromSuperview];
     }];
 
 }
-
 
 
 - (void)didReceiveMemoryWarning {

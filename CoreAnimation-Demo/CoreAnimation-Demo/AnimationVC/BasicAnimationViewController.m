@@ -66,9 +66,11 @@
 //--------  CAAnimationDelegate  ----------//
 //用-animationDidStop:finished:方法在动画结束之后来更新图层的backgroundColor
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //create sublayer
     self.colorLayer = [CALayer layer];
     self.colorLayer.frame = CGRectMake(50.0f, 50.0f, 100.0f, 100.0f);
@@ -76,27 +78,27 @@
     //add it to our view
     [self.layerView.layer addSublayer:self.colorLayer];
 }
-- (IBAction)changeColor
-{
+
+- (IBAction)changeColor {
     //create a new random color
-    CGFloat red = arc4random() / (CGFloat)INT_MAX;
-    CGFloat green = arc4random() / (CGFloat)INT_MAX;
-    CGFloat blue = arc4random() / (CGFloat)INT_MAX;
+    CGFloat red = arc4random() / (CGFloat) INT_MAX;
+    CGFloat green = arc4random() / (CGFloat) INT_MAX;
+    CGFloat blue = arc4random() / (CGFloat) INT_MAX;
     UIColor *color = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
     //create a basic animation
     CABasicAnimation *animation = [CABasicAnimation animation];
     animation.keyPath = @"backgroundColor";
-    animation.toValue = (__bridge id)color.CGColor;
+    animation.toValue = (__bridge id) color.CGColor;
     animation.delegate = self;
     //apply animation to layer
     [self.colorLayer addAnimation:animation forKey:nil];
 }
-- (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag
-{
+
+- (void)animationDidStop:(CABasicAnimation *)anim finished:(BOOL)flag {
     //set the backgroundColor property to match animation toValue
     [CATransaction begin];
     [CATransaction setDisableActions:YES];
-    self.colorLayer.backgroundColor = (__bridge CGColorRef)anim.toValue;
+    self.colorLayer.backgroundColor = (__bridge CGColorRef) anim.toValue;
     [CATransaction commit];
 }
 

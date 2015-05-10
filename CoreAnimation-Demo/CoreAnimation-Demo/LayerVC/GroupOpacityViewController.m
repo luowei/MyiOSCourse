@@ -31,6 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
+    self.tabBarController.tabBar.hidden = YES;
+
     //create opaque button
     UIButton *button1 = [self customButton];
     button1.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
