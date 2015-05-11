@@ -84,8 +84,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
 
     _glView = [[UIView alloc] initWithFrame:CGRectMake(50, 160, 200, 200)];
     _glView.backgroundColor = [UIColor whiteColor];

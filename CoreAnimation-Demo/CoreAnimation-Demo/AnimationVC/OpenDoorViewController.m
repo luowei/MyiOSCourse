@@ -17,11 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
 
     // Do any additional setup after loading the view.
-    _containerView = [[UIView alloc] initWithFrame:CGRectMake(20, 20, 300, 400)];
+    _containerView = [[UIView alloc] initWithFrame:CGRectMake(20, 64, 300, 400)];
     _containerView.backgroundColor = [UIColor lightGrayColor];
     self.view.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_containerView];

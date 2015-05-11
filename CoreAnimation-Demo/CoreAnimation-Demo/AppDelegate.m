@@ -50,7 +50,7 @@
 #import "EAGLLayerViewController.h"
 #import "PlayerLayerViewController.h"
 
-@interface AppDelegate ()<UITabBarControllerDelegate,UITableViewDataSource,UITableViewDelegate>{
+@interface AppDelegate ()<UITabBarControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>{
     BOOL showToolBar;
 }
 
@@ -64,53 +64,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    self.window.rootViewController = storyboard.instantiateInitialViewController;
-
-//    self.window.rootViewController = [ShapeLayerViewController new];
-//    self.window.rootViewController = [MaskViewController new];
-//    self.window.rootViewController = [ContentRectViewController new];
-//    self.window.rootViewController = [ClickViewController new];
-//    self.window.rootViewController = [HitTestViewController new];
-//    self.window.rootViewController = [ShadowViewController new];
-//    self.window.rootViewController = [MaskViewController new];
-//    self.window.rootViewController = [NearestViewController new];
-//    self.window.rootViewController = [GroupOpacityViewController new];
-//    self.window.rootViewController = [TransformViewController new];
-//    self.window.rootViewController = [Transform3dViewController new];
-//    self.window.rootViewController = [Cube3dViewController new];
-//    self.window.rootViewController = [ImplicitAnimationViewController new];
-//    self.window.rootViewController = [PresentationViewController new];
-//    self.window.rootViewController = [BasicAnimationViewController new];
-//    self.window.rootViewController = [KeyFrameAnimationViewController new];
-//    self.window.rootViewController = [BezierAnimationViewController new];
-//    self.window.rootViewController = [TransitionViewController new];
-//    self.window.rootViewController = [StopAnimationViewController new];
-//    self.window.rootViewController = [ShapeLayerViewController new];
-//    self.window.rootViewController = [TextLayerViewController new];
-//    self.window.rootViewController = [TransformLayerViewController new];
-//    self.window.rootViewController = [GradientLayerViewController new];
-//    self.window.rootViewController = [ReplicatorLayerViewController new];
-//    self.window.rootViewController = [TiledLayerViewController new];
-//    self.window.rootViewController = [MediaTimingViewController new];
-//    self.window.rootViewController = [OpenDoorViewController new];
-//    self.window.rootViewController = [RelativeTimeViewController new];
-//    self.window.rootViewController = [MediaTimingFunctionViewController new];
-//    self.window.rootViewController = [ReboundBallViewController new];
-//    self.window.rootViewController = [DrawViewController new];
-//    self.window.rootViewController = [ChipmunkViewController new];
-//    self.window.rootViewController = [OptimizeViewController new];
-//    self.window.rootViewController = [ImageIOViewController new];
-//    self.window.rootViewController = [CollectionScrollViewController new];
-//    self.window.rootViewController = [CollectionTiledLayerViewController new];
-//    self.window.rootViewController = [PVRImageViewController new];
-//    self.window.rootViewController = [Matrix3DViewController new];
-
-//    self.window.rootViewController = [TransitionViewController new];
-//    self.window.rootViewController = [ClickViewController new];
-
-
 
     //添加tabBar
     UITableViewController *tableViewController1 = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
@@ -188,6 +141,23 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+/*- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC{
+    if(operation == UINavigationControllerOperationPop ){
+        self.tabBarController.tabBar.hidden = NO;
+    }
+    return nil;
+}*/
+
+- (void)navigationController:(UINavigationController *)navigationController
+       didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    NSLog(@"=======:%@",viewController.description);
+
+}
+
 #pragma mark UITabbarControllerDelegate Implements
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
@@ -212,7 +182,7 @@
             return 13;
         }
         default:{
-            return 18;
+            return 21;
         }
     }
     return 0;
@@ -304,18 +274,14 @@
                     break;
                 }
                 case 10:{
-                    cell.textLabel.text = [NSString stringWithUTF8String:class_getName([OpenDoorViewController class])];
-                    break;
-                }
-                case 11:{
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MediaTimingFunctionViewController class])];
                     break;
                 }
-                case 12:{
+                case 11:{
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ReboundBallViewController class])];
                     break;
                 }
-                case 13:{
+                case 12:{
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ChipmunkViewController class])];
                     break;
                 }
@@ -536,24 +502,18 @@
                     break;
                 }
                 case 10:{
-                    OpenDoorViewController *viewController = [OpenDoorViewController new];
-                    viewController.title = [NSString stringWithUTF8String:class_getName([OpenDoorViewController class])];
-                    [self.navViewController2 pushViewController:viewController animated:YES];
-                    break;
-                }
-                case 11:{
                     MediaTimingFunctionViewController *viewController = [MediaTimingFunctionViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([MediaTimingFunctionViewController class])];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 12:{
+                case 11:{
                     ReboundBallViewController *viewController = [ReboundBallViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ReboundBallViewController class])];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 13:{
+                case 12:{
                     ChipmunkViewController *viewController = [ChipmunkViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ChipmunkViewController class])];
                     [self.navViewController2 pushViewController:viewController animated:YES];
@@ -569,7 +529,8 @@
         default:{
             switch (indexPath.row){
                 case 0:{
-                    ViewController *viewController = [ViewController new];
+                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                    ViewController *viewController = storyboard.instantiateInitialViewController;
                     viewController.title = [NSString stringWithUTF8String:class_getName([ViewController class])];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;

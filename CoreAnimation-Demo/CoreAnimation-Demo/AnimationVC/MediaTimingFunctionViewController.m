@@ -19,11 +19,12 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
     self.tabBarController.tabBar.hidden = YES;
+    self.edgesForExtendedLayout = UIRectEdgeBottom;
 
     //create a red layer
     self.colorLayer = [CALayer layer];
     self.colorLayer.frame = CGRectMake(0, 0, 100, 100);
-    self.colorLayer.position = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0);
+    self.colorLayer.position = CGPointMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height);
     self.colorLayer.backgroundColor = [UIColor redColor].CGColor;
     [self.view.layer addSublayer:self.colorLayer];
 

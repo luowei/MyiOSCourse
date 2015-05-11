@@ -26,6 +26,8 @@
 		EA225BD71AFFBDC40083AC10 /* EAGLLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA225BD51AFFBDC40083AC10 /* EAGLLayerViewController.m */; };
 		EA26CB281AE1092000C5A1D4 /* ChipmunkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */; };
 		EA3386601AE24FFA0029816B /* RGCardViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */; };
+		EA3886DE1B005EDA00C28E2E /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3886DD1B005EDA00C28E2E /* Chipmunk6_iOS.framework */; };
+		EA3887131B00B92100C28E2E /* MyShow.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EA3887121B00B92100C28E2E /* MyShow.mp4 */; };
 		EA48884D1ADD1DBF00078FCB /* MediaTimingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */; };
 		EA48884E1ADD1DBF00078FCB /* MediaTimingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */; };
 		EA4888511ADD258600078FCB /* OpenDoorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4888501ADD258600078FCB /* OpenDoorViewController.m */; };
@@ -37,7 +39,6 @@
 		EA652CF31AE2A84D000E5071 /* Matrix3DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA652CF21AE2A84D000E5071 /* Matrix3DViewController.m */; };
 		EA78D02A1ADD4CAF0019DB31 /* RelativeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */; };
 		EA78D02C1ADD4CC20019DB31 /* RelativeTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */; };
-		EA7F56AD1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */; };
 		EA7F56B11AE1744000CFF6D0 /* OptimizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */; };
 		EA7F56BD1AE179B400CFF6D0 /* Ship1.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B31AE179B400CFF6D0 /* Ship1.png */; };
 		EA7F56BE1AE179B400CFF6D0 /* Ship10.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7F56B41AE179B400CFF6D0 /* Ship10.png */; };
@@ -146,6 +147,8 @@
 		EA26CB271AE1092000C5A1D4 /* ChipmunkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChipmunkViewController.m; sourceTree = "<group>"; };
 		EA33865E1AE24FFA0029816B /* RGCardViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RGCardViewLayout.h; sourceTree = "<group>"; };
 		EA33865F1AE24FFA0029816B /* RGCardViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RGCardViewLayout.m; sourceTree = "<group>"; };
+		EA3886DD1B005EDA00C28E2E /* Chipmunk6_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chipmunk6_iOS.framework; path = FrameWork/Debug/Chipmunk6_iOS.framework; sourceTree = "<group>"; };
+		EA3887121B00B92100C28E2E /* MyShow.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = MyShow.mp4; sourceTree = "<group>"; };
 		EA48884A1ADD1DBF00078FCB /* MediaTimingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaTimingViewController.h; sourceTree = "<group>"; };
 		EA48884B1ADD1DBF00078FCB /* MediaTimingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaTimingViewController.m; sourceTree = "<group>"; };
 		EA48884C1ADD1DBF00078FCB /* MediaTimingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MediaTimingViewController.xib; sourceTree = "<group>"; };
@@ -164,7 +167,6 @@
 		EA78D0271ADD4CAF0019DB31 /* RelativeTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelativeTimeViewController.h; sourceTree = "<group>"; };
 		EA78D0281ADD4CAF0019DB31 /* RelativeTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelativeTimeViewController.m; sourceTree = "<group>"; };
 		EA78D0291ADD4CAF0019DB31 /* RelativeTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RelativeTimeViewController.xib; sourceTree = "<group>"; };
-		EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chipmunk6_iOS.framework; path = FrameWork/Release/Chipmunk6_iOS.framework; sourceTree = "<group>"; };
 		EA7F56AF1AE1744000CFF6D0 /* OptimizeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptimizeViewController.h; sourceTree = "<group>"; };
 		EA7F56B01AE1744000CFF6D0 /* OptimizeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptimizeViewController.m; sourceTree = "<group>"; };
 		EA7F56B31AE179B400CFF6D0 /* Ship1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ship1.png; sourceTree = "<group>"; };
@@ -262,8 +264,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA3886DE1B005EDA00C28E2E /* Chipmunk6_iOS.framework in Frameworks */,
 				EA7F56EA1AE18C0D00CFF6D0 /* ImageIO.framework in Frameworks */,
-				EA7F56AD1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework in Frameworks */,
 				EA1D292C1ADB732A00E8C078 /* CoreText.framework in Frameworks */,
 				EA9E501B1AD9890600CEEEFB /* GLKit.framework in Frameworks */,
 			);
@@ -296,6 +298,14 @@
 				BEF060BDCC09E86B2B8C601D /* BrushDrawingView.h */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		EA3887111B00B92100C28E2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EA3887121B00B92100C28E2E /* MyShow.mp4 */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EA7F56AE1AE1742400CFF6D0 /* Performance */ = {
@@ -341,8 +351,8 @@
 		EA9E4FAD1AD8D4B500CEEEFB = {
 			isa = PBXGroup;
 			children = (
+				EA3886DD1B005EDA00C28E2E /* Chipmunk6_iOS.framework */,
 				EA7F56E91AE18C0D00CFF6D0 /* ImageIO.framework */,
-				EA7F56AC1AE16CC600CFF6D0 /* Chipmunk6_iOS.framework */,
 				EA1D292B1ADB732A00E8C078 /* CoreText.framework */,
 				EA9E501A1AD9890600CEEEFB /* GLKit.framework */,
 				EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */,
@@ -364,6 +374,7 @@
 		EA9E4FB81AD8D4B600CEEEFB /* CoreAnimation-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				EA3887111B00B92100C28E2E /* Resources */,
 				EA7F56E71AE18AAD00CFF6D0 /* mmPhotos */,
 				EA7F56B21AE179B400CFF6D0 /* shipes */,
 				EA7F56AE1AE1742400CFF6D0 /* Performance */,
@@ -599,6 +610,7 @@
 				EA7F56E81AE18AAD00CFF6D0 /* mmPhotos in Resources */,
 				EA7F56C21AE179B400CFF6D0 /* Ship5.png in Resources */,
 				EA7F56C41AE179B400CFF6D0 /* Ship7.png in Resources */,
+				EA3887131B00B92100C28E2E /* MyShow.mp4 in Resources */,
 				EA9E502B1AD9A5A200CEEEFB /* PresentationViewController.xib in Resources */,
 				EA9E4FF61AD933F900CEEEFB /* HitTestViewController.xib in Resources */,
 				EA9E4FC51AD8D4B600CEEEFB /* Main.storyboard in Resources */,

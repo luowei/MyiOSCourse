@@ -18,8 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
+//    self.view.backgroundColor = [UIColor whiteColor];
+//    self.navigationController.navigationBar.hidden = YES;
+//    self.tabBarController.tabBar.hidden = YES;
 
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor whiteColor];
@@ -28,7 +29,7 @@
     //用CAReplicatorLayer绘制重复图层
     //create a replicator layer and add it to our view
     CAReplicatorLayer *replicator = [CAReplicatorLayer layer];
-    replicator.frame = self.view.bounds;
+    replicator.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-108);
     [self.view.layer addSublayer:replicator];
     //configure the replicator
     replicator.instanceCount = 10;
@@ -49,7 +50,7 @@
 
 
     //添加一个反射视图，用CAReplicatorLayer自动绘制反射
-    ReflectionView *reflectionView = [[ReflectionView alloc] initWithFrame:CGRectMake(20.0f, 40.0f, 50.0f, 50.0f)];
+    ReflectionView *reflectionView = [[ReflectionView alloc] initWithFrame:CGRectMake(20.0f, self.view.frame.origin.y+80, 50.0f, 50.0f)];
     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mm.jpg"]];
     imageView.frame = reflectionView.bounds;
 //    imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -59,7 +60,7 @@
 
 
     //添加一个用CAScrollLayer实现滑动视图
-    ScrollLayerView *scrollLayerView = [[ScrollLayerView alloc] initWithFrame:CGRectMake(150.0f, 20.0f, 150, 150)];
+    ScrollLayerView *scrollLayerView = [[ScrollLayerView alloc] initWithFrame:CGRectMake(150.0f, self.view.frame.origin.y+80, 150, 150)];
     scrollLayerView.layer.borderColor = [UIColor redColor].CGColor;
     scrollLayerView.layer.borderWidth = 1.0f;
     scrollLayerView.layer.cornerRadius = 10.0f;
