@@ -40,4 +40,7 @@
    <FileRef
       location = "group:AVPlayer-Demo/AVPlayer-Demo.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TabAndTable/TabAndTable.xcodeproj">
+   </FileRef>
 </Workspace>
