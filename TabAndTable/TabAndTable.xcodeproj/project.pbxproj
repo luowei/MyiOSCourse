@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEF0604051F8B25C3F06BEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF064D12FB034CF2D88CF06 /* ViewController.m */; };
+		BEF0616C34FD2831270A8347 /* SDStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06927C5430536B618815D /* SDStatusService.m */; };
+		BEF067A856354AA4FAC84569 /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A5B6C136996BB4E2228 /* SDUser.m */; };
+		BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */; };
+		BEF06816F67AD5A99D3B5933 /* SDUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06D84297FBB6F021DF137 /* SDUserService.m */; };
+		BEF06C2E597619DC47E9BEC4 /* SDDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06320CF2040E4479E4671 /* SDDbManager.m */; };
+		BEF06D97B9A960EDB6C0C26B /* SDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF062B94142AC2EE10F5355 /* SDStatus.m */; };
+		BEF06FDA542A0FE46D867136 /* SDDatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06DCBC479EA1BE762404E /* SDDatabaseCreator.m */; };
 		EA00A6661B0ACB45007DE7AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00A6651B0ACB45007DE7AC /* main.m */; };
 		EA00A6691B0ACB45007DE7AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00A6681B0ACB45007DE7AC /* AppDelegate.m */; };
-		EA00A66C1B0ACB45007DE7AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00A66B1B0ACB45007DE7AC /* ViewController.m */; };
 		EA00A66F1B0ACB45007DE7AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA00A66D1B0ACB45007DE7AC /* Main.storyboard */; };
 		EA00A6711B0ACB45007DE7AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA00A6701B0ACB45007DE7AC /* Images.xcassets */; };
 		EA00A6741B0ACB45007DE7AC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00A6721B0ACB45007DE7AC /* LaunchScreen.xib */; };
@@ -25,6 +32,13 @@
 		EA00A6A61B0ACB73007DE7AC /* KeyBoardTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00A69F1B0ACB73007DE7AC /* KeyBoardTypeViewController.xib */; };
 		EA00A6A71B0ACB73007DE7AC /* ReturnTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00A6A11B0ACB73007DE7AC /* ReturnTypeViewController.m */; };
 		EA00A6A81B0ACB73007DE7AC /* ReturnTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA00A6A21B0ACB73007DE7AC /* ReturnTypeViewController.xib */; };
+		EACA2B921B0DCC8300C6D882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */; };
+		EACA2B951B0DCF3600C6D882 /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */; };
+		EACA2B981B0DCF4900C6D882 /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B971B0DCF4900C6D882 /* SqliteViewController.m */; };
+		EACA2B9B1B0DCF5900C6D882 /* FMDBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B9A1B0DCF5900C6D882 /* FMDBViewController.m */; };
+		EACA2B9E1B0DE09700C6D882 /* CDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B9C1B0DE09700C6D882 /* CDModel.xcdatamodeld */; };
+		EACA2BA11B0DE64400C6D882 /* CDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2BA01B0DE64400C6D882 /* CDStatus.m */; };
+		EACA2BA41B0DE64400C6D882 /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2BA31B0DE64400C6D882 /* CDUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +52,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEF062828C2E606905B50725 /* SDDatabaseCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDatabaseCreator.h; sourceTree = "<group>"; };
+		BEF062A88A306691C3A0FCD0 /* SDDbManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDDbManager.h; sourceTree = "<group>"; };
+		BEF062B94142AC2EE10F5355 /* SDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatus.m; sourceTree = "<group>"; };
+		BEF06320CF2040E4479E4671 /* SDDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDbManager.m; sourceTree = "<group>"; };
+		BEF064D12FB034CF2D88CF06 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BEF067ADD0683B7AD6B609BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BEF06927C5430536B618815D /* SDStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusService.m; sourceTree = "<group>"; };
+		BEF06A5B6C136996BB4E2228 /* SDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUser.m; sourceTree = "<group>"; };
+		BEF06AFB2EFFB31B6E0F8E2A /* SDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUser.h; sourceTree = "<group>"; };
+		BEF06B0CE60FCBF3E0C0F1E2 /* SDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatus.h; sourceTree = "<group>"; };
+		BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusTableViewCell.m; sourceTree = "<group>"; };
+		BEF06BC1B688C41D957CD7D2 /* SDStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusTableViewCell.h; sourceTree = "<group>"; };
+		BEF06D84297FBB6F021DF137 /* SDUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUserService.m; sourceTree = "<group>"; };
+		BEF06DA2CD9A1D900A34521B /* SDUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUserService.h; sourceTree = "<group>"; };
+		BEF06DACF2ACE12DCD9E25D9 /* SDStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusService.h; sourceTree = "<group>"; };
+		BEF06DCBC479EA1BE762404E /* SDDatabaseCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDatabaseCreator.m; sourceTree = "<group>"; };
+		BEF06F5CD5A8BF5FFD30CA45 /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
 		EA00A6601B0ACB45007DE7AC /* TabAndTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabAndTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA00A6641B0ACB45007DE7AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA00A6651B0ACB45007DE7AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA00A6671B0ACB45007DE7AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA00A6681B0ACB45007DE7AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EA00A66A1B0ACB45007DE7AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA00A66B1B0ACB45007DE7AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EA00A66E1B0ACB45007DE7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA00A6701B0ACB45007DE7AC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA00A6731B0ACB45007DE7AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -71,6 +100,18 @@
 		EA00A6A01B0ACB73007DE7AC /* ReturnTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnTypeViewController.h; sourceTree = "<group>"; };
 		EA00A6A11B0ACB73007DE7AC /* ReturnTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReturnTypeViewController.m; sourceTree = "<group>"; };
 		EA00A6A21B0ACB73007DE7AC /* ReturnTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReturnTypeViewController.xib; sourceTree = "<group>"; };
+		EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		EACA2B931B0DCF3600C6D882 /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
+		EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
+		EACA2B961B0DCF4900C6D882 /* SqliteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteViewController.h; sourceTree = "<group>"; };
+		EACA2B971B0DCF4900C6D882 /* SqliteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteViewController.m; sourceTree = "<group>"; };
+		EACA2B991B0DCF5900C6D882 /* FMDBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBViewController.h; sourceTree = "<group>"; };
+		EACA2B9A1B0DCF5900C6D882 /* FMDBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBViewController.m; sourceTree = "<group>"; };
+		EACA2B9D1B0DE09700C6D882 /* CDModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDModel.xcdatamodel; sourceTree = "<group>"; };
+		EACA2B9F1B0DE64400C6D882 /* CDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStatus.h; sourceTree = "<group>"; };
+		EACA2BA01B0DE64400C6D882 /* CDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatus.m; sourceTree = "<group>"; };
+		EACA2BA21B0DE64400C6D882 /* CDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUser.h; sourceTree = "<group>"; };
+		EACA2BA31B0DE64400C6D882 /* CDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACA2B921B0DCC8300C6D882 /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,9 +133,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF063963F975817F7D5BCE2 /* SqliteDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EACA2B961B0DCF4900C6D882 /* SqliteViewController.h */,
+				EACA2B971B0DCF4900C6D882 /* SqliteViewController.m */,
+				BEF06DCBC479EA1BE762404E /* SDDatabaseCreator.m */,
+				BEF062828C2E606905B50725 /* SDDatabaseCreator.h */,
+				BEF06320CF2040E4479E4671 /* SDDbManager.m */,
+				BEF062A88A306691C3A0FCD0 /* SDDbManager.h */,
+				BEF06A5B6C136996BB4E2228 /* SDUser.m */,
+				BEF06AFB2EFFB31B6E0F8E2A /* SDUser.h */,
+				BEF062B94142AC2EE10F5355 /* SDStatus.m */,
+				BEF06B0CE60FCBF3E0C0F1E2 /* SDStatus.h */,
+				BEF06D84297FBB6F021DF137 /* SDUserService.m */,
+				BEF06DA2CD9A1D900A34521B /* SDUserService.h */,
+				BEF06927C5430536B618815D /* SDStatusService.m */,
+				BEF06DACF2ACE12DCD9E25D9 /* SDStatusService.h */,
+				BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */,
+				BEF06BC1B688C41D957CD7D2 /* SDStatusTableViewCell.h */,
+			);
+			path = SqliteDemo;
+			sourceTree = "<group>";
+		};
+		BEF06D5E24DC0A6E37F144EE /* FMDBDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EACA2B991B0DCF5900C6D882 /* FMDBViewController.h */,
+				EACA2B9A1B0DCF5900C6D882 /* FMDBViewController.m */,
+			);
+			path = FMDBDemo;
+			sourceTree = "<group>";
+		};
+		BEF06E320D38C54BBFFB334F /* CoreDataDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EACA2B931B0DCF3600C6D882 /* CoreDataViewController.h */,
+				EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */,
+				EACA2B9C1B0DE09700C6D882 /* CDModel.xcdatamodeld */,
+				EACA2BA21B0DE64400C6D882 /* CDUser.h */,
+				EACA2BA31B0DE64400C6D882 /* CDUser.m */,
+				EACA2B9F1B0DE64400C6D882 /* CDStatus.h */,
+				EACA2BA01B0DE64400C6D882 /* CDStatus.m */,
+			);
+			path = CoreDataDemo;
+			sourceTree = "<group>";
+		};
 		EA00A6571B0ACB45007DE7AC = {
 			isa = PBXGroup;
 			children = (
+				EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */,
 				EA00A6891B0ACB56007DE7AC /* DaiDodgeKeyboard */,
 				EA00A6621B0ACB45007DE7AC /* TabAndTable */,
 				EA00A67C1B0ACB45007DE7AC /* TabAndTableTests */,
@@ -116,12 +205,16 @@
 				EA00A6A91B0ACB92007DE7AC /* ViewController */,
 				EA00A6671B0ACB45007DE7AC /* AppDelegate.h */,
 				EA00A6681B0ACB45007DE7AC /* AppDelegate.m */,
-				EA00A66A1B0ACB45007DE7AC /* ViewController.h */,
-				EA00A66B1B0ACB45007DE7AC /* ViewController.m */,
 				EA00A66D1B0ACB45007DE7AC /* Main.storyboard */,
 				EA00A6701B0ACB45007DE7AC /* Images.xcassets */,
 				EA00A6721B0ACB45007DE7AC /* LaunchScreen.xib */,
 				EA00A6631B0ACB45007DE7AC /* Supporting Files */,
+				BEF067ADD0683B7AD6B609BB /* ViewController.h */,
+				BEF064D12FB034CF2D88CF06 /* ViewController.m */,
+				BEF063963F975817F7D5BCE2 /* SqliteDemo */,
+				BEF06E320D38C54BBFFB334F /* CoreDataDemo */,
+				BEF06D5E24DC0A6E37F144EE /* FMDBDemo */,
+				BEF06F5CD5A8BF5FFD30CA45 /* Singleton.h */,
 			);
 			path = TabAndTable;
 			sourceTree = "<group>";
@@ -288,18 +381,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACA2B981B0DCF4900C6D882 /* SqliteViewController.m in Sources */,
 				EA00A6A41B0ACB73007DE7AC /* CustomeKeyboardViewController.m in Sources */,
 				EA00A6A51B0ACB73007DE7AC /* KeyBoardTypeViewController.m in Sources */,
 				EA00A6941B0ACB56007DE7AC /* DaiDodgeKeyboard+AccessObject.m in Sources */,
 				EA00A6A31B0ACB73007DE7AC /* BaseKeyboardViewController.m in Sources */,
-				EA00A66C1B0ACB45007DE7AC /* ViewController.m in Sources */,
+				EACA2B9E1B0DE09700C6D882 /* CDModel.xcdatamodeld in Sources */,
 				EA00A6971B0ACB56007DE7AC /* DaiDodgeKeyboardObjects.m in Sources */,
 				EA00A6951B0ACB56007DE7AC /* DaiDodgeKeyboard+Animation.m in Sources */,
+				EACA2B951B0DCF3600C6D882 /* CoreDataViewController.m in Sources */,
+				EACA2BA41B0DE64400C6D882 /* CDUser.m in Sources */,
 				EA00A6961B0ACB56007DE7AC /* DaiDodgeKeyboard.m in Sources */,
 				EA00A6691B0ACB45007DE7AC /* AppDelegate.m in Sources */,
 				EA00A6661B0ACB45007DE7AC /* main.m in Sources */,
 				EA00A6A71B0ACB73007DE7AC /* ReturnTypeViewController.m in Sources */,
+				EACA2B9B1B0DCF5900C6D882 /* FMDBViewController.m in Sources */,
 				EA00A6981B0ACB56007DE7AC /* UIView+FirstResponderNotify.m in Sources */,
+				BEF0604051F8B25C3F06BEBE /* ViewController.m in Sources */,
+				EACA2BA11B0DE64400C6D882 /* CDStatus.m in Sources */,
+				BEF06FDA542A0FE46D867136 /* SDDatabaseCreator.m in Sources */,
+				BEF06C2E597619DC47E9BEC4 /* SDDbManager.m in Sources */,
+				BEF067A856354AA4FAC84569 /* SDUser.m in Sources */,
+				BEF06D97B9A960EDB6C0C26B /* SDStatus.m in Sources */,
+				BEF06816F67AD5A99D3B5933 /* SDUserService.m in Sources */,
+				BEF0616C34FD2831270A8347 /* SDStatusService.m in Sources */,
+				BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +602,7 @@
 				EA00A6851B0ACB45007DE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA00A6861B0ACB45007DE7AC /* Build configuration list for PBXNativeTarget "TabAndTableTests" */ = {
 			isa = XCConfigurationList;
@@ -504,8 +611,22 @@
 				EA00A6881B0ACB45007DE7AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EACA2B9C1B0DE09700C6D882 /* CDModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EACA2B9D1B0DE09700C6D882 /* CDModel.xcdatamodel */,
+			);
+			currentVersion = EACA2B9D1B0DE09700C6D882 /* CDModel.xcdatamodel */;
+			path = CDModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EA00A6581B0ACB45007DE7AC /* Project object */;
 }

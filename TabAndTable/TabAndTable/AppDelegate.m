@@ -10,6 +10,9 @@
 #import "KeyBoardTypeViewController.h"
 #import "ReturnTypeViewController.h"
 #import "ViewController.h"
+#import "SqliteViewController.h"
+#import "CoreDataViewController.h"
+#import "FMDBViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,22 +33,28 @@
     viewController.view.backgroundColor = [UIColor whiteColor];
     viewController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFavorites tag:10];
     
-    KeyBoardTypeViewController *viewController2 = [KeyBoardTypeViewController new];
-    viewController2.title = @"viewController2";
-    viewController2.view.backgroundColor = [UIColor lightGrayColor];
-    viewController2.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:11];
+    SqliteViewController *sqliteController = [SqliteViewController new];
+    sqliteController.title = @"sqlite数据操作范例";
+    sqliteController.view.backgroundColor = [UIColor lightGrayColor];
+    sqliteController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemHistory tag:11];
     
-    ReturnTypeViewController *viewController3= [ReturnTypeViewController new];
-    viewController3.title = @"viewController3";
-    viewController3.view.backgroundColor = [UIColor grayColor];
-    viewController3.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:12];
+    CoreDataViewController *coreDataController= [CoreDataViewController new];
+    coreDataController.title = @"CoreData数据操作范例";
+    coreDataController.view.backgroundColor = [UIColor grayColor];
+    coreDataController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemContacts tag:12];
+
+    FMDBViewController *fmdbController= [FMDBViewController new];
+    fmdbController.title = @"FMDB数据操作范例";
+    fmdbController.view.backgroundColor = [UIColor grayColor];
+    fmdbController.tabBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemBookmarks tag:13];
     
     UINavigationController *navigationController1 = [[UINavigationController alloc] initWithRootViewController:viewController];
-    UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:viewController2];
-    UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:viewController3];
-    
-    tabBarController.viewControllers = @[navigationController1,navigationController2,navigationController3];
-    
+    UINavigationController *navigationController2 = [[UINavigationController alloc] initWithRootViewController:sqliteController];
+    UINavigationController *navigationController3 = [[UINavigationController alloc] initWithRootViewController:coreDataController];
+    UINavigationController *navigationController4 = [[UINavigationController alloc] initWithRootViewController:fmdbController];
+
+    tabBarController.viewControllers = @[navigationController1,navigationController2,navigationController3,navigationController4];
+
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
     
