@@ -21,6 +21,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -43,6 +44,7 @@
 
     // Do any additional setup after loading the view from its nib.
 
+//    UIImage *image = [UIImage imageNamed:@"pinghe.jpg"];
     UIImage *image = [UIImage imageNamed:@"pinghe"];
     //set igloo sprite
     [self addSpriteImage:image withContentRect:CGRectMake(0, 0, 0.5, 0.5) toLayer:self.mid2.layer];

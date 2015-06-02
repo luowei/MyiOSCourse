@@ -193,26 +193,38 @@
             switch (indexPath.row) {
                 case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([OptimizeViewController class])];
+                    NSString *desc = @"TableView滚动优化";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ImageIOViewController class])];
+                    NSString *desc = @"Collection及ImageIO操作";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([CollectionScrollViewController class])];
+                    NSString *desc = @"自定义Collection横向滑动";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([CollectionTiledLayerViewController class])];
+                    NSString *desc = @"CATiledLayer使用";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PVRImageViewController class])];
+                    NSString *desc = @"使用OpenGL加载PVR图像";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Matrix3DViewController class])];
+                    NSString *desc = @"3D阵列优化";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 default:
@@ -226,54 +238,80 @@
             switch (indexPath.row) {
                 case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([KeyFrameAnimationViewController class])];
+                    NSString *desc = @"帧动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ImplicitAnimationViewController class])];
+                    NSString *desc = @"隐式动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PresentationViewController class])];
+                    NSString *desc = @"呈现动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([BasicAnimationViewController class])];
+                    NSString *desc = @"基础动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([BezierAnimationViewController class])];
+                    NSString *desc = @"贝赛尔动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransitionViewController class])];
+                    NSString *desc = @"过渡动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 6: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([StopAnimationViewController class])];
+                    NSString *desc = @"动画控制";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 7: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MediaTimingViewController class])];
+                    NSString *desc = @"时间动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 8: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([OpenDoorViewController class])];
+                    NSString *desc = @"开门动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 9: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([RelativeTimeViewController class])];
+                    NSString *desc = @"相对时间动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 10: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MediaTimingFunctionViewController class])];
+                    NSString *desc = @"函数动画";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 11: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ReboundBallViewController class])];
+                    NSString *desc = @"定义器模拟重力";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 12: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ChipmunkViewController class])];
+                    NSString *desc = @"物理引擎Chipmunk";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 default:
@@ -287,86 +325,128 @@
             switch (indexPath.row) {
                 case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ViewController class])];
+                    NSString *desc = @"简单图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ContentRectViewController class])];
+                    NSString *desc = @"拼合图片拆解";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ClickViewController class])];
+                    NSString *desc = @"时钟";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([HitTestViewController class])];
+                    NSString *desc = @"点触测试";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ShadowViewController class])];
+                    NSString *desc = @"阴影图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MaskViewController class])];
+                    NSString *desc = @"遮罩图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 6: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([NearestViewController class])];
+                    NSString *desc = @"图层滤镜Nearest模式";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 7: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([GroupOpacityViewController class])];
+                    NSString *desc = @"栅格化图层实现组透明";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 8: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransformViewController class])];
+                    NSString *desc = @"映射变换";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 9: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Transform3dViewController class])];
+                    NSString *desc = @"3D变换";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 10: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Cube3dViewController class])];
+                    NSString *desc = @"通过变换实现立方体";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 11: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([GradientLayerViewController class])];
+                    NSString *desc = @"渐变图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 12: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ReplicatorLayerViewController class])];
+                    NSString *desc = @"复制图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 13: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ShapeLayerViewController class])];
+                    NSString *desc = @"形状图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 14: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TextLayerViewController class])];
+                    NSString *desc = @"文本图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 15: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TiledLayerViewController class])];
+                    NSString *desc = @"瓦片图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 16: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransformLayerViewController class])];
+                    NSString *desc = @"3D变换图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 17: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([EmitterLayerViewController class])];
+                    NSString *desc = @"放射图层(粒子效果)";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 18: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([EAGLLayerViewController class])];
+                    NSString *desc = @"EAGL图层(OpenGL绘制)";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 19: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PlayerLayerViewController class])];
+                    NSString *desc = @"视频播放图层";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 case 20: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([DrawViewController class])];
+                    NSString *desc = @"手写绘制";
+                    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %@",desc,cell.textLabel.text];
                     break;
                 }
                 default:
