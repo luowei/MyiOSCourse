@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lauchingImage" translatesAutoresizingMaskIntoConstraints="NO" id="nfA-Vv-8c3">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchingImage" translatesAutoresizingMaskIntoConstraints="NO" id="nfA-Vv-8c3">
                     <rect key="frame" x="100" y="100" width="280" height="280"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015年 luowei. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="8ie-xW-0ye">
@@ -53,6 +53,6 @@
         </view>
     </objects>
     <resources>
-        <image name="lauchingImage" width="500" height="500"/>
+        <image name="LaunchingImage" width="640" height="960"/>
     </resources>
 </document>

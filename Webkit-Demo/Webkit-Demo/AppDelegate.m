@@ -49,8 +49,8 @@
     self.tableViewController.tableView.dataSource = self;
 
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:self.tableViewController];
-//    self.window.rootViewController = self.navigationController;
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[BSViewController new]];
+    self.window.rootViewController = self.navigationController;
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[BSViewController new]];
 
     [_window makeKeyAndVisible];
     return YES;
@@ -122,6 +122,7 @@
     switch (indexPath.row){
         case 0:
             viewController = storyboard.instantiateInitialViewController;
+            viewController.edgesForExtendedLayout = UIRectEdgeNone;
             [self.tableViewController.navigationController pushViewController:viewController animated:YES];
             break;
         case 1:

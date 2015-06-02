@@ -244,9 +244,11 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = rootls;
 				TargetAttributes = {
+					EA3F28271AF28A8E00B45030 = {
+						DevelopmentTeam = SHDWRXPG6N;
+					};
 					EA5BEBC61AEF6F7C0082B344 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = G3A2KYKYBU;
 					};
 					EA5BEBDF1AEF6F7C0082B344 = {
 						CreatedOnToolsVersion = 6.3;
