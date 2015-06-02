@@ -17,9 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.hidden = YES;
-//    self.tabBarController.tabBar.hidden = YES;
-
+////
     //add the ship
     self.shipLayer = [CALayer layer];
     self.shipLayer.frame = CGRectMake(0, 0, 128, 128);

@@ -15,13 +15,20 @@
 @end
 
 @implementation ReplicatorLayerViewController
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor whiteColor];
-//    self.navigationController.navigationBar.hidden = YES;
-//    self.tabBarController.tabBar.hidden = YES;
-
+////
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = [UIColor whiteColor];
 

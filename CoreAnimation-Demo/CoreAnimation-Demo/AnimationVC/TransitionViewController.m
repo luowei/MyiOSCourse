@@ -17,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //set up images
     self.images = @[[UIImage imageNamed:@"Cone"],

@@ -59,8 +59,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //create a path
     UIBezierPath *bezierPath = [[UIBezierPath alloc] init];

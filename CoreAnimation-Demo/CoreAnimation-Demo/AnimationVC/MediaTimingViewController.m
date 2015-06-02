@@ -20,9 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBar.hidden = YES;
-//    self.tabBarController.tabBar.hidden = YES;
-    self.edgesForExtendedLayout = UIRectEdgeBottom;
+////    self.edgesForExtendedLayout = UIRectEdgeBottom;
 
     //add the ship
     self.shipLayer = [CALayer layer];

@@ -14,6 +14,16 @@
 
 @implementation GroupOpacityViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 - (UIButton *)customButton {
     //create button
     CGRect frame = CGRectMake(0, 0, 150, 50);
@@ -31,8 +41,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //create opaque button
     UIButton *button1 = [self customButton];

@@ -13,6 +13,15 @@
 @end
 
 @implementation TransformLayerViewController
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
 
 - (CALayer *)faceWithTransform:(CATransform3D)transform {
     //create cube face layer
@@ -64,8 +73,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     self.view.backgroundColor = [UIColor whiteColor];
 

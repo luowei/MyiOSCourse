@@ -17,6 +17,15 @@
 
 @implementation ClickViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 /*
 
 - (void)viewDidLoad {
@@ -60,8 +69,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //adjust anchor points
     self.secondHand.layer.anchorPoint = CGPointMake(0.5f, 0.9f);

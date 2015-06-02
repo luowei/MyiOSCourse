@@ -13,20 +13,26 @@
 @end
 
 @implementation ShapeLayerViewController
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
 
-- (void)viewDidLoad
-{
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //绘制一个火柴人
     //create path
     UIBezierPath *path = [[UIBezierPath alloc] init];
     [path moveToPoint:CGPointMake(175, 100)];
 
-    [path addArcWithCenter:CGPointMake(150, 100) radius:25 startAngle:0 endAngle:2*M_PI clockwise:YES];
+    [path addArcWithCenter:CGPointMake(150, 100) radius:25 startAngle:0 endAngle:2 * M_PI clockwise:YES];
     [path moveToPoint:CGPointMake(150, 125)];
     [path addLineToPoint:CGPointMake(150, 175)];
     [path addLineToPoint:CGPointMake(125, 225)];
@@ -72,7 +78,7 @@
     blueLayer.frame = CGRectMake(200, 450, 100, 100);
     blueLayer.fillColor = [UIColor blueColor].CGColor;
     blueLayer.path = [UIBezierPath bezierPathWithRoundedRect:
-            CGRectMake(0, 0, 100, 100) cornerRadius:20].CGPath;
+            CGRectMake(0, 0, 100, 100)          cornerRadius:20].CGPath;
 
     //add it to our view
     [self.view.layer addSublayer:blueLayer];
@@ -82,7 +88,7 @@
     imageLayer.frame = CGRectMake(200, 300, 100, 100);
     imageLayer.contentsCenter = CGRectMake(0.5, 0.5, 0.0, 0.0);
     imageLayer.contentsScale = [UIScreen mainScreen].scale;
-    imageLayer.contents = (__bridge id)[UIImage imageNamed:@"Ship1"].CGImage;
+    imageLayer.contents = (__bridge id) [UIImage imageNamed:@"Ship1"].CGImage;
     //add it to our view
     [self.view.layer addSublayer:imageLayer];
 

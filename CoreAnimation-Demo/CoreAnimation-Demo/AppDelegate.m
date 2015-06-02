@@ -50,7 +50,7 @@
 #import "EAGLLayerViewController.h"
 #import "PlayerLayerViewController.h"
 
-@interface AppDelegate ()<UITabBarControllerDelegate,UINavigationControllerDelegate,UITableViewDataSource,UITableViewDelegate>{
+@interface AppDelegate () <UITabBarControllerDelegate, UINavigationControllerDelegate, UITableViewDataSource, UITableViewDelegate> {
     BOOL showToolBar;
 }
 
@@ -69,6 +69,7 @@
     UITableViewController *tableViewController1 = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     tableViewController1.tableView.dataSource = self;
     tableViewController1.tableView.delegate = self;
+    tableViewController1.title = @"图层(Layer)相关";
     self.navViewController1 = [[UINavigationController alloc] initWithRootViewController:tableViewController1];
     self.navViewController1.title = @"Layer";
     self.navViewController1.tabBarItem.title = @"图层(Layer)相关";
@@ -77,6 +78,7 @@
     UITableViewController *tableViewController2 = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     tableViewController2.tableView.dataSource = self;
     tableViewController2.tableView.delegate = self;
+    tableViewController2.title = @"动画(Annimation)相关";
     self.navViewController2 = [[UINavigationController alloc] initWithRootViewController:tableViewController2];
     self.navViewController2.title = @"Annimation";
     self.navViewController2.tabBarItem.title = @"动画(Annimation)相关";
@@ -85,6 +87,7 @@
     UITableViewController *tableViewController3 = [[UITableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     tableViewController3.tableView.dataSource = self;
     tableViewController3.tableView.delegate = self;
+    tableViewController3.title = @"性能(Performance)相关";
     self.navViewController3 = [[UINavigationController alloc] initWithRootViewController:tableViewController3];
     self.navViewController3.title = @"Performance";
     self.navViewController3.tabBarItem.title = @"性能(Performance)相关";
@@ -96,27 +99,9 @@
     self.tabBarController.delegate = self;
     self.window.rootViewController = self.tabBarController;
 
-    UIScreenEdgePanGestureRecognizer *screenEdgePanGesture = [[UIScreenEdgePanGestureRecognizer alloc]initWithTarget:self action:@selector(showToolBar:)];
-    screenEdgePanGesture.edges = UIRectEdgeRight;
-    UILongPressGestureRecognizer *longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showToolBar:)];
-
-    [self.tabBarController.view addGestureRecognizer:screenEdgePanGesture];
-    [self.tabBarController.view addGestureRecognizer:longPressGesture];
-
     [self.window makeKeyAndVisible];
 
     return YES;
-}
-
-- (void)showToolBar:(id)gesture {
-    if(!showToolBar){
-        self.tabBarController.navigationController.navigationBar.hidden = YES;
-        self.tabBarController.tabBar.hidden = YES;
-    }else{
-        self.tabBarController.navigationController.navigationBar.hidden = NO;
-        self.tabBarController.tabBar.hidden = NO;
-    }
-    showToolBar=!showToolBar;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -153,8 +138,8 @@
 }*/
 
 - (void)navigationController:(UINavigationController *)navigationController
-       didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
-    NSLog(@"=======:%@",viewController.description);
+       didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    NSLog(@"=======:%@", viewController.description);
 
 }
 
@@ -170,18 +155,24 @@
     [self.tabBarController.view.layer addAnimation:transition forKey:nil];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0)
+        return 1.0f;
+    return 32.0f;
+}
+
 #pragma mark UITableViewDataSource Implements
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    switch (self.tabBarController.selectedIndex){
-        case 2:{
+    switch (self.tabBarController.selectedIndex) {
+        case 2: {
             return 6;
         }
-        case 1:{
+        case 1: {
             return 13;
         }
-        default:{
+        default: {
             return 21;
         }
     }
@@ -191,36 +182,36 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if(cell==nil){
+    if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
-    switch (self.tabBarController.selectedIndex){
+    switch (self.tabBarController.selectedIndex) {
         //性能相关
-        case 2:{
-            switch (indexPath.row){
-                case 0:{
+        case 2: {
+            switch (indexPath.row) {
+                case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([OptimizeViewController class])];
                     break;
                 }
-                case 1:{
+                case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ImageIOViewController class])];
                     break;
                 }
-                case 2:{
+                case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([CollectionScrollViewController class])];
                     break;
                 }
-                case 3:{
+                case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([CollectionTiledLayerViewController class])];
                     break;
                 }
-                case 4:{
+                case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PVRImageViewController class])];
                     break;
                 }
-                case 5:{
+                case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Matrix3DViewController class])];
                     break;
                 }
@@ -230,58 +221,58 @@
             break;
         }
 
-        //动画相关
-        case 1:{
-            switch (indexPath.row){
-                case 0:{
+            //动画相关
+        case 1: {
+            switch (indexPath.row) {
+                case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([KeyFrameAnimationViewController class])];
                     break;
                 }
-                case 1:{
+                case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ImplicitAnimationViewController class])];
                     break;
                 }
-                case 2:{
+                case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PresentationViewController class])];
                     break;
                 }
-                case 3:{
+                case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([BasicAnimationViewController class])];
                     break;
                 }
-                case 4:{
+                case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([BezierAnimationViewController class])];
                     break;
                 }
-                case 5:{
+                case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransitionViewController class])];
                     break;
                 }
-                case 6:{
+                case 6: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([StopAnimationViewController class])];
                     break;
                 }
-                case 7:{
+                case 7: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MediaTimingViewController class])];
                     break;
                 }
-                case 8:{
+                case 8: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([OpenDoorViewController class])];
                     break;
                 }
-                case 9:{
+                case 9: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([RelativeTimeViewController class])];
                     break;
                 }
-                case 10:{
+                case 10: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MediaTimingFunctionViewController class])];
                     break;
                 }
-                case 11:{
+                case 11: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ReboundBallViewController class])];
                     break;
                 }
-                case 12:{
+                case 12: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ChipmunkViewController class])];
                     break;
                 }
@@ -291,90 +282,90 @@
             break;
         }
 
-        //图层相关
-        default:{
-            switch (indexPath.row){
-                case 0:{
+            //图层相关
+        default: {
+            switch (indexPath.row) {
+                case 0: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ViewController class])];
                     break;
                 }
-                case 1:{
+                case 1: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ContentRectViewController class])];
                     break;
                 }
-                case 2:{
+                case 2: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ClickViewController class])];
                     break;
                 }
-                case 3:{
+                case 3: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([HitTestViewController class])];
                     break;
                 }
-                case 4:{
+                case 4: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ShadowViewController class])];
                     break;
                 }
-                case 5:{
+                case 5: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([MaskViewController class])];
                     break;
                 }
-                case 6:{
+                case 6: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([NearestViewController class])];
                     break;
                 }
-                case 7:{
+                case 7: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([GroupOpacityViewController class])];
                     break;
                 }
-                case 8:{
+                case 8: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransformViewController class])];
                     break;
                 }
-                case 9:{
+                case 9: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Transform3dViewController class])];
                     break;
                 }
-                case 10:{
+                case 10: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([Cube3dViewController class])];
                     break;
                 }
-                case 11:{
+                case 11: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([GradientLayerViewController class])];
                     break;
                 }
-                case 12:{
+                case 12: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ReplicatorLayerViewController class])];
                     break;
                 }
-                case 13:{
+                case 13: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([ShapeLayerViewController class])];
                     break;
                 }
-                case 14:{
+                case 14: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TextLayerViewController class])];
                     break;
                 }
-                case 15:{
+                case 15: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TiledLayerViewController class])];
                     break;
                 }
-                case 16:{
+                case 16: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([TransformLayerViewController class])];
                     break;
                 }
-                case 17:{
+                case 17: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([EmitterLayerViewController class])];
                     break;
                 }
-                case 18:{
+                case 18: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([EAGLLayerViewController class])];
                     break;
                 }
-                case 19:{
+                case 19: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([PlayerLayerViewController class])];
                     break;
                 }
-                case 20:{
+                case 20: {
                     cell.textLabel.text = [NSString stringWithUTF8String:class_getName([DrawViewController class])];
                     break;
                 }
@@ -389,46 +380,52 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+
 //    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 
-    switch (self.tabBarController.selectedIndex){
+    switch (self.tabBarController.selectedIndex) {
         //性能相关
-        case 2:{
-            switch (indexPath.row){
-                case 0:{
+        case 2: {
+            switch (indexPath.row) {
+                case 0: {
                     OptimizeViewController *viewController = [OptimizeViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([OptimizeViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 1:{
+                case 1: {
                     ImageIOViewController *viewController = [ImageIOViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([ImageIOViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([ImageIOViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 2:{
+                case 2: {
                     CollectionScrollViewController *viewController = [CollectionScrollViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([CollectionScrollViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 3:{
+                case 3: {
                     CollectionTiledLayerViewController *viewController = [CollectionTiledLayerViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([CollectionTiledLayerViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([CollectionTiledLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 4:{
+                case 4: {
                     PVRImageViewController *viewController = [PVRImageViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([PVRImageViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([PVRImageViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 5:{
+                case 5: {
                     Matrix3DViewController *viewController = [Matrix3DViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([Matrix3DViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([Matrix3DViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController3 pushViewController:viewController animated:YES];
                     break;
                 }
@@ -439,83 +436,96 @@
         }
 
             //动画相关
-        case 1:{
-            switch (indexPath.row){
-                case 0:{
+        case 1: {
+            switch (indexPath.row) {
+                case 0: {
                     KeyFrameAnimationViewController *viewController = [KeyFrameAnimationViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([KeyFrameAnimationViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([KeyFrameAnimationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 1:{
+                case 1: {
                     ImplicitAnimationViewController *viewController = [ImplicitAnimationViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([ImplicitAnimationViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([ImplicitAnimationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 2:{
+                case 2: {
                     PresentationViewController *viewController = [PresentationViewController new];
-                    viewController.title  = [NSString stringWithUTF8String:class_getName([PresentationViewController class])];
+                    viewController.title = [NSString stringWithUTF8String:class_getName([PresentationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 3:{
+                case 3: {
                     BasicAnimationViewController *viewController = [BasicAnimationViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([BasicAnimationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 4:{
+                case 4: {
                     BezierAnimationViewController *viewController = [BezierAnimationViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([BezierAnimationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 5:{
+                case 5: {
                     TransitionViewController *viewController = [TransitionViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([TransitionViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 6:{
+                case 6: {
                     StopAnimationViewController *viewController = [StopAnimationViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([StopAnimationViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 7:{
+                case 7: {
                     MediaTimingViewController *viewController = [MediaTimingViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([MediaTimingViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 8:{
+                case 8: {
                     OpenDoorViewController *viewController = [OpenDoorViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([OpenDoorViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 9:{
+                case 9: {
                     RelativeTimeViewController *viewController = [RelativeTimeViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([RelativeTimeViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 10:{
+                case 10: {
                     MediaTimingFunctionViewController *viewController = [MediaTimingFunctionViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([MediaTimingFunctionViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 11:{
+                case 11: {
                     ReboundBallViewController *viewController = [ReboundBallViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ReboundBallViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 12:{
+                case 12: {
                     ChipmunkViewController *viewController = [ChipmunkViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ChipmunkViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController2 pushViewController:viewController animated:YES];
                     break;
                 }
@@ -526,132 +536,153 @@
         }
 
             //图层相关
-        default:{
-            switch (indexPath.row){
-                case 0:{
+        default: {
+            switch (indexPath.row) {
+                case 0: {
                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                     ViewController *viewController = storyboard.instantiateInitialViewController;
                     viewController.title = [NSString stringWithUTF8String:class_getName([ViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 1:{
+                case 1: {
                     ContentRectViewController *viewController = [ContentRectViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ContentRectViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 2:{
+                case 2: {
                     ClickViewController *viewController = [ClickViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ClickViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 3:{
+                case 3: {
                     HitTestViewController *viewController = [HitTestViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([HitTestViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 4:{
+                case 4: {
                     ShadowViewController *viewController = [ShadowViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ShadowViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 5:{
+                case 5: {
                     MaskViewController *viewController = [MaskViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([MaskViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 6:{
+                case 6: {
                     NearestViewController *viewController = [NearestViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([NearestViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 7:{
+                case 7: {
                     GroupOpacityViewController *viewController = [GroupOpacityViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([GroupOpacityViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 8:{
+                case 8: {
                     TransformViewController *viewController = [TransformViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([TransformViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 9:{
+                case 9: {
                     Transform3dViewController *viewController = [Transform3dViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([Transform3dViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 10:{
+                case 10: {
                     Cube3dViewController *viewController = [Cube3dViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([Cube3dViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 11:{
+                case 11: {
                     GradientLayerViewController *viewController = [GradientLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([GradientLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 12:{
+                case 12: {
                     ReplicatorLayerViewController *viewController = [ReplicatorLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ReplicatorLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 13:{
+                case 13: {
                     ShapeLayerViewController *viewController = [ShapeLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([ShapeLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 14:{
+                case 14: {
                     TextLayerViewController *viewController = [TextLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([TextLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 15:{
+                case 15: {
                     TiledLayerViewController *viewController = [TiledLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([TiledLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 16:{
+                case 16: {
                     TransformLayerViewController *viewController = [TransformLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([TransformLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 17:{
+                case 17: {
                     EmitterLayerViewController *viewController = [EmitterLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([EmitterLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 18:{
+                case 18: {
                     EAGLLayerViewController *viewController = [EAGLLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([EAGLLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 19:{
+                case 19: {
                     PlayerLayerViewController *viewController = [PlayerLayerViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([PlayerLayerViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }
-                case 20:{
+                case 20: {
                     DrawViewController *viewController = [DrawViewController new];
                     viewController.title = [NSString stringWithUTF8String:class_getName([DrawViewController class])];
+                    [viewController setHidesBottomBarWhenPushed:YES];
                     [self.navViewController1 pushViewController:viewController animated:YES];
                     break;
                 }

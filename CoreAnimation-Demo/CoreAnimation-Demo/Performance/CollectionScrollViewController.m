@@ -16,11 +16,17 @@
 
 @implementation CollectionScrollViewController
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 
     _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
                                          collectionViewLayout:[RGCardViewLayout new]];
@@ -32,8 +38,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
-    self.tabBarController.tabBar.hidden = YES;
 
     //set up data
     self.imagePaths = [[NSBundle mainBundle] pathsForResourcesOfType:@"png" inDirectory:@"mmPhotos"];
