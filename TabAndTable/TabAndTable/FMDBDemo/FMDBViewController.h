@@ -6,5 +6,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FMDBViewController : UIViewController
+@interface FMDBViewController : UITableViewController
 @end

@@ -37,6 +37,7 @@
 		EA46E96D1B28476A008E5629 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = EA46E9651B28476A008E5629 /* FMDatabasePool.m */; };
 		EA46E96E1B28476A008E5629 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA46E9671B28476A008E5629 /* FMDatabaseQueue.m */; };
 		EA46E96F1B28476A008E5629 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA46E96A1B28476A008E5629 /* FMResultSet.m */; };
+		EA4A01031B2870F50032A02A /* Summary.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A01021B2870F50032A02A /* Summary.m */; };
 		EACA2B921B0DCC8300C6D882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */; };
 		EACA2B951B0DCF3600C6D882 /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */; };
 		EACA2B981B0DCF4900C6D882 /* SqliteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B971B0DCF4900C6D882 /* SqliteViewController.m */; };
@@ -116,6 +117,8 @@
 		EA46E9681B28476A008E5629 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		EA46E9691B28476A008E5629 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		EA46E96A1B28476A008E5629 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		EA4A01011B2870F50032A02A /* Summary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Summary.h; sourceTree = "<group>"; };
+		EA4A01021B2870F50032A02A /* Summary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Summary.m; sourceTree = "<group>"; };
 		EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		EACA2B931B0DCF3600C6D882 /* CoreDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataViewController.h; sourceTree = "<group>"; };
 		EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataViewController.m; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 			children = (
 				EACA2B991B0DCF5900C6D882 /* FMDBViewController.h */,
 				EACA2B9A1B0DCF5900C6D882 /* FMDBViewController.m */,
+				EA4A01011B2870F50032A02A /* Summary.h */,
+				EA4A01021B2870F50032A02A /* Summary.m */,
 			);
 			path = FMDBDemo;
 			sourceTree = "<group>";
@@ -434,6 +439,7 @@
 				EA46E96B1B28476A008E5629 /* FMDatabase.m in Sources */,
 				EA00A6981B0ACB56007DE7AC /* UIView+FirstResponderNotify.m in Sources */,
 				BEF0604051F8B25C3F06BEBE /* ViewController.m in Sources */,
+				EA4A01031B2870F50032A02A /* Summary.m in Sources */,
 				EACA2BA11B0DE64400C6D882 /* CDStatus.m in Sources */,
 				BEF06FDA542A0FE46D867136 /* SDDatabaseCreator.m in Sources */,
 				BEF06C2E597619DC47E9BEC4 /* SDDbManager.m in Sources */,
