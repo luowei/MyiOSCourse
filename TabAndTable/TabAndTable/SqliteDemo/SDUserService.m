@@ -54,4 +54,8 @@ singleton_implementation(SDUserService)
     return user;
 }
 
+- (void)removeAllUser {
+    NSString *sql = @"delete from User";
+    [[SDDbManager sharedSDDbManager] executeQuery:sql];
+}
 @end

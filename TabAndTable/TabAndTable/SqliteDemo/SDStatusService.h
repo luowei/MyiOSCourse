@@ -45,4 +45,5 @@ singleton_interface(SDStatusService)
 */
 -(NSArray *)getAllStatus;
 
+- (void)removeAllStatus;
 @end

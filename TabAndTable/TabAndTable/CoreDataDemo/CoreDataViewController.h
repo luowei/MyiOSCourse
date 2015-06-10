@@ -6,5 +6,5 @@
 #import <UIKit/UIKit.h>
 
 
-@interface CoreDataViewController : UIViewController
+@interface CoreDataViewController : UITableViewController
 @end

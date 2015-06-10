@@ -25,13 +25,44 @@
     [super viewDidLoad];
     [SDDatabaseCreator initDatabase];
 
-//    [self addUsers];
+//    [self.tableView registerClass:[SDStatusTableViewCell class] forCellReuseIdentifier:@"myTableViewCellIdentityKey1"];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    NSString *key=@"IsAddData";
+    NSUserDefaults *defaults=[[NSUserDefaults alloc]init];
+    if ([[defaults valueForKey:key] intValue]!=1) {
+
+        [self addUsers];
+        [self addStatus];
+
+        [defaults setValue:@1 forKey:key];
+    }
+
 //    [self removeUser];
 //    [self modifyUserInfo];
 
-//    [self addStatus];
+//    [defaults setValue:@0 forKey:key];
 
     [self loadStatusData];
+
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+/*
+    [[SDStatusService sharedSDStatusService] removeAllStatus];
+    [[SDUserService sharedSDUserService] removeAllUser];
+
+    NSString *key=@"IsAddData";
+    NSUserDefaults *defaults=[[NSUserDefaults alloc]init];
+    [defaults setValue:@0 forKey:key];
+*/
 
 }
 
@@ -86,6 +117,7 @@
     [[SDUserService sharedSDUserService] modifyUser:user2];
 }
 
+
 #pragma mark 加载数据
 
 - (void)loadStatusData {
@@ -109,7 +141,7 @@
     return _status.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (SDStatusTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *identtityKey = @"myTableViewCellIdentityKey1";
     SDStatusTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identtityKey];
     if (cell == nil) {
@@ -124,8 +156,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 20.0f;
+    return 1.0f;
 }
-
 
 @end

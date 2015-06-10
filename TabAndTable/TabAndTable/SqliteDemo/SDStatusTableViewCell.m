@@ -5,9 +5,20 @@
 
 #import "SDStatusTableViewCell.h"
 #import "SDStatus.h"
+#import "SDUser.h"
 
 
 @implementation SDStatusTableViewCell {
 
 }
+
+-(void)setStatus:(SDStatus *)status {
+    super.textLabel.text = status.user.screenName;
+    super.detailTextLabel.text = status.text;
+}
+
+-(CGFloat)height {
+    return 50;
+}
+
 @end

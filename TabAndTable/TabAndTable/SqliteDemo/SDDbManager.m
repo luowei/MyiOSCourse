@@ -34,8 +34,18 @@ singleton_implementation(SDDbManager)
 }
 
 - (void)openDb:(NSString *)dbname {
+/*
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documents = [paths firstObject];
+    NSString *databasePath = [documents stringByAppendingPathComponent:dbname];
+    if(sqlite3_open([databasePath UTF8String], &_database)!= SQLITE_OK){
+        sqlite3_close(_database);
+        NSLog(@"打开数据库失败");
+    }
+*/
+
     //取得数据库保存路径，通常保存沙盒Documents目录
-    NSString *directory = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *directory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     NSLog(@"%@", directory);
     NSString *filePath = [directory stringByAppendingPathComponent:dbname];
     //如果有数据库则直接打开，否则创建并打开（注意filePath是ObjC中的字符串，需要转化为C语言字符串类型）
@@ -44,6 +54,7 @@ singleton_implementation(SDDbManager)
     } else {
         NSLog(@"数据库打开失败!");
     }
+
 }
 
 

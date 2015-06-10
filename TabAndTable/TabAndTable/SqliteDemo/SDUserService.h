@@ -59,4 +59,5 @@ singleton_interface(SDUserService)
 */
 - (SDUser *)getUserByName:(NSString *)name;
 
+- (void)removeAllUser;
 @end

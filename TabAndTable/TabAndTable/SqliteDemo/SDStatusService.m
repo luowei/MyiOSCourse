@@ -53,4 +53,8 @@ singleton_implementation(SDStatusService)
     return array;
 }
 
+- (void)removeAllStatus {
+    NSString *sql = @"delete from Status";
+    [[SDDbManager sharedSDDbManager] executeQuery:sql];
+}
 @end
