@@ -7,7 +7,6 @@
 //
 
 #import "CDStatus.h"
-#import "NSManagedObject.h"
 
 
 @implementation CDStatus
