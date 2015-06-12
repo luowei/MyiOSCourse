@@ -24,15 +24,13 @@
     [super viewDidLoad];
 
     [self createDbContext2];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"TABLECREATED_KEY"]) {
 
-//    [self addUserWithName:@"张三" screenName:@"zs" profileImageUrl:@"zs.png" mbtype:@"vip" city:@"ShangHai"];
-//    [self addUserWithName:@"李四" screenName:@"ls" profileImageUrl:@"lisi.png" mbtype:@"commom" city:@"BeiJing"];
-//    [self addUserWithName:@"王五" screenName:@"ww" profileImageUrl:@"wangwu.png" mbtype:@"low" city:@"GuangZhou"];
-//
-//    [self addStatusWithSource:@"来自iphone6" text:@"这是一条测试微博" username:@"张三" createDate:[NSDate date]];
-//    [self addStatusWithSource:@"来自iphone6" text:@"测试微博测试微博测试微博测试微博测试微博" username:@"张三" createDate:[NSDate date]];
-//    [self addStatusWithSource:@"来自iphone6" text:@"测试这一条微博测试这一条微测试这一条" username:@"李四" createDate:[NSDate date]];
+        [self addUsers];
+        [self addStatus];
 
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"TABLECREATED_KEY"];
+    }
 
 //    //根据名字获得某一个实体
 //    NSEntityDescription *entityDesc = [NSEntityDescription entityForName:@"Contact" inManagedObjectContext:self.context];
@@ -45,6 +43,72 @@
     [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
+#pragma mark 加载数据
+
+- (void)addUsers {
+    [self addUserWithName:@"Binger" screenName:@"aaaa" profileImageUrl:@"binger.jpg" mbtype:@"mbtype.png" city:@"北京"];
+    [self addUserWithName:@"Xiaona" screenName:@"bbbb" profileImageUrl:@"xiaona.jpg" mbtype:@"mbtype.png" city:@"北京"];
+    [self addUserWithName:@"Lily" screenName:@"cccc" profileImageUrl:@"lily.jpg" mbtype:@"mbtype.png" city:@"北京"];
+    [self addUserWithName:@"Qianmo" screenName:@"dddd" profileImageUrl:@"qianmo.jpg" mbtype:@"mbtype.png" city:@"北京"];
+    [self addUserWithName:@"Yanyue" screenName:@"eeee" profileImageUrl:@"yanyue.jpg" mbtype:@"mbtype.png" city:@"北京"];
+}
+
+- (void)addStatus {
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"一只雪aaaaaaaaa照片，获得了\"2014年野生动物摄影师\"大赛特等奖。一起来为猴子配个词" username:@"Binger"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"xxxxxx日本边泡温泉边玩iPhone的照片，获得了\"2014年野生动物摄影师\"大赛特等奖。一起来为猴子配个词" username:@"Binger"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"【eeeeeee ihone6了 要求很简单】真心回馈粉丝，小编觉得现在最好的奖品就是iPhone6了。今起到12月31日，关注我们，转发微博，就有机会获iPhone6(奖品可能需要等待)！每月抽一台[鼓掌]。不费事，还是试试吧，万一中了呢" username:@"Xiaona"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"重大新闻：蒂yxxxyxxxxxx 出柜后，ISIS战士怒扔iPhone，沙特神职人员呼吁人们换回iPhone 4。[via Pan-Arabia Enquirer]" username:@"Lily"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"ooooooooooppppp怎么往Iphone4S里倒东西？倒入的东西又该在哪里找？用了Iphone这么长时间，还真的不知道怎么弄！有谁知道啊？谢谢！" username:@"Qianmo"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"在bbbbbbbbbbb《Infinite 金明洙》，推荐给大家! " username:@"Binger"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"如pppppppppppp产品发展下去，不贪图手头节目源的现实利益，就木有苹果的ipod，也就木有iphone。柯达类似的现实利益，不自我革命的案例也是一种巨头的宿命。" username:@"Xiaona"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"【iadfadsfasdfadsa】新买的iPhone 7 Plus ，如何？够酷炫么？" username:@"Xiaona"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"自adsfasdadweqewqvzc 213 R500#，tr350S～价格美丽，行货，全国联保～iPhone6 iPhone6Plus卡西欧TR150 TR200 TR350 TR350S全面到货 招收各种代理！[给力]微信：39017366" username:@"Lily"];
+    [self addStatusWithCreateAt:nil source:@"iPhone 6" text:@"猜到;lqemr109ruknzc[aei 所想者，再奖iPhone一部。（奖品由“2014年野生动物摄影师”评委会颁发）" username:@"Lily"];
+}
+
+- (void)loadStatusData {
+    _statusCells = @[].mutableCopy;
+    _status = [self getAllWeiBoStatus];
+    [_status enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        SDStatusTableViewCell *cell = [[SDStatusTableViewCell alloc] init];
+        cell.status = (SDStatus *) obj;
+        [_statusCells addObject:cell];
+    }];
+    NSLog(@"%@", [_status lastObject]);
+}
+
+#pragma mark 加载设置TableView的数据
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _status.count;
+}
+
+- (SDStatusTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *identtityKey = @"myTableViewCellIdentityKey1";
+    SDStatusTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identtityKey];
+    if (cell == nil) {
+        cell = [[SDStatusTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identtityKey];
+    }
+    cell.status = _status[(NSUInteger) indexPath.row];
+    return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return ((SDStatusTableViewCell *) _statusCells[(NSUInteger) indexPath.row]).height;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 1.0f;
+}
+
+
+#pragma mark CoreData 相关的数据操作
 
 - (NSManagedObjectContext *)createDbContext {
     //打开模型文件，参数为nil则打开包中所有模型文件并合并成一个
@@ -113,14 +177,14 @@
     }
 }
 
-- (void)addStatusWithSource:(NSString *)source text:(NSString *)text
-        username:(NSString *)name createDate:(NSDate *)date {
+- (void)addStatusWithCreateAt:(NSDate *)date source:(NSString *)source
+        text:(NSString *)text username:(NSString *)name  {
     //添加一个对象
     CDStatus *status = [NSEntityDescription insertNewObjectForEntityForName:@"CDStatus" inManagedObjectContext:self.context];
     status.source = source;
     status.text = text;
     status.user = [self getUserByName:name];
-    status.createdAt = date;
+//    status.createdAt = date;
 
     NSError *error;
     //保存上下文
@@ -177,49 +241,5 @@
 -(NSArray *)getAllWeiBoStatus{
     return [self.context executeFetchRequest:[NSFetchRequest fetchRequestWithEntityName:@"CDStatus"] error:nil];
 }
-
-#pragma mark 加载设置TableView的数据
-
-#pragma mark 加载数据
-
-- (void)loadStatusData {
-    _statusCells = [[NSMutableArray alloc] init];
-    _status = [self getAllWeiBoStatus];
-    [_status enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        SDStatusTableViewCell *cell = [[SDStatusTableViewCell alloc] init];
-        cell.status = (SDStatus *) obj;
-        [_statusCells addObject:cell];
-    }];
-    NSLog(@"%@", [_status lastObject]);
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return _status.count;
-}
-
-- (SDStatusTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *identtityKey = @"myTableViewCellIdentityKey1";
-    SDStatusTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:identtityKey];
-    if (cell == nil) {
-        cell = [[SDStatusTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identtityKey];
-    }
-    cell.status = _status[(NSUInteger) indexPath.row];
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return ((SDStatusTableViewCell *) _statusCells[(NSUInteger) indexPath.row]).height;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return 1.0f;
-}
-
 
 @end

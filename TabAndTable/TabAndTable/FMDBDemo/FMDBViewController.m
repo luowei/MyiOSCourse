@@ -38,7 +38,7 @@
     }
     
     self.awarenessList = @[].mutableCopy;
-    [self.awarenessList arrayByAddingObjectsFromArray:[self listContent]];
+    [self.awarenessList addObjectsFromArray:[self listContent]];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
