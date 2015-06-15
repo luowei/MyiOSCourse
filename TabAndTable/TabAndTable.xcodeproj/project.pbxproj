@@ -12,6 +12,7 @@
 		BEF067A856354AA4FAC84569 /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A5B6C136996BB4E2228 /* SDUser.m */; };
 		BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */; };
 		BEF06816F67AD5A99D3B5933 /* SDUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06D84297FBB6F021DF137 /* SDUserService.m */; };
+		BEF06A14F62EF9D6832FC561 /* MenuItemsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06C589CC6A2BC8F206EF5 /* MenuItemsVC.m */; };
 		BEF06C2E597619DC47E9BEC4 /* SDDbManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06320CF2040E4479E4671 /* SDDbManager.m */; };
 		BEF06D97B9A960EDB6C0C26B /* SDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF062B94142AC2EE10F5355 /* SDStatus.m */; };
 		BEF06FDA542A0FE46D867136 /* SDDatabaseCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06DCBC479EA1BE762404E /* SDDatabaseCreator.m */; };
@@ -46,6 +47,8 @@
 		EACA2B9E1B0DE09700C6D882 /* CDModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B9C1B0DE09700C6D882 /* CDModel.xcdatamodeld */; };
 		EACA2BA11B0DE64400C6D882 /* CDStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2BA01B0DE64400C6D882 /* CDStatus.m */; };
 		EACA2BA41B0DE64400C6D882 /* CDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2BA31B0DE64400C6D882 /* CDUser.m */; };
+		EAE9198F1B2EC9AD00E6E199 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9198D1B2EC9AD00E6E199 /* ENSideMenu.swift */; };
+		EAE919901B2EC9AD00E6E199 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE9198E1B2EC9AD00E6E199 /* ENSideMenuNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,12 +68,14 @@
 		BEF06320CF2040E4479E4671 /* SDDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDbManager.m; sourceTree = "<group>"; };
 		BEF064D12FB034CF2D88CF06 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BEF067ADD0683B7AD6B609BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BEF06911B47CEFD3CC47EF4A /* MenuItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemsVC.h; sourceTree = "<group>"; };
 		BEF06927C5430536B618815D /* SDStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusService.m; sourceTree = "<group>"; };
 		BEF06A5B6C136996BB4E2228 /* SDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUser.m; sourceTree = "<group>"; };
 		BEF06AFB2EFFB31B6E0F8E2A /* SDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUser.h; sourceTree = "<group>"; };
 		BEF06B0CE60FCBF3E0C0F1E2 /* SDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatus.h; sourceTree = "<group>"; };
 		BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusTableViewCell.m; sourceTree = "<group>"; };
 		BEF06BC1B688C41D957CD7D2 /* SDStatusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusTableViewCell.h; sourceTree = "<group>"; };
+		BEF06C589CC6A2BC8F206EF5 /* MenuItemsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemsVC.m; sourceTree = "<group>"; };
 		BEF06D84297FBB6F021DF137 /* SDUserService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUserService.m; sourceTree = "<group>"; };
 		BEF06DA2CD9A1D900A34521B /* SDUserService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUserService.h; sourceTree = "<group>"; };
 		BEF06DACF2ACE12DCD9E25D9 /* SDStatusService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatusService.h; sourceTree = "<group>"; };
@@ -134,6 +139,9 @@
 		EACA2BA01B0DE64400C6D882 /* CDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDStatus.m; sourceTree = "<group>"; };
 		EACA2BA21B0DE64400C6D882 /* CDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDUser.h; sourceTree = "<group>"; };
 		EACA2BA31B0DE64400C6D882 /* CDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDUser.m; sourceTree = "<group>"; };
+		EAE9198C1B2EC9AC00E6E199 /* TabAndTable-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabAndTable-Bridging-Header.h"; sourceTree = "<group>"; };
+		EAE9198D1B2EC9AD00E6E199 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		EAE9198E1B2EC9AD00E6E199 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +163,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF060D64DFF1EFBD3A0077A /* ENSlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				EAE9198D1B2EC9AD00E6E199 /* ENSideMenu.swift */,
+				EAE9198E1B2EC9AD00E6E199 /* ENSideMenuNavigationController.swift */,
+				EAE9198C1B2EC9AC00E6E199 /* TabAndTable-Bridging-Header.h */,
+			);
+			path = ENSlideMenu;
+			sourceTree = "<group>";
+		};
 		BEF063963F975817F7D5BCE2 /* SqliteDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +232,7 @@
 				EA00A6621B0ACB45007DE7AC /* TabAndTable */,
 				EA00A67C1B0ACB45007DE7AC /* TabAndTableTests */,
 				EA00A6611B0ACB45007DE7AC /* Products */,
+				BEF060D64DFF1EFBD3A0077A /* ENSlideMenu */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,6 +261,8 @@
 				BEF06E320D38C54BBFFB334F /* CoreDataDemo */,
 				BEF06D5E24DC0A6E37F144EE /* FMDBDemo */,
 				BEF06F5CD5A8BF5FFD30CA45 /* Singleton.h */,
+				BEF06C589CC6A2BC8F206EF5 /* MenuItemsVC.m */,
+				BEF06911B47CEFD3CC47EF4A /* MenuItemsVC.h */,
 			);
 			path = TabAndTable;
 			sourceTree = "<group>";
@@ -441,6 +462,7 @@
 				EA00A6661B0ACB45007DE7AC /* main.m in Sources */,
 				EA00A6A71B0ACB73007DE7AC /* ReturnTypeViewController.m in Sources */,
 				EACA2B9B1B0DCF5900C6D882 /* FMDBViewController.m in Sources */,
+				EAE9198F1B2EC9AD00E6E199 /* ENSideMenu.swift in Sources */,
 				EA46E96B1B28476A008E5629 /* FMDatabase.m in Sources */,
 				EA00A6981B0ACB56007DE7AC /* UIView+FirstResponderNotify.m in Sources */,
 				BEF0604051F8B25C3F06BEBE /* ViewController.m in Sources */,
@@ -449,6 +471,7 @@
 				BEF06FDA542A0FE46D867136 /* SDDatabaseCreator.m in Sources */,
 				BEF06C2E597619DC47E9BEC4 /* SDDbManager.m in Sources */,
 				BEF067A856354AA4FAC84569 /* SDUser.m in Sources */,
+				EAE919901B2EC9AD00E6E199 /* ENSideMenuNavigationController.swift in Sources */,
 				BEF06D97B9A960EDB6C0C26B /* SDStatus.m in Sources */,
 				EA46E96C1B28476A008E5629 /* FMDatabaseAdditions.m in Sources */,
 				EA46E96F1B28476A008E5629 /* FMResultSet.m in Sources */,
@@ -458,6 +481,7 @@
 				BEF0616C34FD2831270A8347 /* SDStatusService.m in Sources */,
 				BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */,
 				EA46E96E1B28476A008E5629 /* FMDatabaseQueue.m in Sources */,
+				BEF06A14F62EF9D6832FC561 /* MenuItemsVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,10 +607,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TabAndTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ENSlideMenu/TabAndTable-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -594,10 +621,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TabAndTable/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ENSlideMenu/TabAndTable-Bridging-Header.h";
 			};
 			name = Release;
 		};

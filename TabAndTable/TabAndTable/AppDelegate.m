@@ -13,6 +13,8 @@
 #import "SqliteViewController.h"
 #import "CoreDataViewController.h"
 #import "FMDBViewController.h"
+#import "MenuItemsVC.h"
+#import "TabAndTable-Swift.h"
 
 @interface AppDelegate ()
 
@@ -23,9 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     ViewController *viewController = [UIStoryboard storyboardWithName:@"Main" bundle:nil].instantiateInitialViewController;
@@ -55,7 +55,16 @@
 
     tabBarController.viewControllers = @[navigationController1,navigationController2,navigationController3,navigationController4];
 
-    self.window.rootViewController = tabBarController;
+    //侧滑菜单
+    MenuItemsVC *sideMenuVC = [MenuItemsVC new];
+    ENSideMenuNavigationController *navVC = [[ENSideMenuNavigationController alloc]initWithMenuViewController:sideMenuVC contentViewController:tabBarController];
+
+    //toggle side menu
+    UIBarButtonItem *toggleButton = [[UIBarButtonItem alloc] initWithTitle:@"Toggle" style:UIBarButtonItemStylePlain target:tabBarController action:@selector(toggleSideMenuView)];
+    [tabBarController.navigationItem setLeftBarButtonItem:toggleButton];
+
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     
     return YES;
