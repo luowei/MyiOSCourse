@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BEF0604051F8B25C3F06BEBE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF064D12FB034CF2D88CF06 /* ViewController.m */; };
+		BEF060BCFC3E073F4CD5191E /* CollectionSelfSizingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A53CE9AE02D5711D4B3 /* CollectionSelfSizingVC.m */; };
 		BEF0616C34FD2831270A8347 /* SDStatusService.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06927C5430536B618815D /* SDStatusService.m */; };
 		BEF067A856354AA4FAC84569 /* SDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06A5B6C136996BB4E2228 /* SDUser.m */; };
 		BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06B12B7295923B68E2550 /* SDStatusTableViewCell.m */; };
@@ -67,9 +68,11 @@
 		BEF062B94142AC2EE10F5355 /* SDStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatus.m; sourceTree = "<group>"; };
 		BEF06320CF2040E4479E4671 /* SDDbManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDDbManager.m; sourceTree = "<group>"; };
 		BEF064D12FB034CF2D88CF06 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BEF06719EADE5D53C6FF5A3A /* CollectionSelfSizingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionSelfSizingVC.h; sourceTree = "<group>"; };
 		BEF067ADD0683B7AD6B609BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BEF06911B47CEFD3CC47EF4A /* MenuItemsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemsVC.h; sourceTree = "<group>"; };
 		BEF06927C5430536B618815D /* SDStatusService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDStatusService.m; sourceTree = "<group>"; };
+		BEF06A53CE9AE02D5711D4B3 /* CollectionSelfSizingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionSelfSizingVC.m; sourceTree = "<group>"; };
 		BEF06A5B6C136996BB4E2228 /* SDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUser.m; sourceTree = "<group>"; };
 		BEF06AFB2EFFB31B6E0F8E2A /* SDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDUser.h; sourceTree = "<group>"; };
 		BEF06B0CE60FCBF3E0C0F1E2 /* SDStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDStatus.h; sourceTree = "<group>"; };
@@ -196,6 +199,15 @@
 			path = SqliteDemo;
 			sourceTree = "<group>";
 		};
+		BEF06CEFAD4C2817D95536F5 /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				BEF06A53CE9AE02D5711D4B3 /* CollectionSelfSizingVC.m */,
+				BEF06719EADE5D53C6FF5A3A /* CollectionSelfSizingVC.h */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
 		BEF06D5E24DC0A6E37F144EE /* FMDBDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +245,7 @@
 				EA00A67C1B0ACB45007DE7AC /* TabAndTableTests */,
 				EA00A6611B0ACB45007DE7AC /* Products */,
 				BEF060D64DFF1EFBD3A0077A /* ENSlideMenu */,
+				BEF06CEFAD4C2817D95536F5 /* MenuItems */,
 			);
 			sourceTree = "<group>";
 		};
@@ -482,6 +495,7 @@
 				BEF06802DE806B9E9C5FFCA7 /* SDStatusTableViewCell.m in Sources */,
 				EA46E96E1B28476A008E5629 /* FMDatabaseQueue.m in Sources */,
 				BEF06A14F62EF9D6832FC561 /* MenuItemsVC.m in Sources */,
+				BEF060BCFC3E073F4CD5191E /* CollectionSelfSizingVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -4,6 +4,8 @@
 //
 
 #import "MenuItemsVC.h"
+#import "CollectionSelfSizingVC.h"
+#import "TABAndTable-Swift.h"
 
 
 @implementation MenuItemsVC {
@@ -29,6 +31,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    switch (indexPath.row){
+        case 0:{
+            CollectionSelfSizingVC *selfSizingVC = [CollectionSelfSizingVC new];
+            [self.sideMenuController setContentViewController:selfSizingVC];
+            break;
+        }
+        case 1:{
+            CollectionSelfSizingVC *selfSizingVC = [CollectionSelfSizingVC new];
+            [self.sideMenuController setContentViewController:selfSizingVC];
+            break;
+        }
+        default:
+            break;
+    }
 
 }
 
