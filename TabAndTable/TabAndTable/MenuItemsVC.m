@@ -11,6 +11,15 @@
 @implementation MenuItemsVC {
 
 }
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    self.edgesForExtendedLayout =UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+}
+
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
