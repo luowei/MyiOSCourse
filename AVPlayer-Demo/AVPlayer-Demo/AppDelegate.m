@@ -38,6 +38,7 @@ typedef void (^AlertViewCompletionHandler)(void);
     return navController;
 }
 
+//分别从相册、共享、音乐中加载媒体资源
 - (UITabBarController *)tabbedAssetBrowserControllerWithSourceType:(AssetBrowserSourceType)sourceType
                                                           delegate:(id <AssetBrowserControllerDelegate>)delegate {
     UITabBarController *assetTabBarController = [[UITabBarController alloc] init];
@@ -70,20 +71,20 @@ typedef void (^AlertViewCompletionHandler)(void);
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // Restore saved tab bar item from the defaults system.
 
-
+    //分别从相册、共享、音乐中加载媒体资源
     self->tabBarController = [self tabbedAssetBrowserControllerWithSourceType:AssetBrowserSourceTypeAll delegate:self];
 
-    // The UITabBarItem 'tag' value is used to identify the saved tab bar item.
+    //从userDefaults中获tab item的选项卡索引
     NSInteger tabBarItemIndex = [defaults integerForKey:AVPlayerDemoPickerViewControllerSourceTypeUserDefaultsKey];
     NSArray *viewControllers = self->tabBarController.viewControllers;
     if (tabBarItemIndex < 0) {
-        // If saved tab bar item does not match any existing item, then default to the first item.
+        //如果userDefaults中没有保存选项卡索引，则默认选中第一项
         self->tabBarController.selectedIndex = 0;
     }
     else {
         NSInteger tempTabBarItemIndex = tabBarItemIndex;
         if (tempTabBarItemIndex > [viewControllers count]) {
-            // If saved tab bar item does not match any existing item, then default to the first item.
+            ////如果userDefaults中item索引无对应项，则默认选中第一项
             self->tabBarController.selectedIndex = 0;
         }
         else {
@@ -92,10 +93,10 @@ typedef void (^AlertViewCompletionHandler)(void);
 
     }
 
-    // Add the tab bar controller's current view as a subview of the window
+    //压入tabController的使其当前View作为window的subView显示出来
     [self.cachedAssetBrowser pushViewController:self->tabBarController animated:NO];
 
-    // Restore saved media from the defaults system.
+    //恢复媒体原来的播放状态
     NSURL *URL = [defaults URLForKey:AVPlayerDemoContentURLUserDefaultsKey];
     if (URL) {
         if (!self.playbackViewController) {
@@ -104,7 +105,7 @@ typedef void (^AlertViewCompletionHandler)(void);
 
         [self.playbackViewController setUrl:URL];
 
-        /* Restore saved media time value from defaults system. */
+        //恢复到上一次的播放时间
         [[self.playbackViewController player] seekToTime:CMTimeMakeWithSeconds([defaults doubleForKey:AVPlayerDemoContentTimeUserDefaultsKey], NSEC_PER_SEC)];
 
         [self.cachedAssetBrowser pushViewController:self.playbackViewController animated:NO];
