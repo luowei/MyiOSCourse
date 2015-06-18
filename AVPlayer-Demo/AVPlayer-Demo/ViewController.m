@@ -106,26 +106,28 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
 }
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+
     [self setPlayer:nil];
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.view.backgroundColor = [UIColor whiteColor];
 
     self.playbackView = [[AVPlaybackView alloc] initWithFrame:self.view.frame];
-    self.playbackView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.playbackView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.playbackView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playbackViewTouched:)]];
     [self.view addSubview:self.playbackView];
 
-    self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-30,self.view.frame.size.width, 30)];
-    self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleTopMargin;
+    self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30)];
+    self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 
     self.playButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(play:)];
     self.stopButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(pause:)];
-    self.scrubber = [[UISlider alloc] initWithFrame:CGRectMake(30, 0, self.toolbar.frame.size.width-88, 20)];
+    self.scrubber = [[UISlider alloc] initWithFrame:CGRectMake(30, 0, self.toolbar.frame.size.width - 88, 20)];
     [self.scrubber setThumbImage:[ViewController imageWithImage:self.scrubber.currentThumbImage scaledToSize:CGSizeMake(5, 5)] forState:UIControlStateNormal];
     self.scrubber.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.scrubber addTarget:self action:@selector(beginScrubbing:) forControlEvents:UIControlEventTouchDown];
-    [self.scrubber addTarget:self action:@selector(scrub:) forControlEvents:UIControlEventTouchDragInside|UIControlEventValueChanged];
-    [self.scrubber addTarget:self action:@selector(endScrubbing:) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchCancel];
+    [self.scrubber addTarget:self action:@selector(scrub:) forControlEvents:UIControlEventTouchDragInside | UIControlEventValueChanged];
+    [self.scrubber addTarget:self action:@selector(endScrubbing:) forControlEvents:UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchCancel];
 
 
     [self.view addSubview:self.toolbar];
@@ -155,14 +157,37 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     [self syncPlayPauseButtons];
     [self syncScrubber];
 
-    [super viewDidLoad];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关灯"
+                                                                              style:UIBarButtonItemStyleDone
+                                                                             target:self
+                                                                             action:@selector(closeAndOpenLight)];;
+}
+
+- (void)closeAndOpenLight {
+
+    //编辑
+    if (self.view.backgroundColor == [UIColor whiteColor]) {
+        self.view.backgroundColor = [UIColor blackColor];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"开灯"
+                                                                                  style:UIBarButtonItemStylePlain
+                                                                                 target:self
+                                                                                 action:@selector(closeAndOpenLight)];
+        //保存
+    } else {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关灯"
+                                                                                  style:UIBarButtonItemStylePlain
+                                                                                 target:self
+                                                                                 action:@selector(closeAndOpenLight)];
+    }
+
 }
 
 - (void)playbackViewTouched:(id)gesture {
-    if(!playbackViewTouched){
+    if (!playbackViewTouched) {
         self.navigationController.navigationBar.hidden = YES;
         self.toolbar.hidden = YES;
-    }else{
+    } else {
         self.navigationController.navigationBar.hidden = NO;
         self.toolbar.hidden = NO;
     }
@@ -479,8 +504,6 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
 }
 
 @end
-
-
 
 
 @implementation ViewController (Player)
