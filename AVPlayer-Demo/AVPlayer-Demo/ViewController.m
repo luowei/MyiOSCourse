@@ -123,6 +123,10 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     self.scrubber = [[UISlider alloc] initWithFrame:CGRectMake(30, 0, self.toolbar.frame.size.width-88, 20)];
     [self.scrubber setThumbImage:[ViewController imageWithImage:self.scrubber.currentThumbImage scaledToSize:CGSizeMake(5, 5)] forState:UIControlStateNormal];
     self.scrubber.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self.scrubber addTarget:self action:@selector(beginScrubbing:) forControlEvents:UIControlEventTouchDown];
+    [self.scrubber addTarget:self action:@selector(scrub:) forControlEvents:UIControlEventTouchDragInside|UIControlEventValueChanged];
+    [self.scrubber addTarget:self action:@selector(endScrubbing:) forControlEvents:UIControlEventTouchUpInside|UIControlEventTouchUpOutside|UIControlEventTouchCancel];
+
 
     [self.view addSubview:self.toolbar];
 
@@ -380,7 +384,7 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
                                                          }];
 }
 
-/* Set the scrubber based on the player current time. */
+//把播放时长同步到进度条
 - (void)syncScrubber {
     CMTime playerDuration = [self playerItemDuration];
     if (CMTIME_IS_INVALID(playerDuration)) {
@@ -398,7 +402,7 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     }
 }
 
-/* The user is dragging the movie controller thumb to scrub through the movie. */
+//当用户开始拖拽进度条
 - (void)beginScrubbing:(id)sender {
     mRestoreAfterScrubbingRate = [self.player rate];
     [self.player setRate:0.f];
@@ -407,7 +411,7 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     [self removePlayerTimeObserver];
 }
 
-/* Set the player current time to match the scrubber position. */
+//拖拽进度条
 - (void)scrub:(id)sender {
     if ([sender isKindOfClass:[UISlider class]] && !isSeeking) {
         isSeeking = YES;
@@ -435,7 +439,7 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     }
 }
 
-/* The user has released the movie thumb control to stop scrubbing through the movie. */
+//当用完成进度条拖拽
 - (void)endScrubbing:(id)sender {
     if (!mTimeObserver) {
         CMTime playerDuration = [self playerItemDuration];
