@@ -46,13 +46,19 @@ typedef void (^AlertViewCompletionHandler)(void);
     NSMutableArray *assetBrowserControllers = [NSMutableArray arrayWithCapacity:0];
 
     if (sourceType & AssetBrowserSourceTypeCameraRoll) {
-        [assetBrowserControllers addObject:[self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeCameraRoll delegate:delegate]];
+        UIViewController *cameraRollVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeCameraRoll delegate:delegate];
+        cameraRollVC.title = @"相册视频";
+        [assetBrowserControllers addObject:cameraRollVC];
     }
     if (sourceType & AssetBrowserSourceTypeFileSharing) {
-        [assetBrowserControllers addObject:[self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate]];
+        UIViewController *fileShareingVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
+        fileShareingVC.title = @"分享视频";
+        [assetBrowserControllers addObject:fileShareingVC];
     }
     if (sourceType & AssetBrowserSourceTypeIPodLibrary) {
-        [assetBrowserControllers addObject:[self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeIPodLibrary delegate:delegate]];
+        UIViewController *iPodLibraryVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
+        iPodLibraryVC.title = @"音乐";
+        [assetBrowserControllers addObject:iPodLibraryVC];
     }
 
     assetTabBarController.viewControllers = assetBrowserControllers;
@@ -88,7 +94,7 @@ typedef void (^AlertViewCompletionHandler)(void);
             self->tabBarController.selectedIndex = 0;
         }
         else {
-            self->tabBarController.selectedIndex =  tabBarItemIndex;
+            self->tabBarController.selectedIndex = tabBarItemIndex;
         }
 
     }

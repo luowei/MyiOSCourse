@@ -19,6 +19,9 @@
     BOOL playbackViewTouched;
 }
 
+//视频画面的播放按钮
+@property(nonatomic, strong) UIButton *playBtn;
+
 - (void)initScrubberTimer;
 
 - (void)showPlayButton;
@@ -112,11 +115,21 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     self.edgesForExtendedLayout = UIRectEdgeAll;
     self.view.backgroundColor = [UIColor whiteColor];
 
+    //播放视图
     self.playbackView = [[AVPlaybackView alloc] initWithFrame:self.view.frame];
     self.playbackView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.playbackView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(playbackViewTouched:)]];
     [self.view addSubview:self.playbackView];
-
+    
+    //添加播放按钮
+    self.playBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.playBtn.bounds = CGRectMake(0, 0, 60, 60);
+    self.playBtn.center = self.playbackView.center;
+    [self.playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
+    [self.playBtn addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
+    [self.playbackView addSubview:self.playBtn];
+    
+    //工具栏
     self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30)];
     self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 
@@ -132,16 +145,14 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
 
     [self.view addSubview:self.toolbar];
 
-
-    UIView *view = [self view];
-
+    //进度条添加手势
     UISwipeGestureRecognizer *swipeUpRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     [swipeUpRecognizer setDirection:UISwipeGestureRecognizerDirectionUp];
-    [view addGestureRecognizer:swipeUpRecognizer];
+    [self.view addGestureRecognizer:swipeUpRecognizer];
 
     UISwipeGestureRecognizer *swipeDownRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     [swipeDownRecognizer setDirection:UISwipeGestureRecognizerDirectionDown];
-    [view addGestureRecognizer:swipeDownRecognizer];
+    [self.view addGestureRecognizer:swipeDownRecognizer];
 
     UIBarButtonItem *scrubberItem = [[UIBarButtonItem alloc] initWithCustomView:self.scrubber];
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -323,12 +334,14 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
 
     [self.player play];
 
+    self.playBtn.hidden = YES;
     [self showStopButton];
 }
 
 - (void)pause:(id)sender {
     [self.player pause];
 
+    self.playBtn.hidden = NO;
     [self showPlayButton];
 }
 
