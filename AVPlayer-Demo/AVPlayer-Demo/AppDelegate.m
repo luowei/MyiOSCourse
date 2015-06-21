@@ -47,18 +47,18 @@ typedef void (^AlertViewCompletionHandler)(void);
 
     if (sourceType & AssetBrowserSourceTypeCameraRoll) {
         UIViewController *cameraRollVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeCameraRoll delegate:delegate];
-        cameraRollVC.title = @"相册视频";
+        cameraRollVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"相册视频" image:[UIImage imageNamed:@"camera"] tag:10];
         [assetBrowserControllers addObject:cameraRollVC];
+    }
+    if (sourceType & AssetBrowserSourceTypeIPodLibrary) {
+        UIViewController *iPodLibraryVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeIPodLibrary delegate:delegate];
+        iPodLibraryVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"音乐" image:[UIImage imageNamed:@"ipod"] tag:11];
+        [assetBrowserControllers addObject:iPodLibraryVC];
     }
     if (sourceType & AssetBrowserSourceTypeFileSharing) {
         UIViewController *fileShareingVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
-        fileShareingVC.title = @"分享视频";
+        fileShareingVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"分享视频" image:[UIImage imageNamed:@"share"] tag:12];
         [assetBrowserControllers addObject:fileShareingVC];
-    }
-    if (sourceType & AssetBrowserSourceTypeIPodLibrary) {
-        UIViewController *iPodLibraryVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
-        iPodLibraryVC.title = @"音乐";
-        [assetBrowserControllers addObject:iPodLibraryVC];
     }
 
     assetTabBarController.viewControllers = assetBrowserControllers;

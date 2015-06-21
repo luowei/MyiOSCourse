@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  AVPlayer-Demo
+
+  Created by luowei on 15/6/22.
+  Copyright (c) 2015年 luowei. All rights reserved.
+*/
+
+"Media" = "媒体";
+"NoMedia" = "没找到媒体文件";

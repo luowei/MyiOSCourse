@@ -32,6 +32,8 @@
 
 @property(nonatomic, copy) NSArray *assetSources;
 
+@property(nonatomic, strong) UIView *noSourceView;
+
 - (void)configureCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath;
 
 - (void)updateActiveAssetSources;
@@ -109,6 +111,7 @@ enum {
     [super viewDidLoad];
 
     self.tableView.rowHeight = 65.0; // 1 point is for the divider, we want our thumbnails to have an even height.
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
 
 
     if (!singleSourceTypeMode)
@@ -221,6 +224,34 @@ enum {
 
 - (void)updateActiveAssetSources {
     [activeAssetSources removeAllObjects];
+
+    //判断是否存在媒体文件
+    AssetBrowserSource *source = self.assetSources ? self.assetSources.firstObject : nil;
+    if (source.items.count > 0) {
+
+        if (self.noSourceView) {
+            self.noSourceView.hidden = YES;
+        }
+    } else {
+        if (!self.noSourceView) {
+            CGRect vRect = self.view.frame;
+            self.noSourceView = [[UIView alloc] initWithFrame:CGRectMake(vRect.origin.x, vRect.origin.y, vRect.size.width, vRect.size.height)];
+            self.noSourceView.backgroundColor = [UIColor whiteColor];
+
+            UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+            tipLabel.bounds = CGRectMake(0, 0, self.view.frame.size.width/2, 80);
+            tipLabel.center = self.view.center;
+            tipLabel.text = NSLocalizedString(@"NoMedia", nil);
+            tipLabel.font = [UIFont systemFontOfSize:24.0];
+            [self.noSourceView addSubview:tipLabel];
+
+            [self.view addSubview:self.noSourceView];
+            [self.view bringSubviewToFront:self.noSourceView];
+
+        }
+        self.noSourceView.hidden = NO;
+    }
+
     for (AssetBrowserSource *source in self.assetSources) {
         if (([source.items count] > 0)) {
             [activeAssetSources addObject:source];

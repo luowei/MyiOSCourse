@@ -25,6 +25,7 @@
 		EA21CE4A1AFE693C005EA253 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA21CE491AFE693C005EA253 /* AssetsLibrary.framework */; };
 		EA21CE4C1AFE6953005EA253 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA21CE4B1AFE6953005EA253 /* MediaPlayer.framework */; };
 		EA21CE4E1AFE6960005EA253 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA21CE4D1AFE6960005EA253 /* MobileCoreServices.framework */; };
+		EA59EF961B37268F00BAB505 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA59EF981B37268F00BAB505 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 		EA21CE491AFE693C005EA253 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		EA21CE4B1AFE6953005EA253 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		EA21CE4D1AFE6960005EA253 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EA59EF971B37268F00BAB505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA59EF991B3726AE00BAB505 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +162,7 @@
 			children = (
 				EA21CE201AFE66BC005EA253 /* Info.plist */,
 				EA21CE211AFE66BC005EA253 /* main.m */,
+				EA59EF981B37268F00BAB505 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -243,6 +247,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = EA21CE131AFE66BC005EA253;
 			productRefGroup = EA21CE1D1AFE66BC005EA253 /* Products */;
@@ -261,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA21CE2B1AFE66BC005EA253 /* Main.storyboard in Resources */,
+				EA59EF961B37268F00BAB505 /* Localizable.strings in Resources */,
 				EA21CE301AFE66BC005EA253 /* LaunchScreen.xib in Resources */,
 				EA21CE2D1AFE66BC005EA253 /* Images.xcassets in Resources */,
 			);
@@ -326,6 +332,15 @@
 				EA21CE2F1AFE66BC005EA253 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EA59EF981B37268F00BAB505 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA59EF971B37268F00BAB505 /* Base */,
+				EA59EF991B3726AE00BAB505 /* zh-Hans */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

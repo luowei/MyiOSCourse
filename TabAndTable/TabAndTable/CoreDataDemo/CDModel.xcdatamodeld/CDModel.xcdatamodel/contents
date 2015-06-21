@@ -15,7 +15,7 @@
         <relationship name="status" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDStatus" inverseName="user" inverseEntity="CDStatus" syncable="YES"/>
     </entity>
     <elements>
+        <element name="CDStatus" positionX="171" positionY="-0" width="128" height="105"/>
         <element name="CDUser" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="CDStatus" positionX="171" positionY="-0" width="128" height="103"/>
     </elements>
 </model>
