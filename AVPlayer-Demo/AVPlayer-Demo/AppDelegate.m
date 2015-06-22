@@ -31,6 +31,16 @@ typedef void (^AlertViewCompletionHandler)(void);
     AssetBrowserController *browser = [[AssetBrowserController alloc] initWithSourceType:sourceType modalPresentation:NO];
     browser.delegate = delegate;
 
+//    if (sourceType == AssetBrowserSourceTypeFileSharing) {
+//        browser.title = NSLocalizedString(@"File Sharing", nil);
+//    }
+//    if (sourceType == AssetBrowserSourceTypeCameraRoll) {
+//        browser.title = NSLocalizedString(@"Camera Roll", nil);
+//    }
+//    if (sourceType == AssetBrowserSourceTypeIPodLibrary) {
+//        browser.title = NSLocalizedString(@"iPod Library", nil);
+//    }
+
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:browser];
     [navController.navigationBar setBarStyle:UIBarStyleBlack];
     [navController.navigationBar setTranslucent:YES];
@@ -47,22 +57,23 @@ typedef void (^AlertViewCompletionHandler)(void);
 
     if (sourceType & AssetBrowserSourceTypeCameraRoll) {
         UIViewController *cameraRollVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeCameraRoll delegate:delegate];
-        cameraRollVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"相册视频" image:[UIImage imageNamed:@"camera"] tag:10];
+        cameraRollVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Camera Roll", nil) image:[UIImage imageNamed:@"camera"] tag:10];
         [assetBrowserControllers addObject:cameraRollVC];
     }
     if (sourceType & AssetBrowserSourceTypeIPodLibrary) {
         UIViewController *iPodLibraryVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeIPodLibrary delegate:delegate];
-        iPodLibraryVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"音乐" image:[UIImage imageNamed:@"ipod"] tag:11];
+        iPodLibraryVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"iPod Library", nil) image:[UIImage imageNamed:@"ipod"] tag:11];
         [assetBrowserControllers addObject:iPodLibraryVC];
     }
     if (sourceType & AssetBrowserSourceTypeFileSharing) {
         UIViewController *fileShareingVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
-        fileShareingVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"分享视频" image:[UIImage imageNamed:@"share"] tag:12];
+        fileShareingVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"File Sharing", nil) image:[UIImage imageNamed:@"share"] tag:12];
         [assetBrowserControllers addObject:fileShareingVC];
     }
 
     assetTabBarController.viewControllers = assetBrowserControllers;
 
+    assetTabBarController.title = NSLocalizedString(@"My Player", nil);
     return assetTabBarController;
 }
 

@@ -156,6 +156,17 @@ enum {
     for (AssetBrowserSource *source in self.assetSources) {
         source.delegate = self;
     }
+
+//    //设置title
+//    if (browserSourceType == AssetBrowserSourceTypeFileSharing) {
+//        self.title = NSLocalizedString(@"File Sharing", nil);
+//    }
+//    if (browserSourceType == AssetBrowserSourceTypeCameraRoll) {
+//        self.title = NSLocalizedString(@"Camera Roll", nil);
+//    }
+//    if (browserSourceType == AssetBrowserSourceTypeIPodLibrary) {
+//        self.title = NSLocalizedString(@"iPod Library", nil);
+//    }
 }
 
 - (void)cancelAction {
@@ -239,7 +250,7 @@ enum {
             self.noSourceView.backgroundColor = [UIColor whiteColor];
 
             UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-            tipLabel.bounds = CGRectMake(0, 0, self.view.frame.size.width/2, 80);
+            tipLabel.bounds = CGRectMake(0, 0, self.view.frame.size.width / 2, 80);
             tipLabel.center = self.view.center;
             tipLabel.text = NSLocalizedString(@"NoMedia", nil);
             tipLabel.font = [UIFont systemFontOfSize:24.0];
