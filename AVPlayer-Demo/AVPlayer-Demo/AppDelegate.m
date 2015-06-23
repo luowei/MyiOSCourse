@@ -79,6 +79,9 @@ typedef void (^AlertViewCompletionHandler)(void);
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    //默认启动画面停留时间延至1.5s
+    [NSThread sleepForTimeInterval:1.5];
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.cachedAssetBrowser = [UINavigationController new];
 
