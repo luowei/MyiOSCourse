@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
+@class BSListWebViewController;
+
 @interface BSViewController : UIViewController
+
+@property(nonatomic, strong) BSListWebViewController *listWebViewController;
+
+@property (nonatomic,strong) NSMutableArray *windows;
+@property (nonatomic,strong) WKWebView *activeWindow;
+
 
 @end
