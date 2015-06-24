@@ -57,10 +57,10 @@
 }
 */
 -(void)dealloc{
-    [_tapGesture release];
-    [_cellContentView release];
-    [_scrollView release];
-    [super dealloc];
+//    [_tapGesture release];
+//    [_cellContentView release];
+//    [_scrollView release];
+//    [super dealloc];
 }
 -(void)prepareForReuse{
     [super prepareForReuse];

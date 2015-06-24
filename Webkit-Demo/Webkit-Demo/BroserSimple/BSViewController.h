@@ -15,7 +15,6 @@
 
 @property(nonatomic, strong) BSListWebViewController *listWebViewController;
 
-@property (nonatomic,strong) NSMutableArray *windows;
 @property (nonatomic,strong) WKWebView *activeWindow;
 
 

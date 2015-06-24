@@ -130,13 +130,6 @@
 
 //添加新webView窗口
 - (void)presentAddWebViewVC {
-
-    if (_listWebViewController) {
-        self.listWebViewController = [BSListWebViewController new];
-    } else {
-        [_listWebViewController updateDatasource:_windows];
-    }
-
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:_listWebViewController];
     [self presentViewController:navigationController animated:YES completion:nil];
 }
@@ -150,11 +143,15 @@
     webView.navigationDelegate = self;
     webView.allowsBackForwardNavigationGestures = YES;
     webView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
+    _activeWindow = webView;
+
     // Add to windows array and make active window
-    [self.windows addObject:webView];
-    self.activeWindow = webView;
-    
+    if (!_listWebViewController) {
+        _listWebViewController = [[BSListWebViewController alloc] initWithWebView:_activeWindow];
+    } else {
+        _listWebViewController.updateDatasourceBlock(_activeWindow);
+    }
+
     return webView;
 }
 
@@ -382,6 +379,8 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 
 //关闭一个webView
 - (void)closeActiveWebView {
+    //todo:
+/*
     // Grab and remove the top web view, remove its reference from the windows array,
     // and nil itself and its delegate. Then we re-set the activeWindow to the
     // now-top web view and refresh the toolbar.
@@ -392,6 +391,8 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     webView = nil;
     NSLog(@"Number of windows: %d", [_windows count]);
     self.activeWindow = [self.windows lastObject];
+*/
+
 }
 
 //处理当接收到html页面脚本发来的消息

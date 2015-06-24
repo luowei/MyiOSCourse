@@ -12,7 +12,8 @@
 
 @property(nonatomic, strong) UITableView *tableView;
 
-- (instancetype)initWithDataSource:(NSMutableArray *)array;
+@property(nonatomic, copy) void (^updateDatasourceBlock)(WKWebView *);
 
-- (void)updateDatasource:(NSMutableArray *)array;
+- (instancetype)initWithWebView:(WKWebView *)webView;
+
 @end
