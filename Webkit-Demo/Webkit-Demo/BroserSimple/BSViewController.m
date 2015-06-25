@@ -10,6 +10,7 @@
 #import "BSListWebViewController.h"
 #import "MyWebView.h"
 #import "AppDelegate.h"
+#import "AWActionSheet.h"
 
 
 @interface NSString (BSEncoding)
@@ -48,7 +49,7 @@
 // If anyone can figure out how to do that, please let me know!
 //
 
-@interface BSViewController () <UISearchBarDelegate>
+@interface BSViewController () <UISearchBarDelegate, AWActionSheetDelegate>
 
 
 //@property(nonatomic, strong) UITextField *urlField;
@@ -140,7 +141,6 @@
     self.navigationItem.rightBarButtonItem = barButton;
 
 }
-
 
 
 - (void)addBottomBar {
@@ -235,7 +235,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+
     //加上这句可以去掉毛玻璃效果
     self.edgesForExtendedLayout = UIRectEdgeNone;
     self.navigationController.navigationItem.hidesBackButton = YES;
@@ -287,7 +287,8 @@
 
 //设置菜单
 - (void)menu {
-
+    AWActionSheet *sheet = [[AWActionSheet alloc] initWithIconSheetDelegate:self ItemCount:[self numberOfItemsInActionSheet]];
+    [sheet show];
 }
 
 //刷新
@@ -315,20 +316,66 @@
     [_activeWindow loadRequest:[NSURLRequest requestWithURL:[[NSURL alloc] initWithString:text]]];
 }*/
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+
+#pragma mark UISearchBarDelegate Implementation
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [_searchBar resignFirstResponder];
     NSString *text = _searchBar.text;
     NSString *urlRegex = @"((http|ftp|https)://)(([a-zA-Z0-9\\._-]+\\.[a-zA-Z]{2,6})|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))(:[0-9]{1,4})*(/[a-zA-Z0-9\\&%_\\./-~-]*)?";
-    NSPredicate *urlStrPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",urlRegex];
+    NSPredicate *urlStrPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", urlRegex];
 
     NSString *urlStr = [NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@", text];
-    if([urlStrPredicate evaluateWithObject:text]){
+    if ([urlStrPredicate evaluateWithObject:text]) {
         urlStr = [NSString stringWithFormat:@"%@", text];
     }
 
     NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     [_activeWindow loadRequest:[NSURLRequest requestWithURL:url]];
 }
+
+
+#pragma mark AWActionSheetDelegate Implementation
+
+- (int)numberOfItemsInActionSheet {
+    return 3;
+}
+
+- (AWActionSheetCell *)cellForActionAtIndex:(NSInteger)index {
+    AWActionSheetCell *cell = [[AWActionSheetCell alloc] init];
+    cell.index = (int) index;
+
+    switch (index){
+        case 0:{
+            cell.titleLabel.text = @"书签管理";
+            [cell.iconView setImage:[UIImage imageNamed:@"bookmark"]];
+
+            break;
+        }
+        case 1:{
+            cell.titleLabel.text = @"夜间模式";
+            [cell.iconView setImage:[UIImage imageNamed:@"night"]];
+
+            break;
+        }
+        case 2:{
+            cell.titleLabel.text = @"无图模式";
+            [cell.iconView setImage:[UIImage imageNamed:@"noimage"]];
+
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+
+    return cell;
+}
+
+- (void)DidTapOnItemAtIndex:(NSInteger)index title:(NSString *)name {
+    NSLog(@"tap on %d", (int) index);
+}
+
 
 //关闭一个webView
 - (void)closeActiveWebView {
@@ -345,7 +392,7 @@
     NSLog(@"Number of windows: %d", [_windows count]);
     self.activeWindow = [self.windows lastObject];
 */
-    
+
 }
 
 

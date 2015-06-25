@@ -46,6 +46,8 @@
 		EA5BEBF41AEF755B0082B344 /* Gray.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF11AEF755B0082B344 /* Gray.css */; };
 		EA5BEBF51AEF755B0082B344 /* HUDdy.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF21AEF755B0082B344 /* HUDdy.css */; };
 		EA5BEBF61AEF755B0082B344 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF31AEF755B0082B344 /* index.html */; };
+		EABE023F1B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */; };
+		EABE02401B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		EA5BEBF11AEF755B0082B344 /* Gray.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Gray.css; sourceTree = "<group>"; };
 		EA5BEBF21AEF755B0082B344 /* HUDdy.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = HUDdy.css; sourceTree = "<group>"; };
 		EA5BEBF31AEF755B0082B344 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EABE023D1B3C4FB1002BA1D3 /* AWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWActionSheet.h; sourceTree = "<group>"; };
+		EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEF06E5405F497881E1958DF /* AWIconSheet */ = {
+			isa = PBXGroup;
+			children = (
+				EABE023D1B3C4FB1002BA1D3 /* AWActionSheet.h */,
+				EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */,
+			);
+			path = AWIconSheet;
+			sourceTree = "<group>";
+		};
 		EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +177,7 @@
 				EA5BEBE31AEF6F7C0082B344 /* Webkit-DemoTests */,
 				EA5BEBC81AEF6F7C0082B344 /* Products */,
 				EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */,
+				BEF06E5405F497881E1958DF /* AWIconSheet */,
 			);
 			sourceTree = "<group>";
 		};
@@ -369,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA28A1091B3A87F800FC1AF2 /* BSListWebViewController.m in Sources */,
+				EABE02401B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */,
 				EA3F28291AF28A8E00B45030 /* ViewController.m in Sources */,
 				EA28A1151B3ABDCA00FC1AF2 /* WKPagesCollectionViewCell.m in Sources */,
 				EA3F282A1AF28A8E00B45030 /* BSViewController.m in Sources */,
@@ -387,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5BEBD31AEF6F7C0082B344 /* ViewController.m in Sources */,
+				EABE023F1B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */,
 				EA15E8EF1AF078A100DEC7F3 /* BSViewController.m in Sources */,
 				EA28A1141B3ABDCA00FC1AF2 /* WKPagesCollectionViewCell.m in Sources */,
 				EA5BEBD01AEF6F7C0082B344 /* AppDelegate.m in Sources */,
