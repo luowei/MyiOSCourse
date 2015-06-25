@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class MyWebView;
+
 @interface BSListWebViewController : UIViewController
 
 @property(nonatomic, strong) UITableView *tableView;
 
-@property(nonatomic, copy) void (^updateDatasourceBlock)(WKWebView *);
+@property(nonatomic, copy) void (^updateDatasourceBlock)(MyWebView *);
 
-- (instancetype)initWithWebView:(WKWebView *)webView;
+@property(nonatomic, copy) void (^addWebViewBlock)(MyWebView **,NSURL *url);
+
+@property(nonatomic, copy) void (^updateActiveWindowBlock)(MyWebView *);
+
+- (instancetype)initWithWebView:(MyWebView *)webView;
 
 @end

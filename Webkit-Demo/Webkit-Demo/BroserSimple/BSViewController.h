@@ -10,12 +10,13 @@
 #import <WebKit/WebKit.h>
 
 @class BSListWebViewController;
+@class MyWebView;
 
 @interface BSViewController : UIViewController
 
 @property(nonatomic, strong) BSListWebViewController *listWebViewController;
 
-@property (nonatomic,strong) WKWebView *activeWindow;
+@property (nonatomic,strong) MyWebView *activeWindow;
 
 
 @end

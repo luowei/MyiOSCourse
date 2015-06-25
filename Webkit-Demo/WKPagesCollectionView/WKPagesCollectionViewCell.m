@@ -72,10 +72,10 @@
 -(IBAction)onTapGesture:(UITapGestureRecognizer*)tapGesture{
     NSIndexPath* indexPath=[self.collectionView indexPathForCell:self];
 //    NSLog(@"row:%d",indexPath.row);
-//    [self.collectionView.delegate collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
-    [(WKPagesCollectionView*)self.collectionView showCellToHighLightAtIndexPath:indexPath completion:^(BOOL finished) {
-        NSLog(@"highlight completed");
-    }];
+    [self.collectionView.delegate collectionView:self.collectionView didSelectItemAtIndexPath:indexPath];
+//    [(WKPagesCollectionView*)self.collectionView showCellToHighLightAtIndexPath:indexPath completion:^(BOOL finished) {
+//        NSLog(@"highlight completed");
+//    }];
 }
 #pragma mark - Properties
 -(void)setShowingState:(WKPagesCollectionViewCellShowingState)showingState{

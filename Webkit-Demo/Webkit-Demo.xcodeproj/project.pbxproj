@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		BEF061A25229C6ED0B238C8F /* overrideWeb.js in Sources */ = {isa = PBXBuildFile; fileRef = BEF0643A63759C6E71F71426 /* overrideWeb.js */; };
+		BEF0621518D8378678808A6B /* MyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0659320DFCB26211619E1 /* MyWebView.m */; };
 		BEF063026EADEA690528C592 /* BSListWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0648F9BED3DCF65EF048C /* BSListWebViewController.m */; };
 		BEF0674C91FE8EB075ED75BB /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E00DB37B34C56CF4085 /* SettingViewController.m */; };
 		BEF0685364A13A4F3E3EF882 /* overrideWeb.js in Sources */ = {isa = PBXBuildFile; fileRef = BEF0643A63759C6E71F71426 /* overrideWeb.js */; };
 		BEF068DEDC80B78651A18302 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF06E00DB37B34C56CF4085 /* SettingViewController.m */; };
+		BEF06EC4395EEA1E828BD2BD /* MyWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0659320DFCB26211619E1 /* MyWebView.m */; };
 		EA15E8EF1AF078A100DEC7F3 /* BSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */; };
 		EA15E8F11AF07A2400DEC7F3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA15E8F01AF07A2400DEC7F3 /* WebKit.framework */; };
 		EA28A1091B3A87F800FC1AF2 /* BSListWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF0648F9BED3DCF65EF048C /* BSListWebViewController.m */; };
@@ -60,7 +62,9 @@
 		BEF062F5071BBB9E1923479C /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		BEF0643A63759C6E71F71426 /* overrideWeb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = overrideWeb.js; sourceTree = "<group>"; };
 		BEF0648F9BED3DCF65EF048C /* BSListWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSListWebViewController.m; sourceTree = "<group>"; };
+		BEF0659320DFCB26211619E1 /* MyWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWebView.m; sourceTree = "<group>"; };
 		BEF068D7817000B8E9AF5FB2 /* BSListWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSListWebViewController.h; sourceTree = "<group>"; };
+		BEF06A132ED1715FC3CDCB07 /* MyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWebView.h; sourceTree = "<group>"; };
 		BEF06E00DB37B34C56CF4085 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		EA15E8ED1AF078A100DEC7F3 /* BSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSViewController.h; sourceTree = "<group>"; };
 		EA15E8EE1AF078A100DEC7F3 /* BSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSViewController.m; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				BEF0648F9BED3DCF65EF048C /* BSListWebViewController.m */,
 				BEF062F5071BBB9E1923479C /* SettingViewController.h */,
 				BEF06E00DB37B34C56CF4085 /* SettingViewController.m */,
+				BEF06A132ED1715FC3CDCB07 /* MyWebView.h */,
+				BEF0659320DFCB26211619E1 /* MyWebView.m */,
 			);
 			path = BroserSimple;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 				EA28A1171B3ABDCA00FC1AF2 /* WKPagesCollectionViewFlowLayout.m in Sources */,
 				BEF068DEDC80B78651A18302 /* SettingViewController.m in Sources */,
 				BEF0685364A13A4F3E3EF882 /* overrideWeb.js in Sources */,
+				BEF0621518D8378678808A6B /* MyWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +396,7 @@
 				EA28A1161B3ABDCA00FC1AF2 /* WKPagesCollectionViewFlowLayout.m in Sources */,
 				BEF0674C91FE8EB075ED75BB /* SettingViewController.m in Sources */,
 				BEF061A25229C6ED0B238C8F /* overrideWeb.js in Sources */,
+				BEF06EC4395EEA1E828BD2BD /* MyWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

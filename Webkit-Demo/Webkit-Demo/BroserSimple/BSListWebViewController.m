@@ -12,6 +12,8 @@
 #import "WKPagesCollectionView.h"
 #import "WKPagesCollectionViewCell.h"
 #import "WKPagesCollectionViewFlowLayout.h"
+#import "BSViewController.h"
+#import "MyWebView.h"
 
 
 @interface BSListWebViewController()<WKPagesCollectionViewDataSource,WKPagesCollectionViewDelegate>
@@ -24,11 +26,11 @@
 @implementation BSListWebViewController
 
 
-- (instancetype)initWithWebView:(WKWebView *)webView {
+- (instancetype)initWithWebView:(MyWebView *)webView {
     self = [super init];
     if (self) {
         __weak __typeof(self) weakSelf = self;
-        self.updateDatasourceBlock = ^(WKWebView *wb){
+        self.updateDatasourceBlock = ^(MyWebView *wb){
             if(!weakSelf.windows){
                 weakSelf.windows = @[wb].mutableCopy;
             }else{
@@ -45,15 +47,25 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
 
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addWebView:)];
-    self.navigationItem.leftBarButtonItem =[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
-
     _collectionView= [[WKPagesCollectionView alloc] initWithFrame:self.view.frame];
     _collectionView.dataSource=self;
     _collectionView.delegate=self;
     [_collectionView registerClass:[WKPagesCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
     [self.view addSubview:_collectionView];
     _collectionView.maskShow=YES;
+
+    UIBarButtonItem *addItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addWebView:)];
+    UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"setting"] style:UIBarButtonItemStylePlain target:self action:@selector(setting)];
+    UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-44, self.view.frame.size.width, 44)];
+    toolbar.items = @[addItem,flexibleSpace,settingItem];
+    [self.view addSubview:toolbar];
+
+    toolbar.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[toolbar]|" options:0 metrics:nil views:@{@"toolbar":toolbar}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[toolbar(44)]|" options:0 metrics:nil views:@{@"toolbar":toolbar}]];
 
 }
 
@@ -65,12 +77,12 @@
 
 //添加一个webView
 - (void)addWebView:(id)sender {
-
     [_collectionView appendItem];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [_collectionView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -86,7 +98,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    WKWebView *webView = _windows[(NSUInteger) indexPath.row];
+    MyWebView *webView = _windows[(NSUInteger) indexPath.row];
 
     static NSString* identity=@"cell";
     WKPagesCollectionViewCell* cell=(WKPagesCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:identity forIndexPath:indexPath];
@@ -102,15 +114,25 @@
 
     imageView.frame=self.view.bounds;
     [cell.cellContentView addSubview:imageView];
-    UIButton* button=[UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame=CGRectMake(0, (indexPath.row+1)*10+100, 320, 50.0f);
-    button.backgroundColor=[UIColor whiteColor];
-    [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-    [button setTitle:webView.title forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(addWebView:) forControlEvents:UIControlEventTouchUpInside];
-    [cell.cellContentView addSubview:button];
+
     return cell;
 }
+
+#pragma mark UICollectionViewDelegate Implementation
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+//    [self viewWillAppear:YES];
+
+    MyWebView *webView = _windows[(NSUInteger) indexPath.row];
+    self.updateActiveWindowBlock(webView);
+
+//    BSViewController *viewController = (BSViewController *)self.parentViewController;
+//    BSViewController *viewController = (BSViewController *)[self.view.superview nextResponder];
+    [self dismissViewControllerAnimated:YES completion:^{
+//        [viewController.activeWindow reload];
+    }];
+}
+
 
 
 #pragma mark WKPagesCollectionViewDataSource Implementation
@@ -121,8 +143,9 @@
 
 - (void)willAppendItemInCollectionView:(WKPagesCollectionView *)collectionView {
 
-//    //添加一个webView
-//    [_windows addObject:@"new button"];
+    //添加一个webView,block会回调_windows addObject
+    MyWebView *webView = nil;
+    self.addWebViewBlock(&webView,[[NSURL alloc] initWithString:@"http://baidu.com"]);
 }
 
 
