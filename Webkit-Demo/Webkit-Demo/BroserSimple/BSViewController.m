@@ -48,9 +48,8 @@
 // If anyone can figure out how to do that, please let me know!
 //
 
-@interface BSViewController () <UITextFieldDelegate, UISearchBarDelegate>
+@interface BSViewController () <UISearchBarDelegate>
 
-@property(nonatomic, strong) UIView *barView;
 
 //@property(nonatomic, strong) UITextField *urlField;
 @property(strong, nonatomic) UISearchBar *searchBar;
@@ -121,91 +120,28 @@
 //地址栏
 - (void)addTopBar {
     //地址栏
-    self.barView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
-    self.barView.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
-    [self.navigationController.navigationBar addSubview:self.barView];
-
-/*
-    self.urlField = [[UITextField alloc] initWithFrame:CGRectMake(5, 7, self.view.frame.size.width - 40, 30)];
-    [self.barView addSubview:self.urlField];
-    self.urlField.backgroundColor = [UIColor whiteColor];
-    self.urlField.layer.cornerRadius = 5;
-    self.urlField.delegate = self;
-    self.urlField.clearButtonMode = UITextFieldViewModeWhileEditing;
-    self.urlField.keyboardType = UIKeyboardTypeURL;
-    self.urlField.returnKeyType = UIReturnKeyGo;
-    self.urlField.autocorrectionType = UITextAutocorrectionTypeNo;
-*/
-
     _searchBar = [UISearchBar new];
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     _searchBar.delegate = self;
     _searchBar.placeholder = @"搜索或输入地址";
-//    _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
-//    _searchBar.autocorrectionType = UITextAutocorrectionTypeYes;
+    _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
+    _searchBar.autocorrectionType = UITextAutocorrectionTypeYes;
     self.navigationItem.titleView = _searchBar;
 
-//    UIButton *btton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btton setFrame:CGRectMake(0, 0, 30, 30)];
-//    [btton addTarget:self action:@selector(presentAddWebViewVC) forControlEvents:UIControlEventTouchUpInside];
-//
-//    UIImage *image = [UIImage imageNamed:@"mutiwindow"];
-//    [btton setImage:image forState:UIControlStateNormal];
-//    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:btton];
-////    barButton.action = @selector(presentAddWebViewVC);
-////    barButton.target = self;
-//    self.navigationItem.rightBarButtonItem = barButton;
+    UIButton *btton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btton setFrame:CGRectMake(0, 0, 30, 30)];
+    [btton addTarget:self action:@selector(presentAddWebViewVC) forControlEvents:UIControlEventTouchUpInside];
 
-
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"1" style:UIBarButtonItemStyleDone target:self action:@selector(presentAddWebViewVC)];
-
-
-/*
-    //新标签按钮
-    self.addWebViewBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    self.addWebViewBtn.frame = CGRectMake(self.view.frame.size.width - 35, 7, 30, 30);
-    [self.addWebViewBtn setTitle:@"1" forState:UIControlStateNormal];
-    self.addWebViewBtn.backgroundColor = [UIColor whiteColor];
-    self.addWebViewBtn.layer.cornerRadius = 5;
-    [self.addWebViewBtn addTarget:self action:@selector(presentAddWebViewVC) forControlEvents:UIControlEventTouchUpInside];
-    [self.barView addSubview:self.addWebViewBtn];
-
-    //导航条View
-    self.barView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight |
-            UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin |
-            UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleRightMargin;
-
-    //textfield输入框
-    self.urlField.translatesAutoresizingMaskIntoConstraints = NO;
-    self.addWebViewBtn.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.barView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-5-[urlField]-5-[addWebViewBtn]-5-|"
-                                                                         options:0
-                                                                         metrics:nil
-                                                                           views:@{@"urlField" : self.urlField, @"addWebViewBtn" : self.addWebViewBtn}]];
-    [self.barView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-7-[urlField]-7-|"
-                                                                         options:0
-                                                                         metrics:nil
-                                                                           views:@{@"urlField" : self.urlField}]];
-    [self.barView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-7-[addWebViewBtn]-7-|"
-                                                                         options:0
-                                                                         metrics:nil
-                                                                           views:@{@"addWebViewBtn" : self.addWebViewBtn}]];
-*/
+    UIImage *image = [UIImage imageNamed:@"mutiwindow"];
+    [btton setImage:image forState:UIControlStateNormal];
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithCustomView:btton];
+//    barButton.action = @selector(presentAddWebViewVC);
+//    barButton.target = self;
+    self.navigationItem.rightBarButtonItem = barButton;
 
 }
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
-{
-    UIWindow *window = [UIApplication sharedApplication].delegate.window;
-    if (!window.isKeyWindow) {
-        [window makeKeyAndVisible];
-    }
-}
 
--(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-
-}
 
 - (void)addBottomBar {
 //底部工具栏
@@ -370,14 +306,28 @@
 }
 
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
-    NSString *text = textField.text;
+/*- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    [_searchBar resignFirstResponder];
+    NSString *text = _searchBar.text;
     if ([text compare:@"http://" options:NSLiteralSearch range:NSMakeRange(0, 7)] != NSOrderedSame) {
         text = [NSString stringWithFormat:@"http://%@", text];
     }
     [_activeWindow loadRequest:[NSURLRequest requestWithURL:[[NSURL alloc] initWithString:text]]];
-    return NO;
+}*/
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [_searchBar resignFirstResponder];
+    NSString *text = _searchBar.text;
+    NSString *urlRegex = @"((http|ftp|https)://)(([a-zA-Z0-9\\._-]+\\.[a-zA-Z]{2,6})|([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}))(:[0-9]{1,4})*(/[a-zA-Z0-9\\&%_\\./-~-]*)?";
+    NSPredicate *urlStrPredicate = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",urlRegex];
+
+    NSString *urlStr = [NSString stringWithFormat:@"http://www.baidu.com/s?wd=%@", text];
+    if([urlStrPredicate evaluateWithObject:text]){
+        urlStr = [NSString stringWithFormat:@"%@", text];
+    }
+
+    NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    [_activeWindow loadRequest:[NSURLRequest requestWithURL:url]];
 }
 
 //关闭一个webView
