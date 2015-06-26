@@ -14,12 +14,11 @@
 #import "WKPagesCollectionViewFlowLayout.h"
 #import "BSViewController.h"
 #import "MyWebView.h"
+#import "Defines.h"
 
 
 @interface BSListWebViewController()<WKPagesCollectionViewDataSource,WKPagesCollectionViewDelegate>
 
-
-@property(nonatomic, strong) NSMutableArray *windows;
 @property(nonatomic, strong) WKPagesCollectionView *collectionView;
 @end
 
@@ -145,7 +144,7 @@
 
     //添加一个webView,block会回调_windows addObject
     MyWebView *webView = nil;
-    self.addWebViewBlock(&webView,[[NSURL alloc] initWithString:@"http://baidu.com"]);
+    self.addWebViewBlock(&webView,HOME_URL);
 }
 
 

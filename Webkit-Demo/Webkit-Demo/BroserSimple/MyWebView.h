@@ -10,7 +10,10 @@
 
 #import <WebKit/WebKit.h>
 
-@interface MyWebView : WKWebView<WKNavigationDelegate, WKScriptMessageHandler>
+@interface MyWebView : WKWebView<WKNavigationDelegate, WKScriptMessageHandler,WKUIDelegate>
 
 @property(nonatomic, copy) void (^finishNavigationProgressBlock)();
+@property(nonatomic, copy) void (^addWebViewBlock)(MyWebView **wb, NSURL *);
+@property(nonatomic, copy) void (^closeActiveWebViewBlock)();
+@property(nonatomic, copy) void (^presentViewControllerBlock)(UIViewController *);
 @end

@@ -9,6 +9,22 @@
 #import "MyWebView.h"
 
 
+@interface NSString (BSEncoding)
+
++ (NSString *)encodedString:(NSString *)string;
+
+@end
+
+@implementation NSString (BSEncoding)
+
++ (NSString *)encodedString:(NSString *)string {
+    return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef) string, NULL, (CFStringRef) @"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
+}
+
+@end
+
+
+
 @interface MyWebView()
 
 @property(nonatomic, strong) WKWebViewConfiguration *webViewConfiguration;
@@ -22,6 +38,7 @@
     self = [super initWithFrame:frame configuration:configuration];
     if (self) {
         self.navigationDelegate = self;
+        self.UIDelegate = self;
         self.allowsBackForwardNavigationGestures = YES;
 //        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
@@ -59,6 +76,7 @@
     [self.webViewConfiguration.userContentController addScriptMessageHandler:self name:@"myName"];
 }
 
+#pragma mark WKNavigationDelegate Implementation
 
 //当加载页面发生错误
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
@@ -108,21 +126,15 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
         if ([method isEqualToString:@"jswindowopenoverride"]) {
 
             NSLog(@"window.open caught");
-            WKWebView *wkwebView = [self addWebView];
             NSURL *url = [NSURL URLWithString:[NSString stringWithString:methodAsArray[1]]];
-            NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-            [wkwebView loadRequest:requestObj];
-            [self.view addSubview:wkwebView];
-            NSLog(@"Number of windows: %d", [_windows count]);
+            self.addWebViewBlock(nil,url);
 
         } else if ([method isEqualToString:@"jswindowcloseoverride"] || [method isEqualToString:@"jswindowopenerfocusoverride"]) {
 
             // Only close the active web view if it's not the base web view. We don't want to close
             // the last web view, only ones added to the top of the original one.
             NSLog(@"window.close caught");
-            if ([self.windows count] > 1) {
-                [self closeActiveWebView];
-            }
+            self.closeActiveWebViewBlock();
 
         }
 
@@ -132,13 +144,16 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     // This fixes the issue with popup window overrides, where the underlying window was still
     // trying to redirect to the original anchor tag location in addition to the new window
     // going to the same location, which resulted in the "back" button needing to be pressed twice.
-    if (![webView isEqual:self.activeWindow]) {
-    }
+//    if (![webView isEqual:self.activeWindow]) {
+//    }
 */
 
 
 }
 
+
+
+#pragma mark WKMessageHandle Implementation
 
 //处理当接收到html页面脚本发来的消息
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
@@ -148,6 +163,66 @@ decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
 //        [[[UIAlertView alloc] initWithTitle:@"message" message:message.body delegate:self
 //                          cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
+}
+
+
+#pragma mark WKUIDelegate Implementation
+
+//let link has arget=”_blank” work
+- (WKWebView *)webView:(WKWebView *)webView createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration
+   forNavigationAction:(WKNavigationAction *)navigationAction windowFeatures:(WKWindowFeatures *)windowFeatures {
+
+    //
+    if (!navigationAction.targetFrame.isMainFrame) {
+//        [webView loadRequest:navigationAction.request];
+        MyWebView *wb = nil;
+        self.addWebViewBlock(&wb,navigationAction.request.mainDocumentURL);
+        return wb;
+    }
+    return nil;
+}
+
+//处理页面的alert弹窗
+- (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)())completionHandler {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:webView.URL.host message:message preferredStyle:UIAlertControllerStyleAlert];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Close", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        completionHandler();
+    }]];
+    self.presentViewControllerBlock(alertController);
+}
+
+//处理页面的confirm弹窗
+- (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler {
+
+    // TODO We have to think message to confirm "YES"
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:webView.URL.host message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        completionHandler(YES);
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        completionHandler(NO);
+    }]];
+    self.presentViewControllerBlock(alertController);
+}
+
+//处理页面的promt弹窗
+- (void)webView:(WKWebView *)webView runJavaScriptTextInputPanelWithPrompt:(NSString *)prompt defaultText:(NSString *)defaultText initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(NSString *))completionHandler {
+
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:prompt message:webView.URL.host preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.text = defaultText;
+    }];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"OK", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSString *input = ((UITextField *)alertController.textFields.firstObject).text;
+        completionHandler(input);
+    }]];
+
+    [alertController addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        completionHandler(nil);
+    }]];
+    self.presentViewControllerBlock(alertController);
 }
 
 

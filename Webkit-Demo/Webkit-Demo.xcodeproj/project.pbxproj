@@ -46,6 +46,10 @@
 		EA5BEBF41AEF755B0082B344 /* Gray.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF11AEF755B0082B344 /* Gray.css */; };
 		EA5BEBF51AEF755B0082B344 /* HUDdy.css in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF21AEF755B0082B344 /* HUDdy.css */; };
 		EA5BEBF61AEF755B0082B344 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = EA5BEBF31AEF755B0082B344 /* index.html */; };
+		EA8ED4141B3CFBC100168B69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8ED4171B3CFBC100168B69 /* Localizable.strings */; };
+		EA8ED4151B3CFBC100168B69 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA8ED4171B3CFBC100168B69 /* Localizable.strings */; };
+		EA8ED4221B3D01FA00168B69 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA8ED41E1B3CFCF400168B69 /* Info.plist */; };
+		EA8ED4231B3D01FE00168B69 /* MyBrowser-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */; };
 		EABE023F1B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */; };
 		EABE02401B3C4FB1002BA1D3 /* AWActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */; };
 /* End PBXBuildFile section */
@@ -65,6 +69,7 @@
 		BEF0643A63759C6E71F71426 /* overrideWeb.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = overrideWeb.js; sourceTree = "<group>"; };
 		BEF0648F9BED3DCF65EF048C /* BSListWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSListWebViewController.m; sourceTree = "<group>"; };
 		BEF0659320DFCB26211619E1 /* MyWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWebView.m; sourceTree = "<group>"; };
+		BEF0677870C9FB553D0B1FDE /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		BEF068D7817000B8E9AF5FB2 /* BSListWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSListWebViewController.h; sourceTree = "<group>"; };
 		BEF06A132ED1715FC3CDCB07 /* MyWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWebView.h; sourceTree = "<group>"; };
 		BEF06E00DB37B34C56CF4085 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
@@ -83,21 +88,22 @@
 		EA3F283A1AF28A8E00B45030 /* MyBrowser-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "MyBrowser-Info.plist"; path = "/Users/luowei/Movies/iOS开发实战精讲/projects/MyiOSCourse/Webkit-Demo/MyBrowser-Info.plist"; sourceTree = "<absolute>"; };
 		EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = postingMsg.js; sourceTree = "<group>"; };
 		EA5BEBC71AEF6F7C0082B344 /* Webkit-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Webkit-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA5BEBCB1AEF6F7C0082B344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5BEBCC1AEF6F7C0082B344 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EA5BEBCE1AEF6F7C0082B344 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA5BEBCF1AEF6F7C0082B344 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA5BEBD11AEF6F7C0082B344 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EA5BEBD21AEF6F7C0082B344 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EA5BEBD51AEF6F7C0082B344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA5BEBD71AEF6F7C0082B344 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		EA5BEBDA1AEF6F7C0082B344 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EA5BEBE01AEF6F7C0082B344 /* Webkit-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Webkit-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5BEBE51AEF6F7C0082B344 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5BEBE61AEF6F7C0082B344 /* Webkit_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Webkit_DemoTests.m; sourceTree = "<group>"; };
 		EA5BEBF11AEF755B0082B344 /* Gray.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = Gray.css; sourceTree = "<group>"; };
 		EA5BEBF21AEF755B0082B344 /* HUDdy.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = HUDdy.css; sourceTree = "<group>"; };
 		EA5BEBF31AEF755B0082B344 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		EA8ED42C1B3D139200168B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA8ED42D1B3D139200168B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EA8ED42E1B3D13AA00168B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		EA8ED42F1B3D13B700168B69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		EABE023D1B3C4FB1002BA1D3 /* AWActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWActionSheet.h; sourceTree = "<group>"; };
 		EABE023E1B3C4FB1002BA1D3 /* AWActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				EA5BD8ED1AF51CE50028CFEE /* postingMsg.js */,
+				BEF0643A63759C6E71F71426 /* overrideWeb.js */,
+				BEF0677870C9FB553D0B1FDE /* Defines.h */,
 				EA15E8EC1AF0783F00DEC7F3 /* BroserSimple */,
 				EA5BEBF01AEF75310082B344 /* Themes */,
 				EA5BEBCE1AEF6F7C0082B344 /* AppDelegate.h */,
@@ -205,7 +213,6 @@
 				EA5BEBD71AEF6F7C0082B344 /* Images.xcassets */,
 				EA5BEBD91AEF6F7C0082B344 /* LaunchScreen.xib */,
 				EA5BEBCA1AEF6F7C0082B344 /* Supporting Files */,
-				BEF0643A63759C6E71F71426 /* overrideWeb.js */,
 			);
 			path = "Webkit-Demo";
 			sourceTree = "<group>";
@@ -213,8 +220,9 @@
 		EA5BEBCA1AEF6F7C0082B344 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA5BEBCB1AEF6F7C0082B344 /* Info.plist */,
+				EA8ED41E1B3CFCF400168B69 /* Info.plist */,
 				EA5BEBCC1AEF6F7C0082B344 /* main.m */,
+				EA8ED4171B3CFBC100168B69 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -324,7 +332,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = EA5BEBBE1AEF6F7C0082B344;
@@ -346,9 +353,11 @@
 			files = (
 				EA3F28301AF28A8E00B45030 /* HUDdy.css in Resources */,
 				EA5BD8EF1AF51CE50028CFEE /* postingMsg.js in Resources */,
+				EA8ED4231B3D01FE00168B69 /* MyBrowser-Info.plist in Resources */,
 				EA3F28311AF28A8E00B45030 /* Main.storyboard in Resources */,
 				EA3F28321AF28A8E00B45030 /* LaunchScreen.xib in Resources */,
 				EA3F28331AF28A8E00B45030 /* index.html in Resources */,
+				EA8ED4151B3CFBC100168B69 /* Localizable.strings in Resources */,
 				EA3F28341AF28A8E00B45030 /* Gray.css in Resources */,
 				EA3F28351AF28A8E00B45030 /* Images.xcassets in Resources */,
 			);
@@ -363,7 +372,9 @@
 				EA5BEBD61AEF6F7C0082B344 /* Main.storyboard in Resources */,
 				EA5BEBDB1AEF6F7C0082B344 /* LaunchScreen.xib in Resources */,
 				EA5BEBF61AEF755B0082B344 /* index.html in Resources */,
+				EA8ED4141B3CFBC100168B69 /* Localizable.strings in Resources */,
 				EA5BEBF41AEF755B0082B344 /* Gray.css in Resources */,
+				EA8ED4221B3D01FA00168B69 /* Info.plist in Resources */,
 				EA5BEBD81AEF6F7C0082B344 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,7 +449,7 @@
 		EA5BEBD41AEF6F7C0082B344 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA5BEBD51AEF6F7C0082B344 /* Base */,
+				EA8ED42C1B3D139200168B69 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -446,9 +457,25 @@
 		EA5BEBD91AEF6F7C0082B344 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA5BEBDA1AEF6F7C0082B344 /* Base */,
+				EA8ED42D1B3D139200168B69 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EA8ED4171B3CFBC100168B69 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8ED42F1B3D13B700168B69 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		EA8ED41E1B3CFCF400168B69 /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8ED42E1B3D13AA00168B69 /* Base */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -518,7 +545,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -555,7 +582,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -566,9 +593,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Webkit-DemoTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,9 +609,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Webkit-Demo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Webkit-DemoTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

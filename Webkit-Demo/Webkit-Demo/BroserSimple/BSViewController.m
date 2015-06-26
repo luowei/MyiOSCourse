@@ -11,21 +11,7 @@
 #import "MyWebView.h"
 #import "AppDelegate.h"
 #import "AWActionSheet.h"
-
-
-@interface NSString (BSEncoding)
-
-+ (NSString *)encodedString:(NSString *)string;
-
-@end
-
-@implementation NSString (BSEncoding)
-
-+ (NSString *)encodedString:(NSString *)string {
-    return (NSString *) CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(NULL, (__bridge CFStringRef) string, NULL, (CFStringRef) @"!*'();:@&=+$,/?%#[]", kCFStringEncodingUTF8));
-}
-
-@end
+#import "Defines.h"
 
 //
 // This is our JS we're going to inject into each web view. It looks a bit messy,
@@ -86,7 +72,7 @@
     [self addWebContainer];
 
     //向webContainer中添加webview
-    [self addWebView:[[NSURL alloc] initWithString:@"http://www.baidu.com"]];
+    [self addWebView:HOME_URL];
 
     //设置初始值
     self.backBtn.enabled = NO;
@@ -124,7 +110,7 @@
     _searchBar = [UISearchBar new];
     _searchBar.searchBarStyle = UISearchBarStyleMinimal;
     _searchBar.delegate = self;
-    _searchBar.placeholder = @"搜索或输入地址";
+    _searchBar.placeholder = NSLocalizedString(@"KeyWord or Url", nil);//@"搜索或输入地址";
     _searchBar.autocapitalizationType = UITextAutocapitalizationTypeNone;
     _searchBar.autocorrectionType = UITextAutocorrectionTypeYes;
     self.navigationItem.titleView = _searchBar;
@@ -210,6 +196,25 @@
         [weakSelf.progressView setProgress:0.0 animated:NO];
         weakSelf.progressView.trackTintColor = [UIColor whiteColor];
     };
+    
+    //添加新webView的block
+    _activeWindow.addWebViewBlock = ^(MyWebView **wb, NSURL *aurl){
+        if(*wb){
+            *wb = [weakSelf addWebView:aurl];
+        }else{
+            [weakSelf addWebView:aurl];
+        }
+    };
+
+    //presentViewController block
+    _activeWindow.presentViewControllerBlock = ^(UIViewController *viewController){
+        [weakSelf presentViewController:viewController animated:YES completion:nil];
+    };
+    
+    //关闭激活的webView的block
+    _activeWindow.closeActiveWebViewBlock = ^(){
+        [weakSelf closeActiveWebView];
+    };
 
     // Add to windows array and make active window
     if (!_listWebViewController) {
@@ -217,7 +222,11 @@
 
         //设置添加webView的block
         _listWebViewController.addWebViewBlock = ^(MyWebView **wb, NSURL *aurl) {
-            *wb = [weakSelf addWebView:aurl];
+            if(*wb){
+                *wb = [weakSelf addWebView:aurl];
+            }else{
+                [weakSelf addWebView:aurl];
+            }
         };
         //更新活跃webView的block
         _listWebViewController.updateActiveWindowBlock = ^(MyWebView *wb) {
@@ -277,7 +286,7 @@
 
 //主页
 - (void)home {
-    [self.activeWindow loadRequest:[NSURLRequest requestWithURL:[[NSURL alloc] initWithString:@"http://www.baidu.com"]]];
+    [self.activeWindow loadRequest:[NSURLRequest requestWithURL:HOME_URL]];
 }
 
 //收藏
@@ -347,19 +356,19 @@
 
     switch (index){
         case 0:{
-            cell.titleLabel.text = @"书签管理";
+            cell.titleLabel.text = NSLocalizedString(@"Bookmarks", nil);//@"书签管理";
             [cell.iconView setImage:[UIImage imageNamed:@"bookmark"]];
 
             break;
         }
         case 1:{
-            cell.titleLabel.text = @"夜间模式";
+            cell.titleLabel.text = NSLocalizedString(@"Nighttime", nil);//@"夜间模式";
             [cell.iconView setImage:[UIImage imageNamed:@"night"]];
 
             break;
         }
         case 2:{
-            cell.titleLabel.text = @"无图模式";
+            cell.titleLabel.text = NSLocalizedString(@"No Image", nil);//@"无图模式";
             [cell.iconView setImage:[UIImage imageNamed:@"noimage"]];
 
             break;
@@ -377,22 +386,20 @@
 }
 
 
-//关闭一个webView
+//关闭当前webView
 - (void)closeActiveWebView {
-    //todo:
-/*
     // Grab and remove the top web view, remove its reference from the windows array,
     // and nil itself and its delegate. Then we re-set the activeWindow to the
     // now-top web view and refresh the toolbar.
-    WKWebView *webView = [self.windows lastObject];
-    [webView removeFromSuperview];
-    [self.windows removeLastObject];
-    webView.navigationDelegate = nil;
-    webView = nil;
-    NSLog(@"Number of windows: %d", [_windows count]);
-    self.activeWindow = [self.windows lastObject];
-*/
-
+    if(_activeWindow == _listWebViewController.windows.lastObject){
+        [_activeWindow loadRequest:[NSURLRequest requestWithURL:HOME_URL]];
+        return;
+    }
+    
+    [_activeWindow removeFromSuperview];
+    [_listWebViewController.windows removeObject:_activeWindow];
+    _activeWindow = _listWebViewController.windows.lastObject;
+    [_webContainer bringSubviewToFront:_activeWindow];
 }
 
 

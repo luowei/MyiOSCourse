@@ -20,6 +20,8 @@
 
 @property(nonatomic, copy) void (^updateActiveWindowBlock)(MyWebView *);
 
+@property(nonatomic, strong) NSMutableArray *windows;
+
 - (instancetype)initWithWebView:(MyWebView *)webView;
 
 @end
