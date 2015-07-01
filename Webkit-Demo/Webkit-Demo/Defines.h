@@ -10,8 +10,8 @@
 #define Webkit_Demo_Defines____FILEEXTENSION___
 
 
-//#define HOME_URL [[NSURL alloc] initWithString:@"http://www.baidu.com"]
-#define HOME_URL [[NSURL alloc] initWithString:@"http://wodedata.com/test/alert.html"]
+#define HOME_URL [[NSURL alloc] initWithString:@"http://www.baidu.com"]
+//#define HOME_URL [[NSURL alloc] initWithString:@"http://wodedata.com/test/alert.html"]
 
 
 #endif

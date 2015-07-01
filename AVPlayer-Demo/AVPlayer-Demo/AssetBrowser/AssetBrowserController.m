@@ -253,11 +253,23 @@ enum {
             tipLabel.bounds = CGRectMake(0, 0, self.view.frame.size.width / 2, 80);
             tipLabel.center = self.view.center;
             tipLabel.text = NSLocalizedString(@"NoMedia", nil);
+            tipLabel.textAlignment = NSTextAlignmentCenter;
             tipLabel.font = [UIFont systemFontOfSize:24.0];
             [self.noSourceView addSubview:tipLabel];
 
             [self.view addSubview:self.noSourceView];
             [self.view bringSubviewToFront:self.noSourceView];
+
+//            self.noSourceView.translatesAutoresizingMaskIntoConstraints = NO;
+//            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[noSourceView]|" options:0 metrics:nil views:@{@"noSourceView":self.noSourceView}]];
+//            [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[noSourceView]|" options:0 metrics:nil views:@{@"noSourceView":self.noSourceView}]];
+//
+//            tipLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//            [self.noSourceView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[tipLabel(width)]" options:0 metrics:@{@"width":@(vRect.size.width/2)} views:@{@"tipLabel":tipLabel}]];
+//            [self.noSourceView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[tipLabel(80)]" options:0 metrics:nil views:@{@"tipLabel":tipLabel}]];
+//            [self.noSourceView addConstraint:[NSLayoutConstraint constraintWithItem:tipLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.noSourceView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+//            [self.noSourceView addConstraint:[NSLayoutConstraint constraintWithItem:tipLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.noSourceView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+
 
         }
         self.noSourceView.hidden = NO;
@@ -269,6 +281,17 @@ enum {
         }
     }
 }
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    CGRect vRect = self.view.frame;
+    _noSourceView.frame = CGRectMake(vRect.origin.x, vRect.origin.y, vRect.size.width, vRect.size.height);
+    for(UIView *subView in _noSourceView.subviews){
+        subView.bounds = CGRectMake(0, 0, vRect.size.width / 2, 80);
+        subView.center = self.view.center;
+    }
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [activeAssetSources count];

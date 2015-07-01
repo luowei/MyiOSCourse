@@ -65,11 +65,11 @@ typedef void (^AlertViewCompletionHandler)(void);
         iPodLibraryVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"iPod Library", nil) image:[UIImage imageNamed:@"ipod"] tag:11];
         [assetBrowserControllers addObject:iPodLibraryVC];
     }
-    if (sourceType & AssetBrowserSourceTypeFileSharing) {
-        UIViewController *fileShareingVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
-        fileShareingVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"File Sharing", nil) image:[UIImage imageNamed:@"share"] tag:12];
-        [assetBrowserControllers addObject:fileShareingVC];
-    }
+//    if (sourceType & AssetBrowserSourceTypeFileSharing) {
+//        UIViewController *fileShareingVC = [self assetBrowserControllerWithSourceType:AssetBrowserSourceTypeFileSharing delegate:delegate];
+//        fileShareingVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"File Sharing", nil) image:[UIImage imageNamed:@"share"] tag:12];
+//        [assetBrowserControllers addObject:fileShareingVC];
+//    }
 
     assetTabBarController.viewControllers = assetBrowserControllers;
 

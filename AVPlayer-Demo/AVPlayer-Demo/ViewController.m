@@ -128,7 +128,13 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     [self.playBtn setImage:[UIImage imageNamed:@"play"] forState:UIControlStateNormal];
     [self.playBtn addTarget:self action:@selector(play:) forControlEvents:UIControlEventTouchUpInside];
     [self.playbackView addSubview:self.playBtn];
-    
+
+    self.playBtn.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.playbackView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"[playBtn(60)]" options:0 metrics:nil views:@{@"playBtn":self.playBtn}]];
+    [self.playbackView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[playBtn(60)]" options:0 metrics:nil views:@{@"playBtn":self.playBtn}]];
+    [self.playbackView addConstraint:[NSLayoutConstraint constraintWithItem:self.playBtn attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.playbackView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    [self.playbackView addConstraint:[NSLayoutConstraint constraintWithItem:self.playBtn attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.playbackView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+
     //工具栏
     self.toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 30, self.view.frame.size.width, 30)];
     self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
@@ -157,11 +163,12 @@ static void *AVPlayerDemoPlaybackViewControllerCurrentItemObservationContext = &
     UIBarButtonItem *scrubberItem = [[UIBarButtonItem alloc] initWithCustomView:self.scrubber];
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
 
-    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    [infoButton addTarget:self action:@selector(showMetadata:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *infoItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+//    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+//    [infoButton addTarget:self action:@selector(showMetadata:) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *infoItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
 
-    self.toolbar.items = @[self.playButton, flexItem, scrubberItem, infoItem];
+//    self.toolbar.items = @[self.playButton, flexItem, scrubberItem, infoItem];
+    self.toolbar.items = @[self.playButton, flexItem, scrubberItem];
     isSeeking = NO;
     [self initScrubberTimer];
 
