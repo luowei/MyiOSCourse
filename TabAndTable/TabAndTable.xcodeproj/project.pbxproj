@@ -40,6 +40,7 @@
 		EA46E96E1B28476A008E5629 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EA46E9671B28476A008E5629 /* FMDatabaseQueue.m */; };
 		EA46E96F1B28476A008E5629 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EA46E96A1B28476A008E5629 /* FMResultSet.m */; };
 		EA4A01031B2870F50032A02A /* Summary.m in Sources */ = {isa = PBXBuildFile; fileRef = EA4A01021B2870F50032A02A /* Summary.m */; };
+		EA6FB2AF1D3616CA009FB379 /* CustomeKeyboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA6FB2AE1D3616CA009FB379 /* CustomeKeyboardViewController.xib */; };
 		EA88C3521B2AAE9700C2100E /* AwarenessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA88C3511B2AAE9700C2100E /* AwarenessViewController.m */; };
 		EACA2B921B0DCC8300C6D882 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */; };
 		EACA2B951B0DCF3600C6D882 /* CoreDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EACA2B941B0DCF3600C6D882 /* CoreDataViewController.m */; };
@@ -128,6 +129,7 @@
 		EA46E96A1B28476A008E5629 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		EA4A01011B2870F50032A02A /* Summary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Summary.h; sourceTree = "<group>"; };
 		EA4A01021B2870F50032A02A /* Summary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Summary.m; sourceTree = "<group>"; };
+		EA6FB2AE1D3616CA009FB379 /* CustomeKeyboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomeKeyboardViewController.xib; sourceTree = "<group>"; };
 		EA88C3501B2AAE9700C2100E /* AwarenessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwarenessViewController.h; sourceTree = "<group>"; };
 		EA88C3511B2AAE9700C2100E /* AwarenessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwarenessViewController.m; sourceTree = "<group>"; };
 		EACA2B911B0DCC8300C6D882 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -330,6 +332,7 @@
 				EA00A69A1B0ACB73007DE7AC /* BaseKeyboardViewController.m */,
 				EA00A69B1B0ACB73007DE7AC /* CustomeKeyboardViewController.h */,
 				EA00A69C1B0ACB73007DE7AC /* CustomeKeyboardViewController.m */,
+				EA6FB2AE1D3616CA009FB379 /* CustomeKeyboardViewController.xib */,
 				EA00A69D1B0ACB73007DE7AC /* KeyBoardTypeViewController.h */,
 				EA00A69E1B0ACB73007DE7AC /* KeyBoardTypeViewController.m */,
 				EA00A69F1B0ACB73007DE7AC /* KeyBoardTypeViewController.xib */,
@@ -443,6 +446,7 @@
 				EA00A6A61B0ACB73007DE7AC /* KeyBoardTypeViewController.xib in Resources */,
 				EA00A6741B0ACB45007DE7AC /* LaunchScreen.xib in Resources */,
 				EA00A6711B0ACB45007DE7AC /* Images.xcassets in Resources */,
+				EA6FB2AF1D3616CA009FB379 /* CustomeKeyboardViewController.xib in Resources */,
 				EA00A6A81B0ACB73007DE7AC /* ReturnTypeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

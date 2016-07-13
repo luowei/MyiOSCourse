@@ -10,6 +10,7 @@
 #import "KeyBoardTypeViewController.h"
 #import "ReturnTypeViewController.h"
 #import "BaseKeyboardViewController.h"
+#import "CustomeKeyboardViewController.h"
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -84,7 +85,8 @@
             break;
         }
         case 2:{
-            viewController = [BaseKeyboardViewController new];
+            //viewController = [BaseKeyboardViewController new];
+            viewController =  [CustomeKeyboardViewController new];
             viewController.title = cell.textLabel.text;
             viewController.view.backgroundColor = [UIColor whiteColor];
             break;
