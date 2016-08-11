@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbg-zc-J1p" userLabel="Tool Bar">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzG-SA-ldV" userLabel="Draw View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oe5-ds-YQ4" userLabel="Draw Background">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVd-4Z-2p0" userLabel="Draw Board">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="380"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="t5P-b4-4xN"/>
+                                    <constraint firstAttribute="trailing" secondItem="oe5-ds-YQ4" secondAttribute="trailing" id="9VA-Jz-8xT"/>
+                                    <constraint firstItem="DVd-4Z-2p0" firstAttribute="leading" secondItem="rzG-SA-ldV" secondAttribute="leading" id="HsW-HV-sTW"/>
+                                    <constraint firstItem="DVd-4Z-2p0" firstAttribute="top" secondItem="rzG-SA-ldV" secondAttribute="top" id="OFn-Gp-8cz"/>
+                                    <constraint firstAttribute="trailing" secondItem="DVd-4Z-2p0" secondAttribute="trailing" id="Z9J-Eh-QIi"/>
+                                    <constraint firstAttribute="bottom" secondItem="DVd-4Z-2p0" secondAttribute="bottom" id="daL-KJ-Sqx"/>
+                                    <constraint firstItem="oe5-ds-YQ4" firstAttribute="top" secondItem="rzG-SA-ldV" secondAttribute="top" id="eZZ-cB-XjC"/>
+                                    <constraint firstItem="oe5-ds-YQ4" firstAttribute="leading" secondItem="rzG-SA-ldV" secondAttribute="leading" id="kcj-z5-1pA"/>
+                                    <constraint firstAttribute="bottom" secondItem="oe5-ds-YQ4" secondAttribute="bottom" id="tF1-Ng-DlB"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzG-SA-ldV" userLabel="Draw View">
-                                <rect key="frame" x="0.0" y="40" width="320" height="340"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-NH-VKP" userLabel="Bottom Bar">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyp-NH-VKP" userLabel="Draw Bar">
                                 <rect key="frame" x="0.0" y="380" width="320" height="100"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -41,13 +53,10 @@
                             <constraint firstAttribute="trailing" secondItem="jyp-NH-VKP" secondAttribute="trailing" id="Cl9-Fc-GRc"/>
                             <constraint firstItem="rzG-SA-ldV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HSu-TN-LmK"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jyp-NH-VKP" secondAttribute="bottom" id="Ksl-KG-tEg"/>
-                            <constraint firstItem="nbg-zc-J1p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="O34-Zw-IHk"/>
-                            <constraint firstAttribute="trailing" secondItem="nbg-zc-J1p" secondAttribute="trailing" id="RAa-os-Hpu"/>
                             <constraint firstItem="jyp-NH-VKP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="STH-tv-XGw"/>
+                            <constraint firstItem="rzG-SA-ldV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vc5-q2-jPW"/>
                             <constraint firstItem="jyp-NH-VKP" firstAttribute="top" secondItem="rzG-SA-ldV" secondAttribute="bottom" id="aM9-4v-rZg"/>
-                            <constraint firstItem="rzG-SA-ldV" firstAttribute="top" secondItem="nbg-zc-J1p" secondAttribute="bottom" id="eWJ-sp-oAP"/>
                             <constraint firstAttribute="trailing" secondItem="rzG-SA-ldV" secondAttribute="trailing" id="hlv-uI-Jnh"/>
-                            <constraint firstItem="nbg-zc-J1p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wC5-dq-lv6"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>

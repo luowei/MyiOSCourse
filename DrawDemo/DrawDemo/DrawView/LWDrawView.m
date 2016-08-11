@@ -32,11 +32,12 @@
 - (void)drawRect:(CGRect)rect {
     [super drawRect:rect];
     //取出所有保存的路径给绘制出来
-    for(LWBezierPath *path in self.pathArray){
-        if([path isKindOfClass:[UIImage class]]){
-            UIImage *image = (UIImage *)path;
+    for(id obj in self.pathArray){
+        if([obj isKindOfClass:[UIImage class]]){
+            UIImage *image = (UIImage *)obj;
             [image drawInRect:rect];
         }else{
+            LWBezierPath *path = (LWBezierPath *)obj;
             [path.color set];
             [path stroke];
         }
@@ -96,6 +97,28 @@
     [self.pathArray addObject:image];
     [self setNeedsDisplay];
 }
+
+//保存画图板图片到相册
+-(void)save{
+
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size,NO,0.0);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    //把view的内容渲染到上下文中
+    [self.layer renderInContext:ctx];
+    //从上下文中生成一张图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    //关闭上下文
+    UIGraphicsEndImageContext();
+    //保存图片到相册
+    UIImageWriteToSavedPhotosAlbum(image, self, nil, nil);
+}
+
+
+@end
+
+
+@implementation LWDrawBoard
+
 
 
 @end

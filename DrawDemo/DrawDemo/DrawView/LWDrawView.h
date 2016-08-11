@@ -11,6 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class LWDrawBoard;
+
 @interface LWDrawView : UIView
 
 @property (nonatomic, weak) UIBezierPath *path;
@@ -19,6 +21,19 @@
 @property (nonatomic,strong) UIColor *lineColor;
 @property (nonatomic, assign) CGFloat lineWidth;
 
-@property (nonatomic, strong) UIImage * image;
+@property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, weak) IBOutlet UIImageView * drawBGView;
+@property (nonatomic, weak) IBOutlet LWDrawBoard * drawBoard;
 
 @end
+
+
+@interface LWDrawBoard:UIView
+
+
+
+@end
+
+
+
